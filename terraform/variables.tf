@@ -56,6 +56,17 @@ variable "price_class" {
   }
 }
 
+variable "noncurrent_version_expiration_days" {
+  description = "Number of days to retain non-current S3 object versions before expiring them."
+  type        = number
+  default     = 30
+
+  validation {
+    condition     = var.noncurrent_version_expiration_days > 0
+    error_message = "noncurrent_version_expiration_days must be greater than 0."
+  }
+}
+
 variable "tags" {
   description = "Common tags applied to all resources."
   type        = map(string)

@@ -42,6 +42,47 @@ resource "aws_s3_bucket_versioning" "site" {
   }
 }
 
+# Lifecycle — cap the storage cost of versioning by expiring old object
+# versions and cleaning up incomplete multipart uploads.
+resource "aws_s3_bucket_lifecycle_configuration" "site" {
+  bucket = aws_s3_bucket.site.id
+
+  # Versioning must be configured before lifecycle rules reference versions.
+  depends_on = [aws_s3_bucket_versioning.site]
+
+  rule {
+    id     = "expire-noncurrent-versions"
+    status = "Enabled"
+
+    filter {}
+
+    noncurrent_version_expiration {
+      noncurrent_days = var.noncurrent_version_expiration_days
+    }
+
+    abort_incomplete_multipart_upload {
+      days_after_initiation = 7
+    }
+  }
+}
+
+# Intelligent-Tiering — let S3 move objects between access tiers automatically
+# so infrequently accessed content lands in cheaper storage with no ops effort.
+resource "aws_s3_bucket_intelligent_tiering_configuration" "site" {
+  bucket = aws_s3_bucket.site.id
+  name   = "entire-bucket"
+
+  tiering {
+    access_tier = "ARCHIVE_ACCESS"
+    days        = 90
+  }
+
+  tiering {
+    access_tier = "DEEP_ARCHIVE_ACCESS"
+    days        = 180
+  }
+}
+
 resource "aws_s3_bucket_server_side_encryption_configuration" "site" {
   bucket = aws_s3_bucket.site.id
 

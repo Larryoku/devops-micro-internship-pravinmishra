@@ -77,8 +77,8 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-`__________________________`
-[text](https://github.com/Larryoku/Ultimate-Agentic-DevOps-with-Claude-Code)
+`_____________________https://github.com/Larryoku/Ultimate-Agentic-DevOps-with-Claude-Code_____`
+
 ---
 
 # Completion Checklist

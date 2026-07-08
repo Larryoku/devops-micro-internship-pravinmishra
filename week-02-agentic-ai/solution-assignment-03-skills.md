@@ -22,7 +22,7 @@ Create the required `.claude/skills/` directory structure for all skills.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 1.png>)
 
 # Task 2 — Add the Skill Files
 
@@ -36,13 +36,13 @@ Place all required skill files into their correct directories and verify their c
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 2.png>)
 
 #### Screenshot 3 — Screenshot 3 — `tf-plan/SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no Write) and `disable-model-invocation: true`
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 3-1.png>)
 
 # Task 3 — Run /scaffold-terraform
 
@@ -56,13 +56,13 @@ Execute the `/scaffold-terraform` skill to generate a full Terraform infrastruct
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 4-1.png>)
 
 #### Screenshot 5 — VS Code sidebar showing the `terraform/` folder with all generated files inside
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 5-2.png>)
 
 # Task 4 — Run terraform init and /tf-plan
 
@@ -76,7 +76,7 @@ Initialize Terraform and execute the `/tf-plan` skill to observe plan execution 
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 6-1.png>)
 
 # Submission Instructions
 
@@ -90,13 +90,13 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-`__________________________`
+`______________https://github.com/larryoku/devops-micro-internship-pravinmishra____________`
 
 ## LinkedIn post URL
 
 Paste your forked repository URL here:
 
-`__________________________`
+`__________https://www.linkedin.com/posts/silas-nyarko_devops-agenticai-cloudcomputing-activity-7480750040848711680-fiyA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U________________`
 ---
 
 # Completion Checklist
