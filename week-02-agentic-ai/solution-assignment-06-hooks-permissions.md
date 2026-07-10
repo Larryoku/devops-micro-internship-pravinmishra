@@ -22,7 +22,7 @@ Create the `.claude` directory structure required for team-level Claude Code con
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 1-3.png>)
 
 # Task 2 — Create the UserPromptSubmit Hook Script
 
@@ -36,7 +36,7 @@ Create a hook that checks user prompts before Claude processes them and blocks r
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 2-3.png>)
 
 # Task 3 — Create the PreToolUse Hook Script
 
@@ -50,7 +50,7 @@ Create a hook that runs before Claude executes Bash commands and blocks dangerou
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 3-4.png>)
 
 # Task 4 — Create the PostToolUse Hook Script
 
@@ -64,7 +64,7 @@ Create a hook that runs after Claude executes a Bash command and logs selected T
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 4-4.png>)
 
 # Task 5 — Configure settings.json to Connect Hook Scripts
 
@@ -78,7 +78,7 @@ Configure Claude Code permissions and connect the hook scripts created in the pr
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 5-5.png>)
 
 # Task 6 — Test the UserPromptSubmit Hook
 
@@ -90,7 +90,7 @@ Prove the prompt-level hook works by typing a destructive prompt and verifying i
 
 #### Screenshot 6 — UserPromptSubmit hook blocking the destructive prompt
 
----
+--- ![alt text](<Tasks 6-3.png>)
 
 # Task 7 — Test the PreToolUse Hook
 
@@ -102,7 +102,7 @@ Prove the tool-level hook works by asking Claude to execute a dangerous Bash com
 
 #### Screenshot 7 — PreToolUse hook blocking terraform destroy
 
----
+--- ![alt text](<Tasks 7.png>)
 
 # Task 8 — Test the PostToolUse Logging Hook
 
@@ -129,19 +129,19 @@ Your submission must include:
 
 # Completion Checklist
 
-- [ ] `.claude` folder structure created correctly
-- [ ] `user-prompt-guard.sh` created with UserPromptSubmit hook logic
-- [ ] `pre-tool-guard.sh` created with PreToolUse hook logic
-- [ ] `post-tool-logger.sh` created with PostToolUse logging logic
-- [ ] `settings.json` created with allow and deny permissions
-- [ ] `settings.json` configured to connect all three hooks:
-  - [ ] UserPromptSubmit
-  - [ ] PreToolUse
-  - [ ] PostToolUse
-- [ ] Destructive prompt test shows UserPromptSubmit blocked the request
-- [ ] Terraform destroy command test shows PreToolUse intercepted the command
-- [ ] Terraform validate test shows PostToolUse created the log entry
-- [ ] All required screenshots are captured
+- [X] `.claude` folder structure created correctly
+- [X] `user-prompt-guard.sh` created with UserPromptSubmit hook logic
+- [X] `pre-tool-guard.sh` created with PreToolUse hook logic
+- [X] `post-tool-logger.sh` created with PostToolUse logging logic
+- [X] `settings.json` created with allow and deny permissions
+- [X] `settings.json` configured to connect all three hooks:
+  - [X] UserPromptSubmit
+  - [X] PreToolUse
+  - [X] PostToolUse
+- [X] Destructive prompt test shows UserPromptSubmit blocked the request
+- [X] Terraform destroy command test shows PreToolUse intercepted the command
+- [X] Terraform validate test shows PostToolUse created the log entry
+- [X] All required screenshots are captured
 
 ---
 

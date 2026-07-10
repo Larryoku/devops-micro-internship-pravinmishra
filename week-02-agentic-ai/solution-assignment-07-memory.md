@@ -22,7 +22,7 @@ Identify where Claude Code stores memory for this project.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 1-4.png>)
 
 # Task 2 — Give Claude Information to Remember
 
@@ -36,13 +36,13 @@ Store project-specific rules and configurations into Claude’s memory and verif
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 2-4.png>)
 
 #### Screenshot 3 — The `MEMORY.md` file open in VS Code showing the saved content
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 3-6.png>)
 
 # Task 3 — Close the Session Completely
 
@@ -56,7 +56,7 @@ Terminate the current Claude Code session and restart it to ensure memory is the
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 4-5.png>)
 
 # Task 4 — Prove Memory Recall Across Sessions
 
@@ -70,13 +70,13 @@ Verify that Claude correctly recalls stored memory after a full session reset.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 5-6.png>)
 
 #### Screenshot 6 — Claude refusing JavaScript request based on memory rule
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 6-4.png>)
 
 # Submission Instructions
 
@@ -91,19 +91,19 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-`__________________________`
+`__________________https://github.com/Larryoku/devops-micro-internship-pravinmishra
+________`
 
 ---
 
 # Completion Checklist
 
-- [ ] Memory file path identified (Screenshot 1)
-- [ ] Memory successfully saved via prompt (Screenshot 2)
-- [ ] `MEMORY.md` shows stored content (Screenshot 3)
-- [ ] Fresh session opened after full restart (Screenshot 4)
-- [ ] Claude recalled hero colors correctly (Screenshot 5)
-- [ ] Claude refused JavaScript request based on memory (Screenshot 6)
-- [ ] All screenshots added and committed to GitHub repo
+- [X] Memory file path identified (Screenshot 1)
+- [X] Memory successfully saved via prompt (Screenshot 2)
+- [X] `MEMORY.md` shows stored content (Screenshot 3)
+- [X] Claude recalled hero colors correctly (Screenshot 5)
+- [X] Claude refused JavaScript request based on memory (Screenshot 6)
+- [X] All screenshots added and committed to GitHub repo
 
 ---
 

@@ -14,10 +14,10 @@ A cloud-native static website hosting architecture built for high availability a
 - **DNS & SSL:** Route 53 & AWS Certificate Manager (ACM)
 
 ## 4. Code Style & Tech Conventions
-- **Pure HTML/CSS Only:** Keep the front-end strictly structural HTML and native CSS.
-- **NO JAVASCRIPT:** Do not write, accept, or inject any JavaScript, React, or frontend frameworks.
+- **TypeScript Only:** All application/front-end scripting must be written in TypeScript.
+- **NO PLAIN JAVASCRIPT:** Do not write, accept, or inject any hand-authored plain JavaScript. Author in TypeScript and let it compile to JS.
 - **IaC Standards:** Modular Terraform code with strict variable definitions and state locks.
 
 ## 5. Verification & Testing
-- Validate HTML/CSS formatting before committing.
+- Type-check TypeScript (`tsc --noEmit`) and validate HTML/CSS formatting before committing.
 - Run `terraform validate` and `terraform plan` to verify cloud infrastructure states.

@@ -116,16 +116,16 @@ Paste your forked repository URL here:
 
 # Completion Checklist
 
-- [ ] `.claude/agents/` folder contains all 3 agent files
-- [ ] Screenshot 2 shows correct `security-auditor.md` configuration
-- [ ] Screenshot 3 shows correct `cost-optimizer.md` configuration
-- [ ] All 3 written answers completed 
-- [ ] Security auditor executed successfully
-- [ ] Cost optimizer executed successfully
-- [ ] Security report is visible with findings
-- [ ] Cost report is visible with recommendations
-- [ ] All required screenshots added
-- [ ] GitHub repo updated with agents
+- [X] `.claude/agents/` folder contains all 3 agent files
+- [X] Screenshot 2 shows correct `security-auditor.md` configuration
+- [X] Screenshot 3 shows correct `cost-optimizer.md` configuration
+- [X] All 3 written answers completed 
+- [X] Security auditor executed successfully
+- [X] Cost optimizer executed successfully
+- [X] Security report is visible with findings
+- [X] Cost report is visible with recommendations
+- [X] All required screenshots added
+- [X] GitHub repo updated with agents
 
 ---
 

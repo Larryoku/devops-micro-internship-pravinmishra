@@ -101,16 +101,16 @@ Paste your forked repository URL here:
 
 # Completion Checklist
 
-- [ ] `.claude/skills/` folder created with all 4 skill folders
-- [ ] All skill files placed correctly
-- [ ] `tf-plan/SKILL.md` shows correct `allowed-tools` restrictions
-- [ ] `/scaffold-terraform` executed successfully
-- [ ] Terraform files generated inside `terraform/` folder
-- [ ] `terraform init` executed successfully
-- [ ] `/tf-plan` executed and output analyzed by Claude
-- [ ] All required screenshots added
-- [ ] GitHub repository URL included
-- [ ] LinkedIn post URL included
+- [X] `.claude/skills/` folder created with all 4 skill folders
+- [X] All skill files placed correctly
+- [X] `tf-plan/SKILL.md` shows correct `allowed-tools` restrictions
+- [X] `/scaffold-terraform` executed successfully
+- [X] Terraform files generated inside `terraform/` folder
+- [X] `terraform init` executed successfully
+- [X] `/tf-plan` executed and output analyzed by Claude
+- [X] All required screenshots added
+- [X] GitHub repository URL included
+- [X] LinkedIn post URL included
 
 ---
 
