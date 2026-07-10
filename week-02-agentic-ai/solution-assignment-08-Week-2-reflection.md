@@ -48,13 +48,13 @@ You can publish your blog on:
 
 Add your screenshot here.
 
----
+--- ![alt text](Medium.png)
 
 ### Submission Field
 
 Blog Link:
 
-`__________________________________________`
+`______________https://medium.com/@nyarkosilas222/reflection-week-2-7d9c71ad20aa____________________________`
 
 ---
 
@@ -94,7 +94,7 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 Add your screenshot here.
 
----
+--- ![alt text](Linkedin.png)
 
 ### Submission Field
 
@@ -104,11 +104,31 @@ LinkedIn Post Content (copy-paste here):
 Paste your LinkedIn post content here
 ```
 
----
+--- Week 2 of the DevOps Micro Internship with Agentic AI has been a valuable learning experience.
+
+This week, I explored Claude Code and learned how AI can become part of a real development workflow instead of simply answering questions. I also gained a better understanding of concepts such as Memory and Permissions, and how they help AI work more effectively while maintaining good security practices.
+
+One of the biggest lessons for me was that AI works best when paired with clear instructions, careful verification, and continuous learning. Completing the assignments challenged me to think differently about problem-solving and how I can integrate AI into my DevOps journey.
+
+I'm excited to keep building my skills and applying what I've learned to future projects.
+
+📸 Attached is one of my Week 2 assignment screenshots.
+
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this Discord community ( https://lnkd.in/d5gQnyZW ).
+
+#DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps #LearningInPublic
+
+**P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by [Pravin Mishra ](https://lnkd.in/dYCq7dvi). You can start your DevOps journey by joining this [Discord community](https://lnkd.in/d5gQnyZW) ( https://lnkd.in/d5gQnyZW ).**
+
+Co-Mentors: Bhupendra Bhati  
+
+Ranbir Kaur 
+
+Greg Odi
 
 ### LinkedIn Post Link:
 
-`__________________________________________`
+`______________https://www.linkedin.com/posts/silas-nyarko_dmibypravinmishra-agenticai-claudecode-activity-7481402499652972546-prQ_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U____________________________`
 
 ---
 
@@ -124,15 +144,15 @@ Paste your LinkedIn post content here
 
 # Completion Checklist
 
-* [ ] Blog written with required structure
-* [ ] Blog includes at least 2–3 Week 2 topics
-* [ ] Blog is publicly accessible
-* [ ] LinkedIn post created
-* [ ] Required P.S. line included
-* [ ] LinkedIn post content copied in submission field
-* [ ] Blog link added
-* [ ] LinkedIn post link added
-* [ ] Screenshots added to GitHub repo
+* [X] Blog written with required structure
+* [X] Blog includes at least 2–3 Week 2 topics
+* [X] Blog is publicly accessible
+* [X] LinkedIn post created
+* [X] Required P.S. line included
+* [X] LinkedIn post content copied in submission field
+* [X] Blog link added
+* [X] LinkedIn post link added
+* [X] Screenshots added to GitHub repo
 
 ---
 
