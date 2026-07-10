@@ -109,14 +109,14 @@ Confirm below:
 
 # Completion Checklist
 
-- [ ] GitHub PAT created with correct scopes (`repo`, `read:user`)
-- [ ] `.mcp.json` created at project root
-- [ ] `.claude/settings.local.json` contains token (hidden in screenshot)
-- [ ] `.claude/settings.local.json` is NOT committed
-- [ ] `/mcp` shows GitHub connection as active
-- [ ] Live GitHub query returns real repository data
-- [ ] All required screenshots added
-- [ ] GitHub repository URL included
+- [X] GitHub PAT created with correct scopes (`repo`, `read:user`)
+- [X] `.mcp.json` created at project root
+- [X] `.claude/settings.local.json` contains token (hidden in screenshot)
+- [X] `.claude/settings.local.json` is NOT committed
+- [X] `/mcp` shows GitHub connection as active
+- [X] Live GitHub query returns real repository data
+- [X] All required screenshots added
+- [X] GitHub repository URL included
 
 ---
 
