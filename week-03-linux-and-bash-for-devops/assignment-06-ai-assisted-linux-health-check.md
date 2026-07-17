@@ -358,7 +358,7 @@ Recover the service as the human operator and prove that the system is healthy a
 
 Add your screenshot here.
 
---- ![alt text](Tasks 16 Screenshot.png)
+--- ![alt text](screenshots/Tasks%2016%20Screenshot.png)
 
 #### Screenshot 17 — Second `/linux-triage` output showing successful recovery with no FAIL results
 
@@ -370,7 +370,7 @@ Add your screenshot here.
 
 Add your screenshot here.
 
----![alt text](Tasks 18 screenshot.png)
+![alt text](Tasks 18 screenshot.png)
 
 #### Screenshot 19 — `incident-summary.md` showing all required sections and your Full Name
 
