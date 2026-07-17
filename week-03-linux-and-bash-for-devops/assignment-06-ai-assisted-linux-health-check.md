@@ -376,7 +376,7 @@ Add your screenshot here.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 19 Screenshot.png>)
+--- ![alt text](screenshots/Tasks%2019%20Screenshot.png)
 
 ### Notes
 
