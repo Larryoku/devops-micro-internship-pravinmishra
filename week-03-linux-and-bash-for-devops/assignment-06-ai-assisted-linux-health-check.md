@@ -22,13 +22,13 @@ Confirm that Nginx and the React application are healthy before building the aut
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 1 Screenshot.png>)
+--- ![alt text](Tasks 1 Screenshot.png)
 
 #### Screenshot 2 — Output of `pwd` and `find . -maxdepth 4 -type d | sort` showing the workspace folder structure
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2 Screenshot.png>)
+--- ![alt text](Tasks 2 Screenshot.png)
 
 ### Notes
 
@@ -64,7 +64,7 @@ Tell Claude exactly what this project does and what it is not allowed to do.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3 Screenshot.png>)
+--- ![alt text](Tasks 3 Screenshot.png)
 
 ### Notes
 
@@ -100,7 +100,7 @@ Use Claude Code to inspect the environment and produce a read-only plan before c
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 Screenshot.png>)
+--- ![alt text](Tasks 4 Screenshot.png)
 
 ### Notes
 
@@ -136,24 +136,24 @@ Create one Bash script that gathers consistent Linux and Nginx health evidence.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5 Screenshot-1.png>)
+--- ![alt text](Tasks 5 Screenshot-1.png)
 
 #### Screenshot 6 — Middle section showing check functions and conditionals
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 6 Screenshot.png>)
+--- ![alt text](Tasks 6 Screenshot.png)
 
 #### Screenshot 7 — Bottom section showing the loop, summary function, and exit behavior
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7.png>)
+--- ![alt text](Tasks 7.png)
 
 #### Screenshot 8 — Output of `bash -n scripts/linux-triage.sh` (no syntax errors) and `ls -l scripts/linux-triage.sh` showing executable permission
 
 Add your screenshot here.
-![alt text](<Tasks 8 Screenshot.png>)
+![alt text](Tasks 8 Screenshot.png)
 ---
 
 ### Notes
@@ -202,13 +202,13 @@ Run the Bash script against the healthy server and verify that it creates a repo
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 9 Screenshot.png>)
+--- ![alt text](Tasks 9 Screenshot.png)
 
 #### Screenshot 10 — Output showing the captured exit code and final summary
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 10.png>)
+--- ![alt text](Tasks 10.png)
 
 ### Notes
 
@@ -250,13 +250,13 @@ Turn the Bash script into a reusable, manually invoked Agentic AI workflow.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 11 Screenshot.png>)
+--- ![alt text](Tasks 11 Screenshot.png)
 
 #### Screenshot 12 — `/linux-triage` output for the healthy server
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 12 Screenshot.png>)
+--- ![alt text](Tasks 12 Screenshot.png)
 
 ### Notes
 
@@ -298,19 +298,19 @@ Create a controlled service failure, gather evidence through Bash, and let Claud
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 13 screenshot.png>)
+--- ![alt text](Tasks 13 screenshot.png)
 
 #### Screenshot 14 — `/linux-triage` output showing failed evidence, most likely cause, and a suggested recovery command
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 14 Screenshot.png>)
+--- ![alt text](Tasks 14 Screenshot.png)
 
 #### Screenshot 15 — `incident-failure-report.txt` showing the failed checks and your Full Name
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 15 screenshot.png>)
+--- ![alt text](Tasks 15 screenshot.png)
 
 ### Notes
 
@@ -358,19 +358,19 @@ Recover the service as the human operator and prove that the system is healthy a
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 16 Screenshot.png>)
+--- ![alt text](Tasks 16 Screenshot.png)
 
 #### Screenshot 17 — Second `/linux-triage` output showing successful recovery with no FAIL results
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 17 screenshot.png>)
+--- ![alt text](Tasks 17 screenshot.png)
 
 #### Screenshot 18 — Output of `ls -lah reports` showing both `incident-failure-report.txt` and `recovery-report.txt`
 
 Add your screenshot here.
 
----![alt text](<Tasks 18 screenshot.png>)
+---![alt text](Tasks 18 screenshot.png)
 
 #### Screenshot 19 — `incident-summary.md` showing all required sections and your Full Name
 
@@ -491,7 +491,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
---- ![alt text](<Linkedin final.png>)
+--- ![alt text](Linkedin final.png)
 
 # GitHub Repository URL
 
