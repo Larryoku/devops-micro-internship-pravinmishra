@@ -22,7 +22,7 @@ Verify that Bash is available on your system and create a clean workspace for th
 
 Add your screenshot here.
 
-![Screenshot](screenshots/Tasks1.png)(Tasks1.png)
+![Screenshot](screenshots/Tasks1.png)(screenshots/Tasks1.png)
 
 #### Screenshot 2 — Output of `pwd` and `ls -lah` showing the scripts directory
 
@@ -432,7 +432,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
---- ![alt text](Linkedin.png)
+--- ![alt text](screenshots/Linkedin.png)
 
 # Submission Instructions
 
