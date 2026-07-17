@@ -22,19 +22,23 @@ Demonstrate understanding of AWS basics and Free Tier usage by answering the fol
 
 Write your answer here.
 
----
+--- An AWS account is a secure, isolated tenant environment that grants you access to Amazon Web Services' vast ecosystem of cloud resources. At this stage of the EpicReads cloud onboarding, you need it to gain hands-on experience provisioning, managing, and securing infrastructure. It acts as our sandbox to build, test, and host EpicReads' services without needing physical hardware.
 
 #### Question 2 — What is AWS Free Tier, and how long does it last?
 
 Write your answer here.
 
----
+--- The AWS Free Tier is a program designed to let new users explore and try out AWS services free of charge up to certain limits. It includes three different types of offers: Always Free (never expires), 12 Months Free (starts from your initial sign-up date), and Short-Term Trials (lasts for a specific period depending on the service).
 
 #### Question 3 — Name three AWS Free Tier services and their free usage limits.
 
 Write your answer here.
 
----
+--- Amazon EC2 (12 Months Free): 750 hours per month of t2.micro or t3.micro instances (depending on your region) for running virtual servers.
+
+Amazon S3 (12 Months Free): 5 GB of standard object storage, along with 20,000 GET requests and 2,000 PUT requests per month.
+
+Amazon RDS (12 Months Free): 750 hours per month of db.t3.micro or db.t4g.micro database instances, plus 20 GB of SSD storage for relational databases.
 
 # Task 2 — Create AWS Free Tier Account
 
@@ -58,7 +62,7 @@ Confirm that your AWS account setup is complete by navigating to the Account sec
 
 Add your screenshot here.
 
----
+--- ![](<Tasks 1-1.png>)
 
 # Submission Instructions
 
@@ -70,11 +74,11 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1 answers written in own words
-- [ ] AWS Free Tier account created successfully
-- [ ] Signed in to AWS Management Console
-- [ ] Screenshot of AWS Account page captured (full name visible, no sensitive data)
-- [ ] All required screenshots added to repository
+- [X] Task 1 answers written in own words
+- [X] AWS Free Tier account created successfully
+- [X] Signed in to AWS Management Console
+- [X] Screenshot of AWS Account page captured (full name visible, no sensitive data)
+- [X] All required screenshots added to repository
 
 ---
 

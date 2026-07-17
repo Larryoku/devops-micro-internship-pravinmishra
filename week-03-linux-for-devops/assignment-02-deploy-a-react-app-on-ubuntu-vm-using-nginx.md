@@ -22,7 +22,7 @@ Install Node.js and npm on the Ubuntu VM and verify the installation.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 1-2.png>)
 
 # Task 2 — Setup Environment (Nginx)
 
@@ -36,7 +36,7 @@ Install Nginx, start the service, and confirm it is running.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 2.png>)
 
 # Task 3 — Clone React Application
 
@@ -50,7 +50,7 @@ Clone the project repository and verify the project files are present.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 3.png>)
 
 # Task 4 — Modify Application (Personalization)
 
@@ -64,7 +64,7 @@ Update `App.js` with your full name and the current date.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 4.png>)
 
 # Task 5 — Build React Application
 
@@ -78,7 +78,7 @@ Install dependencies and generate the production build.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 5.png>)
 
 # Task 6 — Deploy React Build to Nginx Web Root
 
@@ -92,7 +92,7 @@ Copy the production build files to the Nginx web root directory.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 6.png>)
 
 # Task 7 — Configure Nginx for React Application
 
@@ -106,13 +106,13 @@ Apply Nginx configuration for React routing and confirm the service is active.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 7.png>)
 
 #### Screenshot 8 — Output of `cat /etc/nginx/sites-available/default` showing the Nginx config
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 8.png>)
 
 # Task 8 — Test Deployment
 
@@ -126,13 +126,13 @@ Verify the React application is publicly accessible via the server's public IP.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 9.png>)
 
 #### Screenshot 10 — Browser showing the deployed React app at `http://<public-ip>` with your name and date visible
 
 Add your screenshot here.
 
----
+--- ![alt text](<Final tasks.png>)
 
 # LinkedIn Post (Required)
 
@@ -142,7 +142,7 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-`__________________________`
+`___________https://www.linkedin.com/posts/silas-nyarko_dmi-cohort-4-live-micro-internship-waiting-share-7483518703884759040-ncQY/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U_______________`
 
 ---
 
@@ -150,7 +150,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
----
+--- ![alt text](Linkedin.png)
 
 # Submission Instructions
 
@@ -162,17 +162,17 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Node.js and npm installed and verified (Screenshot 1)
-- [ ] Nginx installed and running (Screenshot 2)
-- [ ] Repository cloned and files verified (Screenshot 3)
-- [ ] App.js updated with full name and date (Screenshot 4)
-- [ ] Production build generated (Screenshot 5)
-- [ ] Build files deployed to Nginx web root (Screenshot 6)
-- [ ] Nginx configured and active (Screenshots 7 & 8)
-- [ ] Public IP retrieved (Screenshot 9)
-- [ ] React app accessible in browser with personal details visible (Screenshot 10)
-- [ ] LinkedIn post published and URL submitted
-- [ ] No sensitive data exposed
+- [X] Node.js and npm installed and verified (Screenshot 1)
+- [X] Nginx installed and running (Screenshot 2)
+- [X] Repository cloned and files verified (Screenshot 3)
+- [X] App.js updated with full name and date (Screenshot 4)
+- [X] Production build generated (Screenshot 5)
+- [X] Build files deployed to Nginx web root (Screenshot 6)
+- [X] Nginx configured and active (Screenshots 7 & 8)
+- [X] Public IP retrieved (Screenshot 9)
+- [X] React app accessible in browser with personal details visible (Screenshot 10)
+- [X] LinkedIn post published and URL submitted
+- [X] No sensitive data exposed
 
 ---
 

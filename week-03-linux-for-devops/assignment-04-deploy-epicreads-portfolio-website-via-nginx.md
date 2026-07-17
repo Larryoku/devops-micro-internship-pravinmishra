@@ -22,7 +22,7 @@ Verify the Ubuntu VM and Nginx are ready for deployment.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 01.png>)
 
 # Task 1 — Get the Website Source Code
 
@@ -36,7 +36,7 @@ Download and extract the portfolio website template.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 1-4.png>)
 
 # Task 2 — Add Ownership Proof (Anti-Copy Change)
 
@@ -50,7 +50,7 @@ Update the website footer with your deployment details.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 2-2.png>)
 
 # Task 3 — Deploy Website via Nginx
 
@@ -64,13 +64,13 @@ Deploy the portfolio website to the Nginx web root.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 3-2.png>)
 
 #### Screenshot 4 — Output of `ls /var/www/html` showing deployed website files
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 4-2.png>)
 
 # Task 4 — Verify Website is Live
 
@@ -84,13 +84,13 @@ Verify the deployed website is publicly accessible and the footer contains your 
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 5-1.png>)
 
 #### Screenshot 6 — Browser showing the live website with your Full Name and deployment details in the footer
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 6-1.png>)
 
 # Task 5 — Mini Real DevOps Operational Check
 
@@ -104,13 +104,13 @@ Verify the deployed website and Nginx service are healthy.
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 7-1.png>)
 
 #### Screenshot 8 — Output of `curl -I http://localhost` showing 200 OK
 
 Add your screenshot here.
 
----
+--- ![alt text](<Tasks 8-1.png>)
 
 # LinkedIn Post (Mandatory)
 
@@ -120,7 +120,7 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-`__________________________`
+`____________________https://www.linkedin.com/posts/silas-nyarko_portfolio-deployed-devops-micro-internship-share-7483795158090702848-0OJt/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U______`
 
 ---
 
@@ -128,7 +128,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
----
+--- ![alt text](Link.png)
 
 # Submission Instructions
 
@@ -141,18 +141,18 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Screenshot 0: Nginx service status (active/running)
-- [ ] Screenshot 1: Website files downloaded and extracted
-- [ ] Screenshot 2: Footer updated with Full Name, Group, Week, and Date
-- [ ] Screenshot 3: Nginx configuration test successful
-- [ ] Screenshot 4: Website files deployed to /var/www/html
-- [ ] Screenshot 5: Public IP retrieved
-- [ ] Screenshot 6: Live website accessible in browser with footer details
-- [ ] Screenshot 7: Nginx enabled on boot
-- [ ] Screenshot 8: Local HTTP response returns 200 OK
-- [ ] LinkedIn post published and URL submitted
-- [ ] Full Name visible in all required screenshots
-- [ ] No sensitive data exposed
+- [X] Screenshot 0: Nginx service status (active/running)
+- [X] Screenshot 1: Website files downloaded and extracted
+- [X] Screenshot 2: Footer updated with Full Name, Group, Week, and Date
+- [X] Screenshot 3: Nginx configuration test successful
+- [X] Screenshot 4: Website files deployed to /var/www/html
+- [X] Screenshot 5: Public IP retrieved
+- [X] Screenshot 6: Live website accessible in browser with footer details
+- [X] Screenshot 7: Nginx enabled on boot
+- [X] Screenshot 8: Local HTTP response returns 200 OK
+- [X] LinkedIn post published and URL submitted
+- [X] Full Name visible in all required screenshots
+- [X] No sensitive data exposed
 
 ---
 
