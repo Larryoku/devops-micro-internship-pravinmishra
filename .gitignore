@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 .claude/settings.local.json
+=======
+.DS_Store
+CLAUDE.md
+>>>>>>> upstream/main
