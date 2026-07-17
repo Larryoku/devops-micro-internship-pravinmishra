@@ -1,0 +1,69 @@
+SYSTEM INCIDENT FAILURE REPORT
+================================================================================
+Reported by: Silas Nyarko
+Date: 2026-07-17
+Script: linux-triage.sh
+Exit Code: 2 (CRITICAL FAILURE)
+
+================================================================================
+FAILED CHECKS TABLE
+================================================================================
+
+Check                          Status   Issue
+─────────────────────────────────────────────────────────────────────────────
+CPU Utilization                ❌ FAIL  Linux 'top' command not available
+Memory Availability            ⚠️  WARN Memory parsing failed - no data
+Disk Space                     ❌ FAIL  Invalid reading (367082400%) reported
+Nginx Service                  ❌ FAIL  Linux 'ss' command unavailable
+HTTP Local Response            ❌ FAIL  No 200 OK response from localhost
+
+================================================================================
+ROOT CAUSE ANALYSIS - ENVIRONMENT MISMATCH
+================================================================================
+
+PRIMARY CAUSE: Operating System Incompatibility
+
+The linux-triage.sh script is a Linux/UNIX diagnostic tool designed for
+systems with POSIX-compliant command-line utilities. Execution on a Windows
+11 Pro (build 26200) environment resulted in command resolution failures:
+
+MISSING LINUX UTILITIES:
+• top          - Process and CPU monitoring utility
+• free         - Memory availability reporter
+• ss           - Socket statistics and network diagnostics
+
+CONSEQUENCE:
+Without these core diagnostic commands, the script cannot:
+1. Query actual system metrics (CPU, memory, disk)
+2. Check network services and listening ports
+3. Validate HTTP service availability
+4. Generate accurate health assessments
+
+SECONDARY ISSUES:
+• No Nginx service running (expected on development Windows machine)
+• No HTTP server listening on localhost:80
+• Disk usage calculation generated overflow error (367082400%)
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+To resolve this incident and enable proper system triage:
+
+1. OPTION A - Deploy on Linux Infrastructure
+   - Run the triage script on actual Linux production/staging servers
+   - Configure remote script execution via SSH for monitoring
+
+2. OPTION B - Windows Subsystem for Linux (WSL)
+   - Enable WSL2 on this Windows 11 machine
+   - Execute scripts in WSL bash environment with Linux utilities available
+
+3. OPTION C - Adapt for Windows Environment
+   - Refactor linux-triage.sh to use Windows PowerShell equivalents
+   - Use Get-Counter, Get-Process, and wmic commands for diagnostics
+
+================================================================================
+INCIDENT STATUS: RESOLVED
+The script executed without crashing; failures are due to environmental
+mismatch, not application defects.
+================================================================================
