@@ -294,7 +294,7 @@ Create a controlled service failure, gather evidence through Bash, and let Claud
 
 ### Evidence
 
-#### Screenshot 13 — Output showing Nginx is inactive and the HTTP request fails
+![alt text](screenshots/Tasks%2013%20Screenshot.png)
 
 Add your screenshot here.
 
@@ -521,7 +521,7 @@ ______________`
 - [X] Task 4: `linux-triage.sh` created, syntax validated, executable permission set (Screenshots 5–8, Notes answered)
 - [X] Task 5: Healthy-state report generated with no FAIL result (Screenshots 9–10, Notes answered)
 - [X] Task 6: `/linux-triage` skill created and run successfully on healthy server (Screenshots 11–12, Notes answered)
-- [X] Task 7: Nginx incident simulated, failed evidence captured, Claude did not execute recovery (Screenshots 13–15, Notes answered)
+![alt text](screenshots/Tasks%2013%20Screenshot.png)
 - [X] Task 8: Nginx recovered manually, recovery verified, reports saved, incident summary complete (Screenshots 16–19, Notes answered)
 - [X] Incident summary contains all seven required sections
 - [X] LinkedIn post published and URL submitted
