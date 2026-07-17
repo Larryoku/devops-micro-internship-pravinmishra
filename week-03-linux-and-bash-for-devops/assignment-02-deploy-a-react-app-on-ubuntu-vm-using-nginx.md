@@ -154,7 +154,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
-![Screenshot](screenshots/Tasks1.png)(Linkedin.png)
+---![alt text](<React app.png>)
 
 # Submission Instructions
 

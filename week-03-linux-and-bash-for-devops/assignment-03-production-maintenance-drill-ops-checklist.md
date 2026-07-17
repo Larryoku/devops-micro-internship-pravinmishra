@@ -403,7 +403,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
----
+--- ![alt text](<Screenshot 2026-07-17 150353.png>)
 
 # Submission Instructions
 
