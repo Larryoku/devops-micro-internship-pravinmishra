@@ -132,7 +132,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
-![Screenshot](screenshots/Tasks1.png)(Link.png)
+--- ![alt text](Link.png)
 
 # Submission Instructions
 
