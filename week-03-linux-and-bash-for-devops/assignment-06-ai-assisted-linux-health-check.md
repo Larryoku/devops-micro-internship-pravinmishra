@@ -310,7 +310,7 @@ Add your screenshot here.
 
 Add your screenshot here.
 
-![alt text](screenshots/Tasks%2015%20Screenshot.png)
+![alt text](screenshots/Tasks%2015%20screenshot.png)
 
 ### Notes
 
@@ -364,13 +364,13 @@ Add your screenshot here.
 
 Add your screenshot here.
 
-![alt text](screenshots/Tasks%2017%20Screenshot.png)
+![alt text](screenshots/Tasks%2017%20screenshot.png)
 
 #### Screenshot 18 — Output of `ls -lah reports` showing both `incident-failure-report.txt` and `recovery-report.txt`
 
 Add your screenshot here.
 
-![alt text](screenshots/Tasks%2018%20Screenshot.png)
+![alt text](screenshots/Tasks%2018%20screenshot.png)
 
 #### Screenshot 19 — `incident-summary.md` showing all required sections and your Full Name
 
