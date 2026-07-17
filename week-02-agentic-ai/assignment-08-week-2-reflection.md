@@ -48,7 +48,7 @@ You can publish your blog on:
 
 Add your screenshot here.
 
---- ![alt text](Medium.png)
+--- ![alt text](screenshots/Medium.png)
 
 ### Submission Field
 
@@ -98,7 +98,7 @@ Your post must include:
 
 Add your screenshot here.
 
---- ![alt text](Linkedin.png)
+--- ![alt text](screenshots/Linkedin.png)
 
 ### Submission Field
 
