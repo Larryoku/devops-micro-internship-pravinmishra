@@ -482,11 +482,8 @@ Verify: The second execution of the triage script validates the return to a heal
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-06-ai-assisted-linux-health-check.md
 `_______________https://www.linkedin.com/posts/silas-nyarko_dmi-cohort-4-live-micro-internship-waiting-share-7483869993701482496-V_TA/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U___________`
-=======
 `Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-06-ai-assisted-linux-health-check.md
 
 ---
 
@@ -500,12 +497,9 @@ Add your screenshot here.
 
 Paste the URL of your GitHub folder or repository containing the assignment files here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-06-ai-assisted-linux-health-check.md
 `____________https://github.com/Larryoku/devops-micro-internship-pravinmishra.git
 ______________`
-=======
 `Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-06-ai-assisted-linux-health-check.md
 
 ---
 
