@@ -20,7 +20,7 @@ privacy.html
 terms.html
 ```
 
-![project folder](./images/ss67.png)
+![project folder](../../week-03-linux-and-bash-for-devops/screenshots/ss67.png)
 
 If a `CLAUDE.md` file already exists, delete it before starting this assignment.
 
@@ -33,24 +33,24 @@ If a `CLAUDE.md` file already exists, delete it before starting this assignment.
 
 1. Open your portfolio project in VS Code.
 
-![project](./images/ss46.png)
+![project](../../week-03-linux-and-bash-for-devops/screenshots/ss46.png)
 
 2. Verify that there is **no `CLAUDE.md`** file.
 
-![project](./images/ss67.png)
+![project](../../week-03-linux-and-bash-for-devops/screenshots/ss67.png)
 
 3. Open the git bash terminal.
 
-![terminal](./images/ss68.png)
+![terminal](../../week-03-linux-and-bash-for-devops/screenshots/ss68.png)
 
-![terminal](./images/ss69.png)
+![terminal](../../week-03-linux-and-bash-for-devops/screenshots/ss69.png)
 
 4. Check the status
 
 ```bash
 git status
 ```
-![project folder](./images/ss73.png)
+![project folder](../../week-03-linux-and-bash-for-devops/screenshots/ss73.png)
 
 5. Confirm the directory, Stage the changes and commit them
 
@@ -60,7 +60,7 @@ git add .
 git commit -m "Deleted claude related files"
 ```
 
-![project folder](./images/ss74.png)
+![project folder](../../week-03-linux-and-bash-for-devops/screenshots/ss74.png)
 
 ### Step 1 — Start claue code in your terminal
 
@@ -70,11 +70,11 @@ git commit -m "Deleted claude related files"
 claude
 ```
 
-![claude](./images/ss70.png)
+![claude](../../week-03-linux-and-bash-for-devops/screenshots/ss70.png)
 
 Output:
 
-![claude](./images/ss71.png)
+![claude](../../week-03-linux-and-bash-for-devops/screenshots/ss71.png)
 
 2. Ask Claude the following question:
 
@@ -84,15 +84,15 @@ Copy and paste this prompt, press `Enter`
 What is this project and how should I deploy it?
 ```
 
-![prompt](./images/ss72.png)
+![prompt](../../week-03-linux-and-bash-for-devops/screenshots/ss72.png)
 
 3. Claude gives a generic response because it only sees the HTML and CSS files. 
 
-![response](./images/ss75.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss75.png)
 
-![response](./images/ss76.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss76.png)
 
-![response](./images/ss77.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss77.png)
 
 ---
 
@@ -104,43 +104,43 @@ What is this project and how should I deploy it?
 /init
 ```
 
-![init](./images/ss78.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss78.png)
 
 2. Select `Project CLAUDE.md` and press `Enter` (It may display another sugession for you to confirm)
 
-![init](./images/ss79.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss79.png)
 
 3. If prompted to this, select this option and press `Enter`
 
-![init](./images/ss80.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss80.png)
 
 4. Provide approval
 
-![init](./images/ss81.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss81.png)
 
 5. If prompted to this, select this option and press `Enter`
 
-![init](./images/ss82.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss82.png)
 
-![init](./images/ss83.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss83.png)
 
 Use arrow keys and navigate to `submit` then press `1` to confirm
 
-![init](./images/ss84.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss84.png)
 
 6. Select `yes` and press `Enter`
 
-![init](./images/ss85.png)
+![init](../../week-03-linux-and-bash-for-devops/screenshots/ss85.png)
 
 7. Claude scans the project and generated a `CLAUDE.md` file.
 
 8. Open the generated `CLAUDE.md` in VS Code.
 
-![claudemd](./images/ss86.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss86.png)
 
-![claudemd](./images/ss87.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss87.png)
 
-![claudemd](./images/ss88.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss88.png)
 
 ---
 
@@ -197,9 +197,9 @@ Never put secrets in this file. No API keys, passwords, or AWS credentials.
 
 Save the file.
 
-![claudemd](./images/ss89.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss89.png)
 
-![claudemd](./images/ss94.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss94.png)
 
 ---
 
@@ -207,7 +207,7 @@ Save the file.
 
 1. Close the current Claude Code session. (Right click and kill terminal)
 
-![newsession](./images/ss90.png)
+![newsession](../../week-03-linux-and-bash-for-devops/screenshots/ss90.png)
 
 2. Open a **new Claude Code session**.
 
@@ -215,11 +215,11 @@ Save the file.
 claude
 ```
 
-![newsession](./images/ss91.png)
+![newsession](../../week-03-linux-and-bash-for-devops/screenshots/ss91.png)
 
-![newsession](./images/ss92.png)
+![newsession](../../week-03-linux-and-bash-for-devops/screenshots/ss92.png)
 
-![newsession](./images/ss93.png)
+![newsession](../../week-03-linux-and-bash-for-devops/screenshots/ss93.png)
 
 ---
 
@@ -231,11 +231,11 @@ claude
 What is this project and how should I deploy it?
 ```
 
-![prompt](./images/ss95.png)
+![prompt](../../week-03-linux-and-bash-for-devops/screenshots/ss95.png)
 
 Claude now provides a much more specific answer because it has read your `CLAUDE.md`.
 
-![prompt](./images/ss96.png)
+![prompt](../../week-03-linux-and-bash-for-devops/screenshots/ss96.png)
 
 It should mention:
 
@@ -254,14 +254,14 @@ It should mention:
 Add a React component to the homepage.
 ```
 
-![react](./images/ss97.png)
+![react](../../week-03-linux-and-bash-for-devops/screenshots/ss97.png)
 
 Claude should refuse or warn against adding React because your project conventions explicitly state:
 
 - No JavaScript
 - No framework
 
-![response](./images/ss98.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss98.png)
 
 ---
 
@@ -293,17 +293,17 @@ git push origin main
 
 > If your default branch is `master`, replace `main` with `master`.
 
-![push](./images/ss99.png)
+![push](../../week-03-linux-and-bash-for-devops/screenshots/ss99.png)
 
-![push](./images/ss100.png)
+![push](../../week-03-linux-and-bash-for-devops/screenshots/ss100.png)
 
 5. Open your GitHub repository and verify that `CLAUDE.md` appears in the repository.
 
-![github](./images/ss101.png)
+![github](../../week-03-linux-and-bash-for-devops/screenshots/ss101.png)
 
-![github](./images/ss102.png)
+![github](../../week-03-linux-and-bash-for-devops/screenshots/ss102.png)
 
-![github](./images/ss103.png)
+![github](../../week-03-linux-and-bash-for-devops/screenshots/ss103.png)
 
 ---
 
@@ -314,41 +314,41 @@ git push origin main
 ### Screenshot 1 — Claude’s generic response before CLAUDE.md exists (project contains only `index.html`, `style.css`, `images/`, `README.MD`, `privacy.html`, `terms.html`)
 
 
-![response](./images/ss75.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss75.png)
 
-![response](./images/ss76.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss76.png)
 
-![response](./images/ss77.png)
+![response](../../week-03-linux-and-bash-for-devops/screenshots/ss77.png)
 
 ---
 
 ### Screenshot 2 — The auto-generated CLAUDE.md open in VS Code showing its content
 
-![claudemd](./images/ss86.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss86.png)
 
-![claudemd](./images/ss87.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss87.png)
 
-![claudemd](./images/ss88.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss88.png)
 ---
 
 ### Screenshot 3 — Customized CLAUDE.md showing all five sections
 
-![claudemd](./images/ss89.png)
+![claudemd](../../week-03-linux-and-bash-for-devops/screenshots/ss89.png)
 
 ---
 
 ### Screenshot 4 — Claude's specific, detailed answer after reading CLAUDE.md (Claude mentioning S3, CloudFront and Terraform)
 
-![ss4](./images/ss96.png)
+![ss4](../../week-03-linux-and-bash-for-devops/screenshots/ss96.png)
 
 ---
 
 ### Screenshot 5 — Screenshot 5 — Claude refusing or warning against adding React because of the "No JavaScript" convention defined in CLAUDE.md
 
-![ss5](./images/ss98.png)
+![ss5](../../week-03-linux-and-bash-for-devops/screenshots/ss98.png)
 
 ---
 
 ### Screenshot 6 — `CLAUDE.md` visible in your GitHub repository after pushing the commit
 
-![ss6](./images/ss102.png)
+![ss6](../../week-03-linux-and-bash-for-devops/screenshots/ss102.png)
