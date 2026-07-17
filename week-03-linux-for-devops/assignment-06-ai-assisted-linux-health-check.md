@@ -490,7 +490,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
---- ![alt text](<Screenshot 2026-07-17 130840.png>)
+![Screenshot](screenshots/Tasks1.png)(<Screenshot 2026-07-17 130840.png>)
 
 # GitHub Repository URL
 

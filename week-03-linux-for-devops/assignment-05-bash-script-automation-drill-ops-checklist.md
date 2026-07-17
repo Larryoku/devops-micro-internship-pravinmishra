@@ -22,13 +22,13 @@ Verify that Bash is available on your system and create a clean workspace for th
 
 Add your screenshot here.
 
---- ![alt text](Tasks1.png)
+![Screenshot](screenshots/Tasks1.png)(Tasks1.png)
 
 #### Screenshot 2 — Output of `pwd` and `ls -lah` showing the scripts directory
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2-3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2-3.png>)
 
 ### Notes
 
@@ -64,19 +64,19 @@ Create your first Bash script, make it executable, and run it from the terminal.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2 1-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2 1-1.png>)
 
 #### Screenshot 2 — Output of `./first-script.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2 2-1.png>)
 
 #### Screenshot 3 — Output of `ls -l first-script.sh` showing executable permission
 
 Add your screenshot here.
 
----![alt text](<Tasks 2 3-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2 3-1.png>)
 
 ### Notes
 
@@ -112,13 +112,13 @@ Use variables to store and display user-related information.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3 1-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3 1-1.png>)
 
 #### Screenshot 2 — Output of `./user-info.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3 2-1.png>)
 
 ### Notes
 
@@ -154,13 +154,13 @@ Use arrays and loops to print a checklist of tools used in Bash scripting.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 1-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4 1-1.png>)
 
 #### Screenshot 2 — Output of `./tools-checklist.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4 2-1.png>)
 
 ### Notes
 
@@ -202,13 +202,13 @@ Use loops to repeat a task multiple times.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5 1-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 5 1-1.png>)
 
 #### Screenshot 2 — Output of `./counter.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 5 2-1.png>)
 
 ### Notes
 
@@ -250,19 +250,19 @@ Use file checks and conditionals to verify whether files and directories exist.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 6 1-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6 1-1.png>)
 
 #### Screenshot 2 — Content of `file-check.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 6 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6 2-1.png>)
 
 #### Screenshot 3 — Output of `./file-check.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 6 3-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6 3-1.png>)
 
 ### Notes
 
@@ -304,25 +304,25 @@ Use if-else conditionals to make decisions based on a variable value.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7 1-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7 1-1.png>)
 
 #### Screenshot 2 — Output showing `Result: Pass`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7 2-1.png>)
 
 #### Screenshot 3 — Content of `score-check.sh` with `score=55`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7 3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7 3.png>)
 
 #### Screenshot 4 — Output showing `Result: Retry`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7 4.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7 4.png>)
 
 ### Notes
 
@@ -364,19 +364,19 @@ Create a final Bash script using functions to organize reusable code.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 8 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 8 1.png>)
 
 #### Screenshot 2 — Output of `./final-automation.sh`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 8 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 8 2.png>)
 
 #### Screenshot 3 — Output of `ls -lah` showing all created scripts
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 8 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 8 2-1.png>)
 
 ### Notes
 
@@ -428,7 +428,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
---- ![alt text](Linkedin-1.png)
+![Screenshot](screenshots/Tasks1.png)(Linkedin-1.png)
 
 # Submission Instructions
 

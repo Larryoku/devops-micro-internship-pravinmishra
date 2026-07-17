@@ -22,7 +22,7 @@ Verify the Ubuntu VM and Nginx are ready for deployment.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 01.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 01.png>)
 
 # Task 1 — Get the Website Source Code
 
@@ -36,7 +36,7 @@ Download and extract the portfolio website template.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 1-4.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 1-4.png>)
 
 # Task 2 — Add Ownership Proof (Anti-Copy Change)
 
@@ -50,7 +50,7 @@ Update the website footer with your deployment details.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2-2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2-2.png>)
 
 # Task 3 — Deploy Website via Nginx
 
@@ -64,13 +64,13 @@ Deploy the portfolio website to the Nginx web root.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3-2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3-2.png>)
 
 #### Screenshot 4 — Output of `ls /var/www/html` showing deployed website files
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4-2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4-2.png>)
 
 # Task 4 — Verify Website is Live
 
@@ -84,13 +84,13 @@ Verify the deployed website is publicly accessible and the footer contains your 
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 5-1.png>)
 
 #### Screenshot 6 — Browser showing the live website with your Full Name and deployment details in the footer
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 6-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6-1.png>)
 
 # Task 5 — Mini Real DevOps Operational Check
 
@@ -104,13 +104,13 @@ Verify the deployed website and Nginx service are healthy.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7-1.png>)
 
 #### Screenshot 8 — Output of `curl -I http://localhost` showing 200 OK
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 8-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 8-1.png>)
 
 # LinkedIn Post (Mandatory)
 
@@ -128,7 +128,7 @@ Paste your LinkedIn post URL here:
 
 Add your screenshot here.
 
---- ![alt text](Link.png)
+![Screenshot](screenshots/Tasks1.png)(Link.png)
 
 # Submission Instructions
 

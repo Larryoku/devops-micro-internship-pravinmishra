@@ -22,25 +22,25 @@ Verify that the deployed React application is reachable from the browser and con
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 1-3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 1-3.png>)
 
 #### Screenshot 2 — Output of `ip a`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2-1.png>)
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3-1.png>)
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4-1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4-1.png>)
 
 ### Notes
 
@@ -76,18 +76,18 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2 1.png>)
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 2 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2 2.png>)
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'
 Add your screenshot here.
 
---- ![alt text](<Tasks 2 3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 2 3.png>)
 
 ### Notes
 
@@ -117,19 +117,19 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3 1.png>)
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3 2.png>)
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 3 3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 3 3.png>)
 
 ### Notes
 
@@ -168,25 +168,25 @@ Assess server capacity and detect potential performance or failure risks.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4 1.png>)
 
 #### Screenshot 2 — Output of `free -h`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4 2.png>)
 
 #### Screenshot 3 — Output of `df -h`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4 3.png>)
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 4 4.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 4 4.png>)
 
 ### Notes
 
@@ -216,19 +216,19 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 5 1.png>)
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 5 2.png>)
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 5 3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 5 3.png>)
 
 ### Notes
 
@@ -251,19 +251,19 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
 Add your screenshot here.
---- ![alt text](<Tasks 6 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6 1.png>)
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 6 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6 2.png>)
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
 Add your screenshot here.
 
----![alt text](<Tasks 6 3.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 6 3.png>)
 
 ### Notes
 
@@ -313,13 +313,13 @@ Simulate missing deployment content and recover the application safely.
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7 1.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7 1.png>)
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
 Add your screenshot here.
 
---- ![alt text](<Tasks 7 2.png>)
+![Screenshot](screenshots/Tasks1.png)(<Tasks 7 2.png>)
 
 ### Notes
 
