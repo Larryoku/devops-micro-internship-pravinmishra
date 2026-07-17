@@ -298,7 +298,7 @@ Create a controlled service failure, gather evidence through Bash, and let Claud
 
 Add your screenshot here.
 
-![alt text](Tasks 13 screenshot.png)
+![alt text](screenshots/Tasks%2013%20Screenshot.png)
 
 #### Screenshot 14 — `/linux-triage` output showing failed evidence, most likely cause, and a suggested recovery command
 
@@ -310,7 +310,7 @@ Add your screenshot here.
 
 Add your screenshot here.
 
-![alt text](Tasks 15 screenshot.png)
+![alt text](screenshots/Tasks%2015%20Screenshot.png)
 
 ### Notes
 
@@ -364,13 +364,13 @@ Add your screenshot here.
 
 Add your screenshot here.
 
-![alt text](Tasks 17 screenshot.png)
+![alt text](screenshots/Tasks%2017%20Screenshot.png)
 
 #### Screenshot 18 — Output of `ls -lah reports` showing both `incident-failure-report.txt` and `recovery-report.txt`
 
 Add your screenshot here.
 
-![alt text](Tasks 18 screenshot.png)
+![alt text](screenshots/Tasks%2018%20Screenshot.png)
 
 #### Screenshot 19 — `incident-summary.md` showing all required sections and your Full Name
 
