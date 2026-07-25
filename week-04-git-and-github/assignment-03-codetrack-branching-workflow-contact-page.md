@@ -22,7 +22,7 @@ Start from a clean default branch (`main` or `master`) and confirm the repositor
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 1.png>)
 
 # Task 2 — Create and Switch to a Feature Branch
 
@@ -36,7 +36,7 @@ Create a branch named exactly `feature/contact-page` and switch to it.
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 2.png>)
 
 # Task 3 — Add contact.html on the Feature Branch
 
@@ -50,19 +50,19 @@ Create `contact.html` with the provided content and commit it alone using the me
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 3.png>)
 
 #### Screenshot 4 — Output of `git commit`
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 4.png>)
 
 #### Screenshot 5 — Output of `git log --oneline -3` showing the new commit
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 5.png>)
 
 # Task 4 — Add the Contact Link to index.html
 
@@ -76,19 +76,19 @@ Add the provided Contact Page link to `index.html` and commit it separately usin
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 6.png>)
 
 #### Screenshot 7 — Output of `git commit`
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 7.png>)
 
 #### Screenshot 8 — Browser showing the Contact Page link on the homepage while on `feature/contact-page`
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 8.png>)
 
 # Task 5 — Verify Isolation (Prove the Default Branch Is Unchanged)
 
@@ -102,13 +102,13 @@ Switch back to the default branch and confirm that `contact.html` and the Contac
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 9.png>)
 
 #### Screenshot 10 — Browser showing the homepage on the default branch with no Contact Page link
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 10.png>)
 
 # Task 6 — Merge the Feature Branch into the Default Branch
 
@@ -122,19 +122,19 @@ Merge `feature/contact-page` into your default branch and confirm the Contact pa
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 11.png>)
 
 #### Screenshot 12 — Output of `ls` showing `contact.html` after the merge
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 12.png>)
 
 #### Screenshot 13 — Browser showing the Contact page opened from the homepage link on the default branch
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 13.png>)
 
 # Task 7 — Inspect History (Graph View)
 
@@ -148,7 +148,7 @@ Display the repository history as a graph and locate both feature commits.
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 14.png>)
 
 # Task 8 — Optional Cleanup (Delete the Feature Branch)
 
@@ -162,7 +162,7 @@ Delete the merged `feature/contact-page` branch to keep your branch list clean.
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 03 Screenshot 15.png>)
 
 # Submission Instructions
 
@@ -175,15 +175,15 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Repository confirmed clean on the default branch (Screenshot 1)
-- [ ] `feature/contact-page` created and checked out (Screenshot 2)
-- [ ] `contact.html` added in its own commit (Screenshots 3–5)
-- [ ] Homepage Contact link added in a separate commit (Screenshots 6–8)
-- [ ] Default branch proven unchanged before merge (Screenshots 9–10)
-- [ ] Feature branch merged and Contact page verified (Screenshots 11–13)
-- [ ] Graph history reviewed (Screenshot 14)
-- [ ] Optional cleanup completed (Screenshot 15)
-- [ ] No sensitive data exposed
+- [X] Repository confirmed clean on the default branch (Screenshot 1)
+- [X] `feature/contact-page` created and checked out (Screenshot 2)
+- [X] `contact.html` added in its own commit (Screenshots 3–5)
+- [X] Homepage Contact link added in a separate commit (Screenshots 6–8)
+- [X] Default branch proven unchanged before merge (Screenshots 9–10)
+- [X] Feature branch merged and Contact page verified (Screenshots 11–13)
+- [X] Graph history reviewed (Screenshot 14)
+- [X] Optional cleanup completed (Screenshot 15)
+- [X] No sensitive data exposed
 
 ---
 
