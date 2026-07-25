@@ -22,13 +22,13 @@ Confirm that you have a working GitHub account and can access your GitHub dashbo
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 04 Screenshot 1.png>)
 
 #### Screenshot 2 (Optional but Recommended) — Your GitHub profile with `https://github.com/<username>` visible in the browser address bar
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 04 Screenshot 2.png>)
 
 # Task 2 — Explore GitHub Like a Professional
 
@@ -42,19 +42,19 @@ Browse Trending, search for a public project, star at least one repository, and 
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 04 Screenshot 3.png>)
 
 #### Screenshot 4 — A repository page showing the Star button in the Starred state
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 04 Screenshot 4.png>)
 
 #### Screenshot 5 — Your forked repository page with your username and repository name visible in the URL
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 04 Screenshot 5.png>)
 
 # Task 3 — Update Your GitHub Profile (Professional Setup)
 
@@ -68,7 +68,7 @@ Add a professional bio to your GitHub profile — and optionally your location, 
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ass 04 Screenshot 6.png>)
 
 # Submission Instructions
 
@@ -84,17 +84,17 @@ Paste your GitHub profile URL here:
 
 `Add your URL here`
 
----
+---https://github.com/Larryoku
 
 # Completion Checklist
 
-- [ ] GitHub account created or existing account confirmed (Screenshot 1)
-- [ ] Trending repositories explored (Screenshot 3)
-- [ ] At least one repository starred (Screenshot 4)
-- [ ] At least one public repository forked (Screenshot 5)
-- [ ] Professional bio added to your GitHub profile (Screenshot 6)
-- [ ] GitHub profile URL included
-- [ ] No passwords, codes, or authentication secrets exposed
+- [X] GitHub account created or existing account confirmed (Screenshot 1)
+- [X] Trending repositories explored (Screenshot 3)
+- [X] At least one repository starred (Screenshot 4)
+- [X] At least one public repository forked (Screenshot 5)
+- [X] Professional bio added to your GitHub profile (Screenshot 6)
+- [X] GitHub profile URL included
+- [X] No passwords, codes, or authentication secrets exposed
 
 ---
 

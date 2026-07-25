@@ -22,13 +22,13 @@ Create a `CodeTrack` project folder and initialize it as a Git repository.
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Code track 1.png>)
 
 #### Screenshot 2 — Output of `ls -a` showing the `.git` folder
 
 Add your screenshot here.
 
----
+---![alt text](<screenshots/Ls -a.png>)
 
 ### Notes
 
@@ -36,7 +36,7 @@ Add your screenshot here.
 
 Add your answer here.
 
----
+--- The .git folder is a hidden directory that acts as the "brain" or database of your Git repository. It tracks and stores every change made to your files, commit histories, branches, staging areas (index), and configuration settings. Without the .git folder, your project directory is just a standard folder with no version control capability. Deleting this folder completely erases the project's Git history and configuration.
 
 # Task 2 — Configure Git Identity Locally (Repository-Only)
 
@@ -50,7 +50,7 @@ Set your Git username and email for the `CodeTrack` repository only, using `git 
 
 Add your screenshot here.
 
----
+--- ![alt text](<screenshots/Config local list.png>)
 
 # Task 3 — Configure Git Identity Globally
 
@@ -64,7 +64,7 @@ Set a global Git username and email for this machine using `git config --global`
 
 Add your screenshot here.
 
----
+--- ![alt text](<screenshots/Global conig list.png>)
 
 # Submission Instructions
 
@@ -76,11 +76,11 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] `CodeTrack` folder created and initialized as a Git repository (Screenshots 1–2)
-- [ ] Explanation of the `.git` folder written in your own words
-- [ ] Local `user.name` and `user.email` configured and verified (Screenshot 3)
-- [ ] Global `user.name` and `user.email` configured and verified (Screenshot 4)
-- [ ] No sensitive data exposed
+- [X] `CodeTrack` folder created and initialized as a Git repository (Screenshots 1–2)
+- [X] Explanation of the `.git` folder written in your own words
+- [X] Local `user.name` and `user.email` configured and verified (Screenshot 3)
+- [X] Global `user.name` and `user.email` configured and verified (Screenshot 4)
+- [X] No sensitive data exposed
 
 ---
 
