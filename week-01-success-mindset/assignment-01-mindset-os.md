@@ -157,11 +157,7 @@ Looking back, the most significant change was not learning a single technology. 
 
 Paste your link here:
 
-<<<<<<< HEAD:week-01-success-mindset/README.md
-_https://www.linkedin.com/posts/silas-nyarko_join-the-dmi-devops-micro-internship-share-7477816980260048896-_VN1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-01-success-mindset/assignment-01-mindset-os.md
+https://www.linkedin.com/posts/silas-nyarko_join-the-dmi-devops-micro-internship-share-7477816980260048896-_VN1/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
 
 ---
 
@@ -408,14 +404,12 @@ Every weekday at 7:00 PM, I will spend two uninterrupted hours learning, practic
 
 Paste your LinkedIn post link here: https://www.linkedin.com/posts/silas-nyarko_join-the-dmi-devops-micro-internship-share-7477831861067472896-X7mt/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
 
-`Add your URL here`
-
 ---
 
 ## 10. Proof of Work
 
 - LinkedIn Post URL: **https://www.linkedin.com/posts/silas-nyarko_join-the-dmi-devops-micro-internship-share-7477831861067472896-X7mt/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U**  
-- Blog / Medium : **ADD LINK HERE**  
+- Blog / Medium : **Not yet published (Blog link to be added)**  
 
 ---
 
