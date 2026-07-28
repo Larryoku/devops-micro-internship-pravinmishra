@@ -90,21 +90,13 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-03-skills.md
-`______________https://github.com/larryoku/devops-micro-internship-pravinmishra____________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-03-skills.md
+https://github.com/larryoku/devops-micro-internship-pravinmishra
 
 ## LinkedIn post URL
 
-Paste your forked repository URL here:
+Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-03-skills.md
-`__________https://www.linkedin.com/posts/silas-nyarko_devops-agenticai-cloudcomputing-activity-7480750040848711680-fiyA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U________________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-03-skills.md
+https://www.linkedin.com/posts/silas-nyarko_devops-agenticai-cloudcomputing-activity-7480750040848711680-fiyA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
 ---
 
 # Completion Checklist

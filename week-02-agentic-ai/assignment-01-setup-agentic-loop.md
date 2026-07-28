@@ -77,11 +77,7 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-01-setup-agentic-loop.md
-`_____________________https://github.com/Larryoku/Ultimate-Agentic-DevOps-with-Claude-Code_____`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-01-setup-agentic-loop.md
+https://github.com/Larryoku/Ultimate-Agentic-DevOps-with-Claude-Code
 
 ---
 

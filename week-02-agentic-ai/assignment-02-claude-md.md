@@ -98,11 +98,7 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-02-claude-md.md
-`__________________https://github.com/Larryoku/devops-micro-internship-pravinmishra________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-02-claude-md.md
+https://github.com/Larryoku/devops-micro-internship-pravinmishra
 
 ---
 

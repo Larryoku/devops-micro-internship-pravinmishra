@@ -110,11 +110,7 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-04-subagents.md
-`_____________https://github.com/Larryoku/devops-micro-internship-pravinmishra_____________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-04-subagents.md
+https://github.com/Larryoku/devops-micro-internship-pravinmishra
 
 ---
 

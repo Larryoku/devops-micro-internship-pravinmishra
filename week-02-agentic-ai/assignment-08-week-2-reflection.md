@@ -54,11 +54,7 @@ Add your screenshot here.
 
 Blog Link:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-08-Week-2-reflection.md
-`______________https://medium.com/@nyarkosilas222/reflection-week-2-7d9c71ad20aa____________________________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-08-week-2-reflection.md
+https://medium.com/@nyarkosilas222/reflection-week-2-7d9c71ad20aa
 
 ---
 
@@ -132,11 +128,7 @@ Greg Odi
 
 ### LinkedIn Post Link:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-08-Week-2-reflection.md
-`______________https://www.linkedin.com/posts/silas-nyarko_dmibypravinmishra-agenticai-claudecode-activity-7481402499652972546-prQ_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U____________________________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-08-week-2-reflection.md
+https://www.linkedin.com/posts/silas-nyarko_dmibypravinmishra-agenticai-claudecode-activity-7481402499652972546-prQ_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
 
 ---
 

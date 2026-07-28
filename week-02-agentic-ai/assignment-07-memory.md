@@ -91,7 +91,7 @@ Add your screenshot here.
 
 Paste your Linkedin post link here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/silas-nyarko_week-2-agentic-ai-learning-journey-devops_devops-agenticai-claudecode-activity-7480750040848711680
 
 ---
 
@@ -99,12 +99,7 @@ Paste your Linkedin post link here:
 
 Paste your forked repository URL here:
 
-<<<<<<< HEAD:week-02-agentic-ai/solution-assignment-07-memory.md
-`__________________https://github.com/Larryoku/devops-micro-internship-pravinmishra
-________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-02-agentic-ai/assignment-07-memory.md
+https://github.com/Larryoku/devops-micro-internship-pravinmishra
 
 ---
 
