@@ -20,23 +20,17 @@ Create a `CodeTrack` project folder and initialize it as a Git repository.
 
 #### Screenshot 1 — Output of `git init` inside `CodeTrack` showing "Initialized empty Git repository"
 
-Add your screenshot here.
-
----![alt text](<screenshots/Code track 1.png>)
+![alt text](<screenshots/Code track 1.png>)
 
 #### Screenshot 2 — Output of `ls -a` showing the `.git` folder
 
-Add your screenshot here.
-
----![alt text](<screenshots/Ls -a.png>)
+![alt text](<screenshots/Ls -a.png>)
 
 ### Notes
 
 **1. What is the `.git` folder, and why does it matter?**
 
-Add your answer here.
-
---- The .git folder is a hidden directory that acts as the "brain" or database of your Git repository. It tracks and stores every change made to your files, commit histories, branches, staging areas (index), and configuration settings. Without the .git folder, your project directory is just a standard folder with no version control capability. Deleting this folder completely erases the project's Git history and configuration.
+The .git folder is a hidden directory that acts as the "brain" or database of your Git repository. It tracks and stores every change made to your files, commit histories, branches, staging areas (index), and configuration settings. Without the .git folder, your project directory is just a standard folder with no version control capability. Deleting this folder completely erases the project's Git history and configuration.
 
 # Task 2 — Configure Git Identity Locally (Repository-Only)
 
@@ -48,9 +42,7 @@ Set your Git username and email for the `CodeTrack` repository only, using `git 
 
 #### Screenshot 3 — Output of `git config --local --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
-
---- ![alt text](<screenshots/Config local list.png>)
+![alt text](<screenshots/Config local list.png>)
 
 # Task 3 — Configure Git Identity Globally
 
@@ -62,9 +54,7 @@ Set a global Git username and email for this machine using `git config --global`
 
 #### Screenshot 4 — Output of `git config --global --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
-
---- ![alt text](<screenshots/Global conig list.png>)
+![alt text](<screenshots/Global conig list.png>)
 
 # Submission Instructions
 
