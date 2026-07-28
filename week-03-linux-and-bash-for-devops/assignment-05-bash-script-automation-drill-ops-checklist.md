@@ -420,11 +420,7 @@ Add your answer here.
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-05-bash-script-automation-drill-ops-checklist.md
-`_________________https://www.linkedin.com/posts/silas-nyarko_milestone-unlocked-leveling-up-my-bash-share-7483843351029608448-nryQ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U_________`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-05-bash-script-automation-drill-ops-checklist.md
+https://www.linkedin.com/posts/silas-nyarko_milestone-unlocked-leveling-up-my-bash-share-7483843351029608448-nryQ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
 
 ---
 

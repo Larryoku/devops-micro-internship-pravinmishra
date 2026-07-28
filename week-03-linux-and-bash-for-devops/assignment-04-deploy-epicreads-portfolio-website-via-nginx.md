@@ -120,11 +120,7 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD:week-03-linux-for-devops/assignment-04-deploy-epicreads-portfolio-website-via-nginx.md
-`____________________https://www.linkedin.com/posts/silas-nyarko_portfolio-deployed-devops-micro-internship-share-7483795158090702848-0OJt/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U______`
-=======
-`Add your URL here`
->>>>>>> upstream/main:week-03-linux-and-bash-for-devops/assignment-04-deploy-epicreads-portfolio-website-via-nginx.md
+https://www.linkedin.com/posts/silas-nyarko_portfolio-deployed-devops-micro-internship-share-7483795158090702848-0OJt/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U
 
 ---
 
