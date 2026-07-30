@@ -90,13 +90,13 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1: Jira Software Cloud account created or existing account accessed (Screenshot 1)
-- [ ] Task 2: Email verification completed, or a Google sign-in note included (Screenshot 2 or Notes)
-- [ ] Task 3: Professional profile updated with full name, role/title, and bio (Screenshot 3)
-- [ ] Task 4: Projects page and a Board or Backlog explored (Screenshots 4 & 5)
-- [ ] No Jira issues created
-- [ ] Full Name visible in required screenshots
-- [ ] No sensitive data exposed
+- [X] Task 1: Jira Software Cloud account created or existing account accessed (Screenshot 1)
+- [X] Task 2: Email verification completed, or a Google sign-in note included (Screenshot 2 or Notes)
+- [X] Task 3: Professional profile updated with full name, role/title, and bio (Screenshot 3)
+- [X] Task 4: Projects page and a Board or Backlog explored (Screenshots 4 & 5)
+- [X] No Jira issues created
+- [X] Full Name visible in required screenshots
+- [X] No sensitive data exposed
 
 ---
 
