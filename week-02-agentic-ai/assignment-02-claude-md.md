@@ -20,9 +20,7 @@ Capture Claude’s response before `CLAUDE.md` exists in the project to establis
 
 #### Screenshot 1 — Claude’s generic response before CLAUDE.md exists (project contains only `index.html`, `style.css`, `images/`, `README.MD`, `privacy.html`, `terms.html`)
 
-Add your screenshot here.
-
---- ![alt text](<Task 1.png>)
+![Task 1 screenshot](<Task 1.png>)
 
 # Task 2 — Generate the First Draft with /init
 
@@ -34,9 +32,7 @@ Generate an initial `CLAUDE.md` file using the `/init` command and review the au
 
 #### Screenshot 2 — The auto-generated CLAUDE.md open in VS Code showing its content
 
-Add your screenshot here.
-
---- ![alt text](<task 2.png>)
+![Task 2 screenshot](<task 2.png>)
 
 # Task 3 — Customize the CLAUDE.md
 
@@ -48,9 +44,7 @@ Update the generated `CLAUDE.md` file by adding project-specific instructions ac
 
 #### Screenshot 3 — Your customized CLAUDE.md in VS Code showing all 5 sections (scroll to show the full file)
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 3.png>)
+![Tasks 3 screenshot](<Tasks 3.png>)
 
 # Task 4 — Test the After State
 
@@ -62,15 +56,11 @@ Verify that Claude’s behavior changes after adding `CLAUDE.md` by running a ne
 
 #### Screenshot 4 — Claude's specific, detailed answer after reading CLAUDE.md (Claude mentioning S3, CloudFront and Terraform)
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 4.png>)
+![Tasks 4 screenshot](<Tasks 4.png>)
 
 #### Screenshot 5 — Claude refusing or warning against adding React because of the "No JavaScript" convention defined in CLAUDE.md
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 5-1.png>)
+![Tasks 5-1 screenshot](<Tasks 5-1.png>)
 
 # Task 5 — Commit and push your changes to your fork in GitHub
 
@@ -82,9 +72,7 @@ Commit the `CLAUDE.md` file and push it to your GitHub fork so the project instr
 
 #### Screenshot 6 — `CLAUDE.md` visible in your GitHub repository after pushing the commit
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 6.png>)
+![Tasks 6 screenshot](<Tasks 6.png>)
 
 # Submission Instructions
 
