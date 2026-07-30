@@ -158,6 +158,71 @@ This is not a course. It is an internship-style program — real deployments, re
 
 ---
 
+## Footer & Dynamic Deployment Date
+
+### Overview
+The portfolio website includes a footer that displays the version and current deployment date. The footer is implemented using:
+- **HTML**: Footer markup with placeholder for dynamic date
+- **TypeScript** (`footer.ts`): Source logic for date formatting and initialization
+- **JavaScript** (`footer.js`): Compiled JavaScript executed in the browser
+
+### Footer Structure
+The footer appears at the bottom of the page with the text format:
+
+### Dynamic Deployment Date Implementation
+
+#### How It Works
+1. **Date Formatting Function** (`formatDeploymentDate()`):
+   - Retrieves the current date at runtime
+   - Formats it as "DD Mon YYYY" (e.g., "30 Jul 2026")
+   - Uses `String.padStart()` to ensure 2-digit day format
+   - Uses `toLocaleString()` to get 3-letter month abbreviation
+
+2. **Footer Initialization** (`initializeFooter()`):
+   - Waits for DOM to be fully loaded via `DOMContentLoaded` event
+   - Locates the `#deploy-date` element in the HTML
+   - Updates the element with the formatted current date
+
+3. **Browser Execution**:
+   - `footer.js` is loaded at the end of the HTML body
+   - The script runs when the page loads
+   - Date is generated dynamically—always reflects the current date when page is viewed
+
+#### Files Involved
+- `index.html`: Footer HTML structure with `<span id="deploy-date">`
+- `footer.ts`: TypeScript source code (main logic)
+- `footer.js`: Compiled JavaScript (what the browser executes)
+- `style.css`: Footer styling (dark background, centered, white text)
+
+### Testing & Verification
+
+#### Local Testing
+1. Open `index.html` in a web browser (or use VS Code Live Server)
+2. Scroll to the bottom of the page
+3. Verify the footer displays the current date in "DD Mon YYYY" format
+4. Refresh the page multiple times—the date should always reflect today's date
+
+#### Browser Developer Tools
+```javascript
+// Open DevTools Console (F12) and run:
+document.getElementById('deploy-date').textContent
+// Should output: "30 Jul 2026" (or current date)
+```
+
+### TypeScript Compilation
+If modifying `footer.ts`:
+```bash
+# Compile TypeScript to JavaScript
+tsc footer.ts --target es6 --lib es2015,dom
+
+# Or watch for changes:
+tsc footer.ts --target es6 --lib es2015,dom --watch
+```
+
+This generates `footer.js` from the TypeScript source.
+
+---
+
 ## Connect
 
 If you found this repo useful or want to follow my DevOps journey:
