@@ -20,27 +20,19 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 1-3.png>)
+![React application in browser screenshot](<screenshots/react-app-running.png>)
 
 #### Screenshot 2 — Output of `ip a`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 2-1.png>)
+![IP address configuration screenshot](<screenshots/ip-configuration.png>)
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 3-1.png>)
+![Network socket status screenshot](<screenshots/network-sockets.png>)
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 4-1.png>)
+![Firewall status screenshot](<screenshots/firewall-status.png>)
 
 ### Notes
 
@@ -74,20 +66,15 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 2 1.png>)
+![Nginx service status screenshot](<screenshots/nginx-service-status.png>)
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 2 2.png>)
+![Nginx configuration test screenshot](<screenshots/nginx-test.png>)
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'
-Add your screenshot here.
 
-![Screenshot](screenshots/Tasks1.png)(<Tasks 2 3.png>)
+![Port 80 listening screenshot](<screenshots/port-80-listening.png>)
 
 ### Notes
 
@@ -115,21 +102,15 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 3 1.png>)
+![Nginx access log screenshot](<screenshots/nginx-access-log.png>)
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 3 2.png>)
+![Nginx error log screenshot](<screenshots/nginx-error-log.png>)
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 3 3.png>)
+![Systemd journal screenshot](<screenshots/systemd-journal.png>)
 
 ### Notes
 
@@ -166,27 +147,19 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 4 1.png>)
+![System uptime screenshot](<screenshots/uptime.png>)
 
 #### Screenshot 2 — Output of `free -h`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 4 2.png>)
+![Free memory screenshot](<screenshots/free-memory.png>)
 
 #### Screenshot 3 — Output of `df -h`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 4 3.png>)
+![Disk space screenshot](<screenshots/disk-space.png>)
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 4 4.png>)
+![Directory size analysis screenshot](<screenshots/dir-size-analysis.png>)
 
 ### Notes
 
@@ -214,21 +187,15 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 5 1.png>)
+![HTML directory listing screenshot](<screenshots/html-dir-listing.png>)
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 5 2.png>)
+![Grep deployment verification screenshot](<screenshots/grep-deployment.png>)
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 5 3.png>)
+![Nginx try_files configuration screenshot](<screenshots/nginx-try-files.png>)
 
 ### Notes
 
@@ -250,20 +217,15 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
-Add your screenshot here.
-![Screenshot](screenshots/Tasks1.png)(<Tasks 6 1.png>)
+![Nginx syntax error screenshot](<screenshots/nginx-syntax-error.png>)
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 6 2.png>)
+![Nginx syntax fixed screenshot](<screenshots/nginx-syntax-fixed.png>)
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 6 3.png>)
+![Curl recovery confirmation screenshot](<screenshots/curl-recovery.png>)
 
 ### Notes
 
@@ -311,15 +273,11 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 7 1.png>)
+![Curl failure response screenshot](<screenshots/curl-failure.png>)
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
-
-![Screenshot](screenshots/Tasks1.png)(<Tasks 7 2.png>)
+![Curl success recovery screenshot](<screenshots/curl-success.png>)
 
 ### Notes
 
@@ -397,9 +355,7 @@ https://www.linkedin.com/posts/silas-nyarko_dmi-cohort-4-live-micro-internship-w
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
-
---- ![alt text](<Screenshot 2026-07-17 150353.png>)
+![LinkedIn post screenshot](<screenshots/linkedin-post.png>)
 
 # Submission Instructions
 
