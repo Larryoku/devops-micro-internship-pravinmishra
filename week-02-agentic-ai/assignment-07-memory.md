@@ -20,9 +20,7 @@ Discover exactly where Claude Code stores memory for this project.
 
 #### Screenshot 1 — Memory file path shown by Claude
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 1-4.png>)
+![Tasks 1-4 screenshot](<Tasks 1-4.png>)
 
 # Task 2 — Give Claude Information to Remember
 
@@ -34,15 +32,11 @@ Teach Claude three specific facts about the project and instruct it to save them
 
 #### Screenshot 2 — Claude confirming the memory was saved
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 2-4.png>)
+![Tasks 2-4 screenshot](<Tasks 2-4.png>)
 
 #### Screenshot 3 — The `MEMORY.md` file open in VS Code showing the saved content
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 3-6.png>)
+![Tasks 3-6 screenshot](<Tasks 3-6.png>)
 
 # Task 3 — Close the Session Completely
 
@@ -54,9 +48,7 @@ Terminate the current Claude Code session and restart it to ensure memory is the
 
 #### Screenshot 4 — VS Code reopened with a fresh Claude Code session showing no previous conversation
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 4-5.png>)
+![Tasks 4-5 screenshot](<Tasks 4-5.png>)
 
 # Task 4 — Prove Memory Recall Across Sessions
 
@@ -68,15 +60,11 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 #### Screenshot 5 — Claude recalling hero section colors
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 5-6.png>)
+![Tasks 5-6 screenshot](<Tasks 5-6.png>)
 
 #### Screenshot 6 — Claude refusing JavaScript request based on memory rule
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 6-4.png>)
+![Tasks 6-4 screenshot](<Tasks 6-4.png>)
 
 # Submission Instructions
 

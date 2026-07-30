@@ -46,9 +46,7 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-Add your screenshot here.
-
---- ![alt text](screenshots/Medium.png)
+![Blog screenshot](screenshots/Medium.png)
 
 ### Submission Field
 
@@ -92,19 +90,13 @@ Your post must include:
 
 #### Screenshot 2 — LinkedIn post published
 
-Add your screenshot here.
-
---- ![alt text](screenshots/Linkedin.png)
+![LinkedIn screenshot](screenshots/Linkedin.png)
 
 ### Submission Field
 
 LinkedIn Post Content (copy-paste here):
 
-```
-Paste your LinkedIn post content here
-```
-
---- Week 2 of the DevOps Micro Internship with Agentic AI has been a valuable learning experience.
+Week 2 of the DevOps Micro Internship with Agentic AI has been a valuable learning experience.
 
 This week, I explored Claude Code and learned how AI can become part of a real development workflow instead of simply answering questions. I also gained a better understanding of concepts such as Memory and Permissions, and how they help AI work more effectively while maintaining good security practices.
 

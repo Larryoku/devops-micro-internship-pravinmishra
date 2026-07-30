@@ -20,9 +20,7 @@ Create the `.claude/agents/` directory and add all required agent files.
 
 #### Screenshot 1 — VS Code sidebar showing `.claude/agents/` with all 3 files
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 1-1.png>)
+![Tasks 1-1 screenshot](<Tasks 1-1.png>)
 
 # Task 2 — Compare the Agent Configurations
 
@@ -34,35 +32,25 @@ Analyze the configuration differences between the three agents and demonstrate u
 
 #### 1. Why does the cost optimizer use Haiku instead of Sonnet?
 
-Add your answer here...
-
---- Cost optimization tasks typically involve parsing large volumes of text, metrics, and cloud pricing data to find anomalies or matching patterns. Claude 3.5 Haiku is highly efficient, incredibly fast, and significantly more cost-effective than Sonnet. Since analyzing infrastructure costs doesn't require deep architectural reasoning or complex code generation, using Haiku minimizes the operational token spend of the AI team without sacrificing accuracy.
+Cost optimization tasks typically involve parsing large volumes of text, metrics, and cloud pricing data to find anomalies or matching patterns. Claude 3.5 Haiku is highly efficient, incredibly fast, and significantly more cost-effective than Sonnet. Since analyzing infrastructure costs doesn't require deep architectural reasoning or complex code generation, using Haiku minimizes the operational token spend of the AI team without sacrificing accuracy.
 
 #### 2. Why does the security auditor NOT have Write in its tools list?
 
-Add your answer here...
-
---- The principle of least privilege and blast-radius containment. A security auditor's job is purely observational—it needs to read your Terraform configuration files (Read permissions) to flag vulnerabilities, open ports, or unencrypted resources. Giving it Write permissions would allow it to modify your infrastructure code autonomously, which risks introducing accidental misconfigurations or unauthorized changes without a human-in-the-loop review.
+The principle of least privilege and blast-radius containment. A security auditor's job is purely observational—it needs to read your Terraform configuration files (Read permissions) to flag vulnerabilities, open ports, or unencrypted resources. Giving it Write permissions would allow it to modify your infrastructure code autonomously, which risks introducing accidental misconfigurations or unauthorized changes without a human-in-the-loop review.
 
 #### 3. Why does the tf-writer use `inherit` instead of a specific model?
 
-Add your answer here...
-
---- Using inherit allows the subagent to dynamically leverage whatever parent model the user is currently running in their main Claude Code session (typically Claude 3.5 Sonnet). Writing Terraform code requires high-level reasoning, complex logic handling, and syntax precision. Inheriting the parent model ensures that if the main session upgrades or shifts context, the tf-writer automatically utilizes that same premium reasoning capacity without needing a hardcoded configuration update.
+Using inherit allows the subagent to dynamically leverage whatever parent model the user is currently running in their main Claude Code session (typically Claude 3.5 Sonnet). Writing Terraform code requires high-level reasoning, complex logic handling, and syntax precision. Inheriting the parent model ensures that if the main session upgrades or shifts context, the tf-writer automatically utilizes that same premium reasoning capacity without needing a hardcoded configuration update.
 
 ### Evidence
 
 #### Screenshot 2 — `security-auditor.md` frontmatter showing model and tools configuration
 
-Add your screenshot here.
-
---- ![alt text](<tasks 2-1.png>)
+![Tasks 2-1 screenshot](<tasks 2-1.png>)
 
 #### Screenshot 3 — `cost-optimizer.md` frontmatter showing the model and tools configuration
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 3-2.png>)
+![Tasks 3-2 screenshot](<Tasks 3-2.png>)
 
 # Task 3 — Run the Security Auditor
 
@@ -74,15 +62,11 @@ Trigger the security auditor agent and analyze the generated security report for
 
 #### Screenshot 4 — The delegation message showing Claude launched the security-auditor
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 4-2.png>)
+![Tasks 4-2 screenshot](<Tasks 4-2.png>)
 
 #### Screenshot 5 — Security audit report output
 
-Add your screenshot here.
-
---- ![alt text](<tasks 5-3.png>)
+![Tasks 5-3 screenshot](<tasks 5-3.png>)
 
 # Task 4 — Run the Cost Optimizer
 
@@ -94,9 +78,7 @@ Trigger the cost optimizer agent and review the generated cost optimization repo
 
 #### Screenshot 6 — The full cost optimization report
 
-Add your screenshot here.
-
---- ![alt text](<Tasks 6-2.png>)
+![Tasks 6-2 screenshot](<Tasks 6-2.png>)
 
 # Submission Instructions
 
