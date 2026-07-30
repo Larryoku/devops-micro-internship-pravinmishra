@@ -142,7 +142,9 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+**DNS (Domain Name System)** is a distributed directory service that translates human-readable domain names (like epicreads.com) into machine-readable IP addresses (like 52.172.142.222). When a user types epicreads.com in their browser, DNS performs a lookup to find the corresponding IP address, routing them to the correct server.
+
+**A Record** is the appropriate DNS record type for this scenario. An A Record maps a domain name directly to an IPv4 address. Since EpicReads is hosted at 52.172.142.222 (IPv4), creating an A Record with epicreads.com → 52.172.142.222 allows users to access the bookstore using the memorable domain name instead of typing the IP address directly.
 
 ---
 
