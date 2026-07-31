@@ -127,7 +127,7 @@ Create a manually invoked Claude Code skill that reads your staged changes and p
 
 #### Screenshot 6 — `/pr-ready` output while the risky file is still staged, showing it flagged the secret and/or debug statement
 
-![alt text](<screenshots/Ass 05 Screenshot 6.png>)
+![alt text](<screenshots/Ass 06 Screenshot 6.png>)
 
 ### Notes
 
@@ -278,8 +278,6 @@ Limits of Pattern Matching: Rule-based regex checks are essential for fast, dete
 Combining AI Skills & Fixed Rules: Using fixed hooks for rigid security rules alongside AI skills (/pr-ready) creates a defense-in-depth strategy that evaluates both security compliance and holistic PR quality.
 
 Human-in-the-Loop Governance: While AI agents can perform the Gather and Analyze phases of the OODA loop, critical execution steps (Act) like git push and opening PRs require human oversight, credential control, and accountability.
--
--
 
 ---
 
