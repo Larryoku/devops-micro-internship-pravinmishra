@@ -83,7 +83,7 @@ This is not a course. It is an internship-style program — real deployments, re
  [![Week 04 – Git](./badges/week-04.svg)](./week-04-github/) 
 
 <!-- Week 05 → DevOps Lifecycle & Agile -->
-<!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
+ [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
 
 <!-- Week 06 → AWS Cloud -->
 <!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
@@ -135,7 +135,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/silas-nyarko_dmibypravinmishra-agenticai-claudecode-activity-7481402499652972546-prQ_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U | https://medium.com/@nyarkosilas222/week-2-of-devops-micro-internship-9baed88e5ed5 |
 | 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/silas-nyarko_dmi-cohort-4-live-micro-internship-waiting-share-7483869993701482496-V_TA/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U | [Bash Scripting](https://medium.com/@nyarkosilas222/bash-scripting-439097559ea7) |
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/silas-nyarko_dmi-devops-micro-internship-with-agentic-share-7486877737366929409-7sqN/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U | https://medium.com/@nyarkosilas222/beyond-regex-why-your-devops-pipeline-needs-both-git-hooks-and-agentic-ai-2c0ea0337a3f |
-| 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
+| 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/silas-nyarko_excited-to-share-my-latest-progress-with-share-7488994823899750400-1Ris/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U |https://medium.com/@nyarkosilas222/from-jira-stories-to-ec2-deployment-my-journey-through-mini-sprint-1-1b6ef13ffc43 |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
