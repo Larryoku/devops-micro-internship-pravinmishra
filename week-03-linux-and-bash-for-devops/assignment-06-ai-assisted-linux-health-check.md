@@ -146,9 +146,7 @@ Add your screenshot here.
 
 #### Screenshot 7 — Bottom section showing the loop, summary function, and exit behavior
 
-Add your screenshot here.
-
-![alt text](screenshots/Tasks%207.png)
+![Triage script loop and summary section](./screenshots/triage-loop-summary.png)
 
 #### Screenshot 8 — Output of `bash -n scripts/linux-triage.sh` (no syntax errors) and `ls -l scripts/linux-triage.sh` showing executable permission
 
@@ -296,9 +294,7 @@ Create a controlled service failure, gather evidence through Bash, and let Claud
 
 ![alt text](screenshots/Tasks%2013%20Screenshot.png)
 
-Add your screenshot here.
-
-![alt text](screenshots/Tasks%2013%20Screenshot.png)
+![Nginx incident simulation screenshot](./screenshots/nginx-incident-simulation.png)
 
 #### Screenshot 14 — `/linux-triage` output showing failed evidence, most likely cause, and a suggested recovery command
 
