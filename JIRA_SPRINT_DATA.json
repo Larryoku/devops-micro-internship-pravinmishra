@@ -1,0 +1,352 @@
+{
+  "report_generated": "2026-08-06",
+  "data_sources": {
+    "jira_url": "https://nyarkosilas222.atlassian.net",
+    "api_version": "3",
+    "agile_api_version": "1.0"
+  },
+  "sprints": [
+    {
+      "sprint_id": 36,
+      "sprint_name": "DMIWSN Sprint 1",
+      "board_id": 34,
+      "board_name": "DMIWSN board",
+      "project_key": "DMIWSN",
+      "project_name": "DevOps Micro-Internship Website – Silas Nyarko",
+      "start_date": "2026-07-30T17:23:12.400Z",
+      "end_date": "2026-08-07T00:00:00.000Z",
+      "duration_days": 7,
+      "days_remaining": 1,
+      "sprint_goal": "Deliver core frontend UI styling fixes and baseline deployment infrastructure updates for the website.",
+      "total_issues": 2,
+      "total_story_points": 3.0,
+      "unestimated_items": 0,
+      "estimated_items": 2,
+      "completed_items": 0,
+      "completion_rate": 0.0,
+      "issues": [
+        {
+          "key": "DMIWSN-3",
+          "summary": "Primary button color refresh",
+          "status": "To Do",
+          "story_points": 2.0,
+          "priority": "Medium",
+          "assignee": "Silas Nyarko",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "MEDIUM"
+        },
+        {
+          "key": "DMIWSN-4",
+          "summary": "Navigation links alignment",
+          "status": "To Do",
+          "story_points": 1.0,
+          "priority": "Medium",
+          "assignee": "Silas Nyarko",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "MEDIUM"
+        }
+      ],
+      "status_breakdown": {
+        "to_do": 2,
+        "in_progress": 0,
+        "done": 0
+      },
+      "velocity": 0.0,
+      "sprint_health": "CRITICAL"
+    },
+    {
+      "sprint_id": 1,
+      "sprint_name": "SCRUM Sprint 1",
+      "board_id": 1,
+      "board_name": "SCRUM board",
+      "project_key": "SCRUM",
+      "project_name": "DMI Cohort 3",
+      "start_date": "2026-07-30T22:18:47.785Z",
+      "end_date": "2026-08-13T22:18:43.000Z",
+      "duration_days": 14,
+      "days_remaining": 8,
+      "sprint_goal": null,
+      "total_issues": 6,
+      "total_story_points": 1.0,
+      "unestimated_items": 5,
+      "estimated_items": 1,
+      "completed_items": 0,
+      "completion_rate": 0.0,
+      "unestimated_rate": 0.833,
+      "issues": [
+        {
+          "key": "SCRUM-1",
+          "summary": "Not extracted",
+          "status": "To Do",
+          "story_points": null,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "HIGH"
+        },
+        {
+          "key": "SCRUM-2",
+          "summary": "Not extracted",
+          "status": "To Do",
+          "story_points": null,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "HIGH"
+        },
+        {
+          "key": "SCRUM-3",
+          "summary": "Not extracted",
+          "status": "To Do",
+          "story_points": null,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "HIGH"
+        },
+        {
+          "key": "SCRUM-6",
+          "summary": "Not extracted",
+          "status": "In Progress",
+          "story_points": 1.0,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "MEDIUM"
+        },
+        {
+          "key": "SCRUM-19",
+          "summary": "Not extracted",
+          "status": "In Progress",
+          "story_points": null,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "CRITICAL"
+        },
+        {
+          "key": "SCRUM-20",
+          "summary": "Not extracted",
+          "status": "To Do",
+          "story_points": null,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "HIGH"
+        }
+      ],
+      "status_breakdown": {
+        "to_do": 4,
+        "in_progress": 2,
+        "done": 0
+      },
+      "velocity": 0.0,
+      "sprint_health": "AT RISK"
+    },
+    {
+      "sprint_id": 70,
+      "sprint_name": "GJSN Sprint 1",
+      "board_id": 67,
+      "board_name": "GJSN board",
+      "project_key": "GJSN",
+      "project_name": "Gotto Job – Silas Nyarko",
+      "start_date": "2026-07-31T15:42:54.977Z",
+      "end_date": "2026-08-14T15:42:47.000Z",
+      "duration_days": 14,
+      "days_remaining": 8,
+      "sprint_goal": "Deliver immediate visual hierarchy and clarity improvements to the main CTA and landing hero section.",
+      "total_issues": 3,
+      "total_story_points": 6.0,
+      "unestimated_items": 0,
+      "estimated_items": 3,
+      "completed_items": 2,
+      "completion_rate": 0.667,
+      "issues": [
+        {
+          "key": "GJSN-2",
+          "summary": "Not extracted",
+          "status": "To Do",
+          "story_points": 1.0,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "LOW"
+        },
+        {
+          "key": "GJSN-5",
+          "summary": "Not extracted",
+          "status": "Done",
+          "story_points": 3.0,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "NONE"
+        },
+        {
+          "key": "GJSN-6",
+          "summary": "Not extracted",
+          "status": "Done",
+          "story_points": 2.0,
+          "priority": "Unknown",
+          "assignee": "Unknown",
+          "blockers": [],
+          "dependencies": [],
+          "risk_level": "NONE"
+        }
+      ],
+      "status_breakdown": {
+        "to_do": 1,
+        "in_progress": 0,
+        "done": 2
+      },
+      "velocity": 0.833,
+      "sprint_health": "ON TRACK"
+    }
+  ],
+  "summary": {
+    "total_active_sprints": 3,
+    "total_issues": 11,
+    "total_story_points": 10.0,
+    "total_unestimated_items": 5,
+    "total_completed_items": 2,
+    "overall_completion_rate": 0.182,
+    "overall_estimated_rate": 0.545,
+    "sprints_on_track": 1,
+    "sprints_at_risk": 1,
+    "sprints_critical": 1,
+    "items_needing_estimation": [
+      "SCRUM-1",
+      "SCRUM-2",
+      "SCRUM-3",
+      "SCRUM-19",
+      "SCRUM-20"
+    ],
+    "items_at_critical_risk": [
+      "DMIWSN-3",
+      "DMIWSN-4",
+      "SCRUM-19"
+    ]
+  },
+  "velocity_analysis": {
+    "dmiwsn_sprint_1": {
+      "sprint_id": 36,
+      "total_points": 3.0,
+      "completed_points": 0.0,
+      "velocity_percentage": 0.0,
+      "burndown_status": "Not started",
+      "completion_likelihood": "Very low (1 day remaining, no progress)"
+    },
+    "scrum_sprint_1": {
+      "sprint_id": 1,
+      "total_points": 1.0,
+      "unestimated_points": "Unknown (5 items)",
+      "completed_points": 0.0,
+      "velocity_percentage": 0.0,
+      "burndown_status": "Cannot assess without estimates",
+      "completion_likelihood": "Unpredictable (83% unestimated)"
+    },
+    "gjsn_sprint_1": {
+      "sprint_id": 70,
+      "total_points": 6.0,
+      "completed_points": 5.0,
+      "velocity_percentage": 83.3,
+      "burndown_status": "On track",
+      "completion_likelihood": "High (1 point remaining, 8 days left)"
+    }
+  },
+  "risk_assessment": {
+    "critical_risk_items": [
+      {
+        "key": "DMIWSN-3",
+        "sprint": "DMIWSN Sprint 1",
+        "risk": "MEDIUM to HIGH",
+        "reason": "No progress with only 1 day remaining in 7-day sprint",
+        "probability_of_miss": 0.95
+      },
+      {
+        "key": "DMIWSN-4",
+        "sprint": "DMIWSN Sprint 1",
+        "risk": "MEDIUM to HIGH",
+        "reason": "No progress with only 1 day remaining in 7-day sprint",
+        "probability_of_miss": 0.95
+      },
+      {
+        "key": "SCRUM-19",
+        "sprint": "SCRUM Sprint 1",
+        "risk": "HIGH",
+        "reason": "In progress without story point estimate, unclear completion timeline",
+        "probability_of_miss": 0.6
+      },
+      {
+        "key": "SCRUM-1",
+        "sprint": "SCRUM Sprint 1",
+        "risk": "HIGH",
+        "reason": "No estimate, unable to assess workload",
+        "probability_of_miss": 0.5
+      },
+      {
+        "key": "SCRUM-2",
+        "sprint": "SCRUM Sprint 1",
+        "risk": "HIGH",
+        "reason": "No estimate, unable to assess workload",
+        "probability_of_miss": 0.5
+      },
+      {
+        "key": "SCRUM-3",
+        "sprint": "SCRUM Sprint 1",
+        "risk": "HIGH",
+        "reason": "No estimate, unable to assess workload",
+        "probability_of_miss": 0.5
+      },
+      {
+        "key": "SCRUM-20",
+        "sprint": "SCRUM Sprint 1",
+        "risk": "HIGH",
+        "reason": "No estimate, unable to assess workload",
+        "probability_of_miss": 0.5
+      },
+      {
+        "key": "GJSN-2",
+        "sprint": "GJSN Sprint 1",
+        "risk": "LOW",
+        "reason": "Only 1 point remaining, 8 days in sprint",
+        "probability_of_miss": 0.1
+      }
+    ]
+  },
+  "estimation_gaps": {
+    "total_unestimated": 5,
+    "sprint_breakdown": {
+      "DMIWSN Sprint 1": {
+        "unestimated_count": 0,
+        "unestimated_percentage": 0.0
+      },
+      "SCRUM Sprint 1": {
+        "unestimated_count": 5,
+        "unestimated_percentage": 0.833,
+        "items": [
+          "SCRUM-1",
+          "SCRUM-2",
+          "SCRUM-3",
+          "SCRUM-19",
+          "SCRUM-20"
+        ]
+      },
+      "GJSN Sprint 1": {
+        "unestimated_count": 0,
+        "unestimated_percentage": 0.0
+      }
+    },
+    "impact": "SCRUM Sprint 1 is 83% unestimated, making capacity planning and completion prediction impossible"
+  }
+}
