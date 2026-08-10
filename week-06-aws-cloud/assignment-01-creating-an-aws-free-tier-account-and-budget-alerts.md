@@ -30,9 +30,7 @@ In the Billing Dashboard, create a monthly Cost Budget with a name, amount, and 
 
 #### Screenshot 1 — AWS Budget setup page showing the budget name, budget amount, and alert thresholds
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 06 01 Screenshot 1.png>)
 
 ### Notes
 
@@ -40,9 +38,7 @@ Answer the following in your own words:
 
 **1. Why is it important to set up budget alerts when using an AWS account?**
 
-Write your answer here.
-
----
+Setting up budget alerts is essential because AWS operates on an automated pay-as-you-go model where resources accrue costs continuously until they are explicitly stopped or deleted. During learning and experimentation, it is easy to accidentally leave cloud resources running—such as unattached EBS volumes, active EC2 instances, or idle NAT Gateways—or exceed Free Tier limits. Budget alerts act as an automated financial safeguard, notifying you immediately via email when actual or forecasted spending hits your designated thresholds so you can intervene before incurring unexpected charges.
 
 # Submission Instructions
 
@@ -53,13 +49,13 @@ Write your answer here.
 
 # Completion Checklist
 
-- [ ] AWS Free Tier account created and Basic Support Plan (Free) selected
-- [ ] Logged in to the AWS Management Console
-- [ ] Monthly Cost Budget created with name, amount, and start month
-- [ ] Budget alert thresholds and notification email configured
-- [ ] Screenshot captured showing budget name, amount, and thresholds (Screenshot 1)
-- [ ] Notes question answered
-- [ ] No sensitive billing or account information exposed
+- [X] AWS Free Tier account created and Basic Support Plan (Free) selected
+- [X] Logged in to the AWS Management Console
+- [X] Monthly Cost Budget created with name, amount, and start month
+- [X] Budget alert thresholds and notification email configured
+- [X] Screenshot captured showing budget name, amount, and thresholds (Screenshot 1)
+- [X] Notes question answered
+- [X] No sensitive billing or account information exposed
 
 ---
 
