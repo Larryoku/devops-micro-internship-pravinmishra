@@ -20,13 +20,13 @@ Create the footer Story (`Add footer with version and deploy date`, 1 point, `fr
 
 #### Screenshot 1 — Sprint 1 created with the Story inside it
 
-Add your screenshot here.
+![Screenshot 1 — Sprint 1 created with Story](./images/assignment-03-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Active Sprint board showing the Sprint Goal
 
-Add your screenshot here.
+![Screenshot 2 — Active Sprint board with Sprint Goal](./images/assignment-03-screenshot-02.png)
 
 ---
 
@@ -40,25 +40,30 @@ Add the required footer text (`Pravin Mishra Portfolio v1.0 — Deployed on <DD 
 
 #### Screenshot 3 — Jira board showing the Day 1 Sub-task in Done
 
-Add your screenshot here.
+![Screenshot 3 — Day 1 Sub-task Done](./images/assignment-03-screenshot-03.png)
 
 ---
 
 #### Screenshot 4 — Successful Git commit output
 
-Add your screenshot here.
+![Screenshot 4 — Git commit output](./images/assignment-03-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — EC2 browser view showing the complete footer text, with the URL visible
 
-Add your screenshot here.
+![Screenshot 5 — EC2 footer deployed](./images/assignment-03-screenshot-05.png)
 
 ---
 
 #### Screenshot 6 — Jira Story comment showing the Day 1 Daily Scrum update
 
-Add your screenshot here.
+![Screenshot 6 — Day 1 Daily Scrum comment](./images/assignment-03-screenshot-06.png)
+
+**Day 1 Daily Scrum Comment:**
+```
+Day 1 — ✅ Implemented static footer with version and date text. Created feature/footer-v1 branch, added footer HTML with required text format: "Pravin Mishra Portfolio v1.0 — Deployed on 15 Aug 2026 — By Silas Nyarko". Committed to Git and deployed to EC2. Footer displays correctly at bottom of page. No blockers.
+```
 
 ---
 
@@ -72,25 +77,30 @@ Update the footer so the deployment date is generated automatically (or updated 
 
 #### Screenshot 7 — Code editor showing the footer and date logic or deployment-time template snippet
 
-Add your screenshot here.
+![Screenshot 7 — Code editor with date logic](./images/assignment-03-screenshot-07.png)
 
 ---
 
 #### Screenshot 8 — EC2 browser view showing the updated footer with the current date
 
-Add your screenshot here.
+![Screenshot 8 — EC2 footer with dynamic date](./images/assignment-03-screenshot-08.png)
 
 ---
 
 #### Screenshot 9 — README snippet documenting the footer and date behavior
 
-Add your screenshot here.
+![Screenshot 9 — README footer documentation](./images/assignment-03-screenshot-09.png)
 
 ---
 
 #### Screenshot 10 — Jira Story comment showing the Day 2 Daily Scrum update
 
-Add your screenshot here.
+![Screenshot 10 — Day 2 Daily Scrum comment](./images/assignment-03-screenshot-10.png)
+
+**Day 2 Daily Scrum Comment:**
+```
+Day 2 — ✅ Made deploy date dynamic using TypeScript. Created footer.ts with formatDeploymentDate() function using Date API and string formatting. Compiled to footer.js. Updated README.md with "Footer & Dynamic Deployment Date" section explaining implementation. Redeployed to EC2 and verified date updates to current date. Documentation complete.
+```
 
 ---
 
@@ -104,19 +114,24 @@ Improve the footer's spacing, contrast, and readability, then validate it at bot
 
 #### Screenshot 11 — Desktop EC2 view showing the polished footer
 
-Add your screenshot here.
+![Screenshot 11 — Polished footer desktop view](./images/assignment-03-screenshot-11.png)
 
 ---
 
 #### Screenshot 12 — Mobile responsive view showing the footer remains readable
 
-Add your screenshot here.
+![Screenshot 12 — Footer mobile responsive view](./images/assignment-03-screenshot-12.png)
 
 ---
 
 #### Screenshot 13 — Jira Story comment showing the Day 3 Daily Scrum update
 
-Add your screenshot here.
+![Screenshot 13 — Day 3 Daily Scrum comment](./images/assignment-03-screenshot-13.png)
+
+**Day 3 Daily Scrum Comment:**
+```
+Day 3 — ✅ Polished footer styling for improved accessibility and UX. Updated style.css: increased padding (20px), improved contrast (dark bg/white text), optimized font size (14px) and line-height. Tested on desktop (1280px) and mobile (375px width) viewports using DevTools. Footer responsive and readable on all screen sizes. CSS validated.
+```
 
 ---
 
@@ -130,7 +145,12 @@ Replace the existing homepage tagline with the required DMI Website call-to-acti
 
 #### Screenshot 14 — EC2 browser view showing "Start your DevOps Journey here" and the clickable "Visit the DMI Website" link
 
-Add your screenshot here.
+![Screenshot 14 — DMI Website CTA deployed](./images/assignment-03-screenshot-14.png)
+
+**Day 4 Daily Scrum Comment:**
+```
+Day 4 — ✅ Updated homepage with DMI Website call-to-action. Replaced hero tagline with "Start your DevOps Journey here" and added clickable link to https://dmi.pravinmishra.com. Updated index.html and style.css for link styling (blue color, hover effect). Committed to feature/footer-v1. Deployed to EC2 and verified link is clickable and functional. CTA live on production.
+```
 
 ---
 
@@ -144,19 +164,35 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 #### Screenshot 15 — Burndown Chart for Sprint 1
 
-Add your screenshot here.
+![Screenshot 15 — Burndown Chart Sprint 1](./images/assignment-03-screenshot-15.png)
 
 ---
 
 #### Screenshot 16 — Jira retrospective comment
 
-Add your screenshot here.
+![Screenshot 16 — Retrospective comment](./images/assignment-03-screenshot-16.png)
+
+**Day 5 Daily Scrum Comment:**
+```
+Day 5 — ✅ Sprint complete. Recorded 2-minute demo video showing footer with dynamic date and DMI CTA link on live EC2 instance. Posted retrospective comment. Reviewed Sprint 1 Burndown Chart showing all 5 sub-tasks completed. All stories moved to Done. Sprint Goal achieved: shipped footer increment with version, dynamic date, and DMI call-to-action.
+```
+
+**Retrospective Comment:**
+```
+**What went well:** Clear sprint goal and well-defined daily sub-tasks made progress tracking straightforward. TypeScript implementation for dynamic dates was well-structured. Responsive design approach ensured footer worked across all viewport sizes without rework.
+
+**What to improve:** Could have tested responsive design earlier (Day 1-2) instead of Day 3. Planning the dynamic date feature on Day 1 would have reduced complexity. Better communication of acceptance criteria upfront would help clarify testing scope.
+
+**DevOps pillar observed:** Transparency — Daily standup comments in Jira provided clear visibility into progress status. Each team member knew exact deployment status, completion percentage, and any blockers at all times.
+
+**Scrum value demonstrated:** Commitment — Delivered all five daily sub-tasks on schedule and shipped the complete footer increment despite design refinements and testing across multiple viewports.
+```
 
 ---
 
 #### Screenshot 17 — Final EC2 browser view showing the complete footer requirement
 
-Add your screenshot here.
+![Screenshot 17 — Final EC2 footer view](./images/assignment-03-screenshot-17.png)
 
 ---
 
@@ -164,7 +200,7 @@ Add your screenshot here.
 
 Paste your unlisted YouTube or accessible Google Drive demo-video link here:
 
-`Add your URL here`
+`https://youtu.be/mYfxX93Kx10`
 
 ---
 
@@ -186,7 +222,7 @@ Paste your LinkedIn post URL here:
 
 #### LinkedIn Screenshot 1 — Published LinkedIn post showing the post content and at least one required link or proof image
 
-Add your screenshot here.
+![LinkedIn Screenshot 1 — Published post](./images/assignment-03-linkedin-screenshot-01.png)
 
 ---
 

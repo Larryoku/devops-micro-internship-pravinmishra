@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-Add your screenshot here.
+![Screenshot 1 — Jira project creation](./images/assignment-04-screenshot-01.png)
 
 ---
 
@@ -28,7 +28,11 @@ Add your screenshot here.
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+**Role Documentation:**
+- **Product Owner:** Prioritized backlog by value: headline clarity refresh (S1) and trust-building elements (S2) addressed first. CTA button visibility (S3) and feature highlights (S6) ranked as high-value, low-effort wins. Deferred dark mode (S8) as nice-to-have.
+- **Scrum Master:** Facilitated 90-minute timebox strict adherence. Ran planning poker estimation discussion; resolved story point debates with data-driven reasoning. Kept team focused on Sprint Goal of "improve UI discoverability and trust." Blocked distractions and documented decisions.
+- **Dev Lead:** Implemented three stories in Sprint 1: improved headline copy with value proposition (S1), added responsive CTA button with hover effects (S3), and created feature highlights grid layout (S6). All code passed HTML/CSS validation and browser testing.
+- **DevOps Lead:** Deployed all Sprint 1 stories to live staging environment. Verified responsive design across desktop, tablet, and mobile viewports. Tested CTA button and links. Documented deployment steps and rollback procedures for each story.
 
 ---
 
@@ -42,7 +46,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-Add your screenshot here.
+![Screenshot 2 — Project created](./images/assignment-04-screenshot-02.png)
 
 ---
 
@@ -56,7 +60,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-Add your screenshot here.
+![Screenshot 3 — Epic panel in backlog](./images/assignment-04-screenshot-03.png)
 
 ---
 
@@ -70,13 +74,13 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-Add your screenshot here.
+![Screenshot 4 — Epic with six Stories](./images/assignment-04-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-Add your screenshot here.
+![Screenshot 5 — Story points and criteria](./images/assignment-04-screenshot-05.png)
 
 ---
 
@@ -90,7 +94,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-Add your screenshot here.
+![Screenshot 6 — Story points visible](./images/assignment-04-screenshot-06.png)
 
 ---
 
@@ -98,7 +102,15 @@ Add your screenshot here.
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+**Planning Poker Reasoning:**
+- **S1 (Headline clarity - 2 pts):** Requires copy rewrite and A/B testing considerations. Design alignment needed with brand guidelines. Moderate complexity; multiple revisions expected during QA.
+- **S2 (Trust badges - 3 pts):** Needs testimonial content sourcing, image assets, and badge styling. Content creation is rate-limiting factor. High design and integration effort. Backend testimonial data not included.
+- **S3 (CTA button - 1 pt):** Simple color, size, and hover state update to existing button. No backend changes. Can be implemented in <30 minutes. Low risk of scope creep. Dependencies: none.
+- **S4 (FAQ section - 2 pts):** Content-heavy but straightforward accordion/collapse layout. Requires FAQ copy creation. HTML/CSS implementation straightforward. Testing: keyboard navigation and mobile interactions.
+- **S5 (Mobile header - 2 pts):** Navigation responsive collapse and touch-friendly spacing require testing across devices (iOS Safari, Android Chrome). CSS media queries needed. Hamburger menu implementation.
+- **S6 (Feature highlights - 1 pt):** Simple grid layout (3 columns → 1 column responsive). Copy + icons only. No backend. Minimal CSS changes. Can ship in one session.
+- **S7 (Form accessibility - 2 pts):** ARIA labels, semantic HTML, keyboard navigation (Tab order), and WCAG contrast verification needed. Multiple test passes required across screen readers and browsers.
+- **S8 (Dark mode - 3 pts):** CSS custom properties, localStorage persistence, theme toggle logic, testing across all pages. Highest complexity. Impacts entire site styling. Deferred to future sprint.
 
 ---
 
@@ -112,13 +124,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-Add your screenshot here.
+![Screenshot 7 — Sprint 1 with Stories](./images/assignment-04-screenshot-07.png)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-Add your screenshot here.
+![Screenshot 8 — Story with Sub-tasks](./images/assignment-04-screenshot-08.png)
 
 ---
 
@@ -132,7 +144,7 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-Add your screenshot here.
+![Screenshot 9 — Burndown Chart](./images/assignment-04-screenshot-09.png)
 
 ---
 
@@ -146,19 +158,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-Add your screenshot here.
+![Screenshot 10 — Story moved to Done](./images/assignment-04-screenshot-10.png)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-Add your screenshot here.
+![Screenshot 11 — Git commit output](./images/assignment-04-screenshot-11.png)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-Add your screenshot here.
+![Screenshot 12 — Live UI change deployed](./images/assignment-04-screenshot-12.png)
 
 ---
 
@@ -172,7 +184,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-Add your screenshot here.
+![Screenshot 13 — Retrospective comment](./images/assignment-04-screenshot-13.png)
 
 ---
 
@@ -194,7 +206,7 @@ Paste your LinkedIn post URL here:
 
 #### Screenshot 14 — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot 14 — LinkedIn post published](./images/assignment-04-screenshot-14.png)
 
 ---
 
