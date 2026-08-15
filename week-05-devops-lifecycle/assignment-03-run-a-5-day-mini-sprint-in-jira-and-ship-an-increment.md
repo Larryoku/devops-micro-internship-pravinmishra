@@ -240,17 +240,17 @@ Paste your LinkedIn post URL here:
 
 # Completion Checklist
 
-- [ ] Task 1: Sprint 1 started with the required Sprint Goal (Screenshots 1 & 2)
-- [ ] Task 2: Day 1 footer implemented, committed, and deployed (Screenshots 3–6)
-- [ ] Task 3: Day 2 deploy date made dynamic and documented (Screenshots 7–10)
-- [ ] Task 4: Day 3 footer polished and validated on desktop and mobile (Screenshots 11–13)
-- [ ] Task 5: Day 4 DMI Website call-to-action deployed and clickable (Screenshot 14)
-- [ ] Task 6: Day 5 demo, retrospective, and Burndown evidence completed (Screenshots 15–17, video URL)
-- [ ] Daily Scrum comments posted for Days 1–5
-- [ ] LinkedIn post published with the GitHub URL, EC2 URL, required delivery details, and proof image
-- [ ] LinkedIn Post URL and LinkedIn Screenshot 1 included
-- [ ] Full Name visible in required screenshots
-- [ ] No sensitive data exposed
+- [x] Task 1: Sprint 1 started with the required Sprint Goal (Screenshots 1 & 2)
+- [X] Task 2: Day 1 footer implemented, committed, and deployed (Screenshots 3–6)
+- [X] Task 3: Day 2 deploy date made dynamic and documented (Screenshots 7–10)
+- [X] Task 4: Day 3 footer polished and validated on desktop and mobile (Screenshots 11–13)
+- [X] Task 5: Day 4 DMI Website call-to-action deployed and clickable (Screenshot 14)
+- [X] Task 6: Day 5 demo, retrospective, and Burndown evidence completed (Screenshots 15–17, video URL)
+- [X] Daily Scrum comments posted for Days 1–5
+- [X] LinkedIn post published with the GitHub URL, EC2 URL, required delivery details, and proof image
+- [X] LinkedIn Post URL and LinkedIn Screenshot 1 included
+- [X] Full Name visible in required screenshots
+- [X] No sensitive data exposed
 
 ---
 
