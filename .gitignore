@@ -1,2 +1,7 @@
 .DS_Store
 CLAUDE.md
+.env
+*.pem
+node_modules/
+package-lock.json
+devops-micro-internship-pravinmishra/

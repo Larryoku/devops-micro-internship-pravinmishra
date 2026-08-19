@@ -8,7 +8,6 @@ Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
 
 In this assignment, you will deploy the Mini Finance static web application directly from an Azure Storage Account by enabling Static Website Hosting. The completed website must be publicly accessible through the Azure Storage primary endpoint URL.
 
----
 
 # Task 1 — Download the Mini Finance Application
 
@@ -18,7 +17,6 @@ Download and extract the Mini Finance static website files (`index.html`, `style
 
 > No screenshot required for this task.
 
----
 
 # Task 2 — Create a Storage Account and Enable Static Website Hosting
 
@@ -28,7 +26,6 @@ Create Resource Group `mini-finance-rg` and a globally unique Storage Account na
 
 > No screenshot required for this task. Completion is verified through Task 4.
 
----
 
 # Task 3 — Upload Your Website Files
 
@@ -38,7 +35,6 @@ Upload all Mini Finance project files to the `$web` container.
 
 > No screenshot required for this task.
 
----
 
 # Task 4 — Test Your Website
 
@@ -50,33 +46,28 @@ Open the primary endpoint URL and confirm the Mini Finance application, styling,
 
 #### Screenshot 1 — Mini Finance website running in the browser
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 07 04 Screenshot 1.png>)
 
 #### Website URL
 
 Paste the Azure Storage static website URL here:
 
-`Add your URL here`
-
----
+https://minifin1787171967.z13.web.core.windows.net/
 
 # Submission Instructions
 
 - Add the required screenshot and URL in your submission
 - Do not expose subscription identifiers or other sensitive account information
 
----
 
 # Completion Checklist
 
-- [ ] Mini Finance project downloaded and extracted
-- [ ] Storage Account created with Static Website Hosting enabled
-- [ ] All website files uploaded to the `$web` container
-- [ ] Website verified through the primary endpoint (Screenshot 1)
-- [ ] Website URL included
-- [ ] No sensitive account information exposed
+- [X] Mini Finance project downloaded and extracted
+- [X] Storage Account created with Static Website Hosting enabled
+- [X] All website files uploaded to the `$web` container
+- [X] Website verified through the primary endpoint (Screenshot 1)
+- [X] Website URL included
+- [X] No sensitive account information exposed
 
 ---
 

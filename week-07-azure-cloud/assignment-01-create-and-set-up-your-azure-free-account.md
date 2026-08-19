@@ -30,39 +30,33 @@ Confirm successful Azure Portal access and Locate the required services and subs
 
 #### Screenshot 1 — Azure Portal homepage after successful login
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 07 01 Screenshot 1.png>)
 
 #### Screenshot 2 — "Subscriptions" section showing the "Free Trial" subscription
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 07 01 Screenshot 2.png>)
 
 ### Notes
 
 Write a three-to-four-line paragraph explaining which Azure services you plan to explore first and why.
 
-Write your answer here.
-
----
+For my initial hands-on learning in Azure, I plan to explore Resource Groups, Azure Virtual Machines (VMs), and Azure Storage Accounts first. Resource Groups will help me establish proper organizational hygiene by logical grouping, while deploying a basic Linux Virtual Machine allows me to practice SSH access, network security groups, and automated deployment scripts essential for DevOps workflows. Finally, exploring Storage Accounts will help me understand Blob storage management, access keys, and object hosting, which are fundamental building blocks for cloud native application pipelines.
 
 # Submission Instructions
 
 - Add all required screenshots in your submission
 - Do not expose payment-card details, phone numbers, or other sensitive account information
 
----
+
 
 # Completion Checklist
 
-- [ ] Azure Free Account created with identity, phone, and payment verification completed
-- [ ] Microsoft Agreement and Offer Terms accepted
-- [ ] Azure Portal accessed successfully (Screenshot 1)
-- [ ] Free Trial subscription confirmed (Screenshot 2)
-- [ ] Reflection paragraph written (Notes)
-- [ ] No sensitive information exposed
+- [X] Azure Free Account created with identity, phone, and payment verification completed
+- [X] Microsoft Agreement and Offer Terms accepted
+- [X] Azure Portal accessed successfully (Screenshot 1)
+- [X] Free Trial subscription confirmed (Screenshot 2)
+- [X] Reflection paragraph written (Notes)
+- [X] No sensitive information exposed
 
 ---
 

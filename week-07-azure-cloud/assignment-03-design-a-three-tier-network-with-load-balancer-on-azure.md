@@ -2,13 +2,11 @@
 
 Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
 
----
 
 ## Purpose
 
 In this assignment, you will design and deploy a three-tier network architecture on Azure using a Virtual Network, subnets, a Virtual Machine, NGINX, and a Public Load Balancer. The web, application, and database tiers are separated into dedicated subnets, and a Public Load Balancer provides the application entry point.
 
----
 
 # Task 1 — Create a Virtual Network with Three Subnets
 
@@ -20,9 +18,7 @@ Create `eb-demo-vnet` (10.0.0.0/16) with `web-subnet` (10.0.1.0/24), `app-subnet
 
 #### Screenshot 1 — Subnet configuration screen showing the three subnets and Bastion subnet (if enabled)
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 07 03 screenshot 1.png>)
 
 # Task 2 — Deploy the Web VM and Install NGINX
 
@@ -32,7 +28,6 @@ Create Ubuntu 22.04 LTS VM `web-nginx` in `web-subnet` with a public IP and inbo
 
 > No screenshot required for this task. Completion is verified through Task 4.
 
----
 
 # Task 3 — Create a Public Load Balancer
 
@@ -44,9 +39,7 @@ Create Standard Public Load Balancer `web-public-elb` with frontend IP `web-elb-
 
 #### Screenshot 2 — Load Balancer frontend IP configuration
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 07 03 screenshot 2.png>)
 
 # Task 4 — Test the Architecture
 
@@ -58,9 +51,7 @@ Confirm the NGINX default page is reachable through the Load Balancer's public I
 
 #### Screenshot 3 — Browser showing the NGINX welcome page through the Load Balancer Public IP
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 07 03 screenshot 3.png>)
 
 # Task 5 — Clean Up Resources
 
@@ -68,9 +59,6 @@ Add your screenshot here.
 
 After capturing all required evidence, delete the `vnet-demo-rg` Resource Group to avoid ongoing charges.
 
-> No screenshot required for this task.
-
----
 
 # Submission Instructions
 
@@ -78,16 +66,14 @@ After capturing all required evidence, delete the `vnet-demo-rg` Resource Group 
 - Capture all evidence before deleting the Resource Group
 - Do not expose passwords or sensitive Azure account information
 
----
-
 # Completion Checklist
 
-- [ ] Task 1: VNet and three subnets created (Screenshot 1)
-- [ ] Task 2: Web VM created and NGINX installed and verified
-- [ ] Task 3: Public Load Balancer configured (Screenshot 2)
-- [ ] Task 4: NGINX reachable through the Load Balancer public IP (Screenshot 3)
-- [ ] Task 5: Resource Group deleted after evidence was captured
-- [ ] No sensitive data exposed
+- [X] Task 1: VNet and three subnets created (Screenshot 1)
+- [X] Task 2: Web VM created and NGINX installed and verified
+- [X] Task 3: Public Load Balancer configured (Screenshot 2)
+- [X] Task 4: NGINX reachable through the Load Balancer public IP (Screenshot 3)
+- [X] Task 5: Resource Group deleted after evidence was captured
+- [X] No sensitive data exposed
 
 ---
 
