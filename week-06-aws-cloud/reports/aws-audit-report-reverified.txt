@@ -1,0 +1,30 @@
+╔════════════════════════════════════════════════════════════════╗
+║              AWS Security & Cost Audit Report                   ║
+╠════════════════════════════════════════════════════════════════╣
+Auditor: Silas Nyarko
+Timestamp: 2026-08-28T11:00:00Z
+╚════════════════════════════════════════════════════════════════╝
+
+[1/5] CHECK: S3 Public Access Block
+Status: PASS
+Finding: S3 public access is blocked
+
+[2/5] CHECK: SSH (22) Open to 0.0.0.0/0
+Status: PASS
+Finding: SSH is not open to the whole internet
+
+[3/5] CHECK: MySQL (3306) Open to 0.0.0.0/0
+Status: PASS
+Finding: MySQL is not open to the whole internet
+
+[4/5] CHECK: RDS Public Accessibility
+Status: PASS
+Finding: RDS is not publicly accessible
+
+[5/5] CHECK: EBS Volume Encryption
+Status: PASS
+Finding: All EBS volumes are encrypted
+
+╔════════════════════════════════════════════════════════════════╗
+Summary: PASS ✓
+╚════════════════════════════════════════════════════════════════╝
