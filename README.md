@@ -74,16 +74,16 @@ This is not a course. It is an internship-style program — real deployments, re
 [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/)
 
 <!-- Week 02 → Agentic AI with Claude Code -->
-<!-- [![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/) -->
+<![![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/)
 
 <!-- Week 03 → Linux & Bash for DevOps -->
-<!-- [![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/) -->
+<[![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)
 
 <!-- Week 04 → Git & GitHub -->
-<!-- [![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/) -->
+<![![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/) 
 
 <!-- Week 05 → DevOps Lifecycle & Agile -->
-<!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
+< [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
 
 <!-- Week 06 → AWS Cloud -->
 <!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
@@ -130,14 +130,14 @@ This is not a course. It is an internship-style program — real deployments, re
 
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
-| 00 | Internet & Networking Basics | ⬜ ✅ Completed  |✅ Solved | — | — |
+| 00 | Internet & Networking Basics |  ✅ Completed  |✅ Solved | — | — |
 | 01 | Success Mindset |✅ Completed | ✅ Solved| — | — |
-| 02 | Agentic AI with Claude Code | ⬜ Not Started | ⏳ Pending | — | — |
-| 03 | Linux & Bash for DevOps | ⬜ Not Started | ⏳ Pending | — | — |
-| 04 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
-| 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/posts/silas-nyarko_devops-agile-jira-share-7494127317221376001-em9P/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U) | [Blog Post](https://medium.com/@nyarkosilas222/week-05-learning-the-devops-lifecycle-through-agile-and-jira-b2852c3820c2) |
+| 02 | Agentic AI with Claude Code |✅ Completed |  ✅ Solved | — | — |
+| 03 | Linux & Bash for DevOps | ✅ Completed |✅ Solved | — | — |
+| 04 | Git & GitHub | ✅ Completed | ✅ Solved | — | — |
+| 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | (https://www.linkedin.com/posts/silas-nyarko_devops-agile-jira-share-7494127317221376001-em9P/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U) | (https://medium.com/@nyarkosilas222/week-05-learning-the-devops-lifecycle-through-agile-and-jira-b2852c3820c2) |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
-| 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 07 | Azure Cloud | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/daVYCN3a) | [Blog Post](https://medium.com/@nyarkosilas222/building-automated-cloud-security-audits-comparing-aws-and-azure-security-controls-199754f23930) |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
