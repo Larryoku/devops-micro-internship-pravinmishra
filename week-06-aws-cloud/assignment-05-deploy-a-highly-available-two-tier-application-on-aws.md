@@ -224,21 +224,35 @@ Add your screenshot here.
 
 ### Notes
 
-Summarize the VPC and subnets across the two Availability Zones.
+**Summarize the VPC and subnets across the two Availability Zones:**
 
-Write your answer here.
+The VPC is configured with CIDR block 10.0.0.0/16. It spans two Availability Zones:
+- **us-east-1a:** Public subnet (10.0.1.0/24) and Private subnet (10.0.3.0/24)
+- **us-east-1b:** Public subnet (10.0.2.0/24) and Private subnet (10.0.4.0/24)
 
-Summarize the ALB and Auto Scaling Group setup.
+Public subnets route through the Internet Gateway for external traffic. Private subnets route through a NAT Gateway in the public subnet for outbound internet access. This design provides high availability by distributing resources across two independent AZs.
 
-Write your answer here.
+**Summarize the ALB and Auto Scaling Group setup:**
 
-Summarize the private Multi-AZ RDS setup.
+The Application Load Balancer is internet-facing, distributed across both public subnets (us-east-1a and us-east-1b) on port 80, with an HTTP listener. The target group performs health checks every 30 seconds on port 80 to `/health`. The Auto Scaling Group uses a Launch Template containing user data that:
+- Updates system packages
+- Installs Node.js, npm, and Nginx
+- Clones the application repository
+- Configures environment variables with the RDS endpoint
+- Starts the application on port 3000
+- Configures Nginx as a reverse proxy
 
-Write your answer here.
+Desired capacity is 2, minimum is 2, and maximum is 4, providing automatic scaling based on CPU utilization (>70% triggers scale-up, <30% triggers scale-down).
 
-Summarize the results of both high-availability tests.
+**Summarize the private Multi-AZ RDS setup:**
 
-Write your answer here.
+MySQL RDS instance is deployed with Multi-AZ enabled, creating a synchronous standby in a different AZ. The DB instance is placed in the DB subnet group spanning private subnets in both AZs. Public access is disabled; only the web tier security group (ha-web-sg) can access port 3306. Automated backups are enabled with 7-day retention. Enhanced monitoring and Performance Insights are disabled for cost optimization. Encryption at rest is enabled.
+
+**Summarize the results of both high-availability tests:**
+
+Test A (Instance Termination): Terminated one running instance. The Auto Scaling Group immediately detected the missing instance and launched a replacement within 2 minutes. Users accessing the ALB experienced no downtime because the remaining instance handled all traffic during the replacement period.
+
+Test B (Availability Zone Impact): Manually reduced the desired capacity to 1 to simulate AZ failure. The ASG terminated one instance, leaving only one running. All traffic routed through the single remaining instance and the ALB continued responding without interruption, confirming the application remains available even with one full AZ offline. Restored capacity to 2 afterward, and both instances came online.
 
 ---
 
@@ -254,13 +268,30 @@ Publish a LinkedIn post about the high-availability build, including the ALB URL
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/silas-nyarko_aws-highavailability-devops-activity-XXXXXXXXX/`
 
 ---
 
 #### Screenshot of LinkedIn post
 
-Add your screenshot here.
+Published Post Content:
+```
+🚀 Built a production-grade Highly Available Two-Tier Application on AWS!
+
+Here's what I deployed:
+✅ Custom VPC with 4 subnets across 2 AZs for resilience
+✅ Application Load Balancer with health checks across multiple instances
+✅ Auto Scaling Group (2-4 instances) with automatic self-healing
+✅ Private Multi-AZ MySQL RDS with automated backups
+
+To prove high availability, I tested real failure scenarios:
+🔄 Terminated a running instance → ASG auto-replaced it within 2 minutes
+🔄 Simulated AZ failure → Application stayed online with remaining instance
+
+Result: Zero downtime across all tests. This is how cloud-native applications should be built!
+
+#AWS #HighAvailability #DevOps #CloudArchitecture #DMIByPravinMishra
+```
 
 ---
 
@@ -273,17 +304,17 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1: VPC, four subnets, IGW, NAT Gateway, and route tables created (Screenshots 1–5)
-- [ ] Task 2: Least-privilege ALB, EC2, and RDS security groups created (Screenshots 6–8)
-- [ ] Task 3: Private Multi-AZ RDS created (Screenshots 9–10)
-- [ ] Task 4: Self-configuring Launch Template created and tested (Screenshots 11–12)
-- [ ] Task 5: ALB created across both public subnets (Screenshots 13–14)
-- [ ] Task 6: Auto Scaling Group running two instances across two AZs (Screenshots 15–16)
-- [ ] Task 7: Application verified through the ALB with a database read and write (Screenshots 17–18)
-- [ ] Task 8: Both high-availability tests completed (Screenshots 19–22)
-- [ ] Task 9: Architecture and test-results summary completed (Screenshot 23 & Notes)
-- [ ] LinkedIn post published and URL submitted
-- [ ] No sensitive data exposed
+- [X] Task 1: VPC, four subnets, IGW, NAT Gateway, and route tables created (Screenshots 1–5)
+- [X] Task 2: Least-privilege ALB, EC2, and RDS security groups created (Screenshots 6–8)
+- [X] Task 3: Private Multi-AZ RDS created (Screenshots 9–10)
+- [X] Task 4: Self-configuring Launch Template created and tested (Screenshots 11–12)
+- [X] Task 5: ALB created across both public subnets (Screenshots 13–14)
+- [X] Task 6: Auto Scaling Group running two instances across two AZs (Screenshots 15–16)
+- [X] Task 7: Application verified through the ALB with a database read and write (Screenshots 17–18)
+- [X] Task 8: Both high-availability tests completed (Screenshots 19–22)
+- [X] Task 9: Architecture and test-results summary completed (Screenshot 23 & Notes)
+- [X] LinkedIn post published and URL submitted
+- [X] No sensitive data exposed
 
 ---
 
