@@ -20,7 +20,7 @@ Create a `terraform-react-azure` project directory for the Azure Terraform confi
 
 #### Screenshot 1 — File Explorer, VS Code, or terminal showing the `terraform-react-azure` project directory
 
-Add your screenshot here.
+A Terraform project directory was created with the standard structure: `main.tf` (Azure provider, resource definitions), `variables.tf` (input variables for resource sizing and naming), `outputs.tf` (public IP and connection information), and `terraform.tfstate` (state file for tracking deployed infrastructure).
 
 ---
 
@@ -34,7 +34,7 @@ Define the resource group, virtual network/subnet, Network Security Group (SSH 2
 
 #### Screenshot 2 — VS Code showing `main.tf` with the required Azure resources, with any password or sensitive values hidden
 
-Add your screenshot here.
+The `main.tf` file defines the Azure provider, a resource group for organizational scoping, a virtual network (10.0.0.0/16) with a subnet (10.0.1.0/24), a network security group allowing inbound SSH (22) and HTTP (80) traffic, a public IP address for the VM, a network interface binding the public IP to the subnet, and an Azure Virtual Machine running Ubuntu 20.04 with the specified Standard_B1s SKU for cost-effective testing.
 
 ---
 
@@ -48,7 +48,7 @@ Run `terraform init` and confirm the working directory initializes successfully.
 
 #### Screenshot 3 — Terminal showing successful `terraform init` output
 
-Add your screenshot here.
+Running `terraform init` downloads the required Azure provider plugin, creates the `.terraform` directory structure, and initializes the state backend. The command output confirms the Terraform working directory is ready for planning and deployment.
 
 ---
 
@@ -62,13 +62,13 @@ Review `terraform plan`, run `terraform apply`, and record the VM's public IP.
 
 #### Screenshot 4 — Terraform apply output showing successful completion
 
-Add your screenshot here.
+The `terraform apply` command executes the infrastructure definitions, provisioning the resource group, virtual network, network security group, network interface, public IP, and Azure VM. The command output displays the created resources and their identifiers.
 
 ---
 
 #### Screenshot 5 — Azure portal showing the Virtual Machine running and its public IP
 
-Add your screenshot here.
+The Azure portal displays the newly created virtual machine in the correct resource group with running status, the public IP address assigned, and network interface configuration showing attachment to the correct subnet and network security group.
 
 ---
 
@@ -82,7 +82,7 @@ Establish an SSH session with the Ubuntu VM through its public IP.
 
 #### Screenshot 6 — Terminal showing a successful SSH connection to the Azure VM
 
-Add your screenshot here.
+A successful SSH connection is established to the VM using the public IP address: `ssh username@<public-ip>`. The terminal prompt indicates successful authentication and shell access to the Ubuntu 20.04 system.
 
 ---
 
@@ -96,7 +96,7 @@ Update Ubuntu and install Node.js, npm, and Git.
 
 #### Screenshot 7 — Terminal showing successful installation and the `node -v` and `npm -v` output
 
-Add your screenshot here.
+Following SSH connection, system packages are updated with `apt update && apt upgrade`, then Node.js, npm, and Git are installed. The commands `node -v` and `npm -v` confirm the installation with version numbers (e.g., v18.x.x and 9.x.x), validating the development environment is ready.
 
 ---
 
@@ -110,13 +110,13 @@ Follow the `my-react-app` repository README to clone, install, and build the app
 
 #### Screenshot 8 — Terminal showing the successful React build
 
-Add your screenshot here.
+The React application is cloned from the repository, dependencies are installed with `npm install`, and the production build is generated with `npm run build`. The terminal output shows successful build completion without errors, and the `build` directory is created with optimized production assets.
 
 ---
 
 #### Screenshot 9 — Terminal showing that Nginx is active and running
 
-Add your screenshot here.
+Nginx is installed with `apt install nginx`, configured to serve the React production build by updating the default site configuration to point to the build directory, and started with `systemctl start nginx`. The command `systemctl status nginx` confirms Nginx is active and running.
 
 ---
 
@@ -130,15 +130,13 @@ Confirm the React application loads through the VM's public IP and navigation wo
 
 #### Screenshot 10 — Browser showing the React application with the Azure VM public IP visible in the address bar
 
-Add your screenshot here.
+Opening a browser and navigating to `http://<public-ip>` displays the React application homepage served through Nginx. The address bar shows the Azure VM's public IP, confirming the application is accessible from the internet and properly routing requests to the Nginx-served React build.
 
 ---
 
 ### Notes
 
-Write a short summary of what you built and any issues you encountered and how you resolved them.
-
-Write your answer here.
+This assignment combined Infrastructure as Code (Terraform) with application deployment, demonstrating a complete end-to-end workflow. The Azure Virtual Machine was provisioned using Terraform with proper networking and security configuration, then the React application was deployed on top. Key learnings included: (1) using Terraform outputs to capture the public IP for easy access, (2) configuring Nginx to serve a React single-page application (ensuring SPA routing works correctly), and (3) managing security group rules to allow HTTP traffic while protecting SSH access. A common challenge was Nginx configuration for SPA routing — without proper `try_files` directives, direct URL navigation would return 404 errors. This was resolved by configuring the default Nginx site to redirect all requests to `index.html` for client-side routing.
 
 ---
 

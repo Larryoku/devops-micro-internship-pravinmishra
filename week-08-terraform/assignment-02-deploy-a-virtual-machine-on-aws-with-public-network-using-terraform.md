@@ -20,9 +20,7 @@ Create a `terraform-aws-vm` project directory for the AWS Terraform configuratio
 
 #### Screenshot 1 — File Explorer, VS Code, or terminal showing the `terraform-aws-vm` project directory
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 02 screenshot 1.png>)
 
 # Task 2 — Create main.tf with the Required AWS Resources
 
@@ -34,9 +32,7 @@ Define the AWS provider, a VPC (10.0.0.0/16) with a public subnet (10.0.1.0/24) 
 
 #### Screenshot 2 (optional) — `main.tf` showing the VPC and EC2 resource blocks
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 02 screenshot 2.png>)
 
 # Task 3 — Initialize Terraform
 
@@ -48,9 +44,7 @@ Run `terraform init` and confirm the working directory initializes successfully.
 
 #### Screenshot 3 — Terminal showing successful `terraform init` output
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 02 screenshot 3.png>)
 
 # Task 4 — Plan and Apply the Configuration
 
@@ -62,16 +56,12 @@ Review `terraform plan`, run `terraform apply`, and record the EC2 instance's pu
 
 #### Screenshot 4 — Terraform apply output showing successful completion
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 02 screenshot 4.png>)
 
 #### Screenshot 5 — Terraform output showing the EC2 public IP
 
-Add your screenshot here.
 
----
-
+![alt text](<screenshots/Ass 08 02 screenshot 5.png>)
 # Task 5 — Verify the Deployment
 
 ## Goal
@@ -82,15 +72,11 @@ Confirm the EC2 instance is running in the public subnet with a public IP, insta
 
 #### Screenshot 6 — EC2 instance running in the AWS Console, with the subnet and public IP visible
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 02 screenshot 6.png>)
 
 #### Screenshot 7 — Browser showing the Nginx page through the EC2 public IP, or terminal showing a successful SSH connection
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 02 screenshot 7.png>)
 
 # Task 6 — Destroy Resources
 
@@ -102,15 +88,10 @@ Run `terraform destroy` to remove the Terraform-managed AWS resources after test
 
 #### Screenshot 8 — Terminal showing successful `terraform destroy` completion
 
-Add your screenshot here.
-
----
-
+![alt text](<screenshots/Ass 08 02 screenshot 8.png>)
 ### Notes
 
-Write a short paragraph about any challenges you faced and how you solved them.
-
-Write your answer here.
+This assignment reinforced AWS networking fundamentals through Infrastructure as Code. Key challenges included: (1) correctly configuring the route table association to ensure traffic from the EC2 instance reaches the Internet Gateway for outbound connectivity, (2) managing security group ingress rules to allow SSH (port 22) and HTTP (port 80) while restricting unwanted access, and (3) ensuring the public IP was properly attached to the EC2 instance. These were resolved by carefully reviewing the AWS security group documentation and verifying the route table associations in the Terraform plan output. The exercise highlighted the importance of explicit routing configuration in VPCs — even with an Internet Gateway present, without a proper route table entry, traffic will not flow as expected. Using Terraform's `-detailed-exitcode` flag in the plan step provided clear feedback on what resources would be created.
 
 ---
 
@@ -124,14 +105,14 @@ Write your answer here.
 
 # Completion Checklist
 
-- [ ] Task 1: `terraform-aws-vm` project created (Screenshot 1)
-- [ ] Task 2: `main.tf` defines VPC, subnets, IGW, Security Group, and EC2 (Screenshot 2, optional)
-- [ ] Task 3: `terraform init` completed successfully (Screenshot 3)
-- [ ] Task 4: Plan reviewed and `terraform apply` completed, public IP recorded (Screenshots 4–5)
-- [ ] Task 5: EC2 instance verified running and accessible (Screenshots 6–7)
-- [ ] Task 6: `terraform destroy` completed successfully (Screenshot 8)
-- [ ] Challenges/solutions paragraph written (Notes)
-- [ ] No sensitive information exposed
+- [X] Task 1: `terraform-aws-vm` project created (Screenshot 1)
+- [X] Task 2: `main.tf` defines VPC, subnets, IGW, Security Group, and EC2 (Screenshot 2, optional)
+- [X] Task 3: `terraform init` completed successfully (Screenshot 3)
+- [X] Task 4: Plan reviewed and `terraform apply` completed, public IP recorded (Screenshots 4–5)
+- [X] Task 5: EC2 instance verified running and accessible (Screenshots 6–7)
+- [X] Task 6: `terraform destroy` completed successfully (Screenshot 8)
+- [X] Challenges/solutions paragraph written (Notes)
+- [X] No sensitive information exposed
 
 ---
 

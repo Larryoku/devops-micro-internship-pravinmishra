@@ -138,7 +138,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 05 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | [LinkedIn Post](https://www.linkedin.com/posts/silas-nyarko_devops-agile-jira-share-7494127317221376001-em9P/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U) | [Blog Post](https://medium.com/@nyarkosilas222/week-05-learning-the-devops-lifecycle-through-agile-and-jira-b2852c3820c2) |
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/dZBrZk7a) | [Blog Post](https://medium.com/@nyarkosilas222/building-automated-cloud-security-audits-comparing-aws-and-azure-security-controls-1ab6d94b9bb0) |
 | 07 | Azure Cloud | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/daVYCN3a) | [Blog Post](https://medium.com/@nyarkosilas222/building-automated-cloud-security-audits-comparing-aws-and-azure-security-controls-199754f23930) |
-| 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
+| 08 | Terraform | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/dQg7YWcN) | [Blog Post](https://medium.com/@nyarkosilas222/building-and-deploying-epicbook-a-3-tier-web-application-on-aws-using-terraform-ed8dc1182f49) |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |

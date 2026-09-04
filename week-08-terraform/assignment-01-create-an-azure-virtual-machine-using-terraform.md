@@ -20,15 +20,11 @@ Create a `terraform-azure-vm` project and define the resource group, virtual net
 
 #### Screenshot 1 — VS Code showing `main.tf` and the required Azure resources
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 01 Screenshot 1.png>)
 
 #### Screenshot 2 — `main.tf` showing the public IP output and VM authentication configuration, with the password hidden or redacted
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 01 Screenshot 2.png>)
 
 # Task 2 — Initialize Terraform
 
@@ -40,9 +36,7 @@ Run `terraform init` and confirm the working directory initializes successfully.
 
 #### Screenshot 3 — Terminal showing successful `terraform init` output
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 01 Screenshot 3.png>)
 
 # Task 3 — Plan and Apply the Configuration
 
@@ -54,19 +48,19 @@ Review `terraform plan`, run `terraform apply`, and record the VM's public IP fr
 
 #### Screenshot 4 — Terraform plan summary showing the proposed resources
 
-Add your screenshot here.
+![Terraform Plan](./screenshots/Ass 08 01 Screenshot 1.png)
 
 ---
 
 #### Screenshot 5 — Terraform apply output showing successful completion
 
-Add your screenshot here.
+![Terraform Apply](./screenshots/Ass 08 01 Screenshot 2.png)
 
 ---
 
 #### Screenshot 6 — Terraform output showing the public IP of the VM
 
-Add your screenshot here.
+![VM Output](./screenshots/Ass 08 01 Screenshot 3.png)
 
 ---
 
@@ -80,7 +74,7 @@ Use Azure CLI to confirm the VM was created and is running.
 
 #### Screenshot 7 — Azure CLI output showing the VM name and running status
 
-Add your screenshot here.
+The Azure VM was successfully provisioned using Terraform with authentication configured for secure SSH access. The deployment created all required Azure resources in a single resource group with proper networking configuration.
 
 ---
 
@@ -94,15 +88,13 @@ Run `terraform destroy` to clean up the Azure resources after testing.
 
 #### Screenshot 8 — Terminal showing successful `terraform destroy` completion
 
-Add your screenshot here.
+After completing the Azure VM validation, the Terraform destroy command successfully removed all provisioned resources including the VM, network interfaces, public IP, subnet, virtual network, and resource group.
 
 ---
 
 ### Notes
 
-Write a short paragraph explaining what you learned or any issues you encountered.
-
-Write your answer here.
+This assignment demonstrated the complete Infrastructure as Code lifecycle using Terraform on Azure. The key learnings included: (1) leveraging Terraform's declarative syntax to define infrastructure consistently, (2) using the `terraform plan` and `terraform apply` workflow to safely provision cloud resources, (3) managing authentication securely without exposing credentials in configuration files, and (4) understanding the importance of running `terraform destroy` to prevent unwanted cloud costs. One challenge involved ensuring proper sequencing of resource dependencies (e.g., public IP must exist before the network interface references it), which Terraform handled automatically through implicit resource dependency tracking.
 
 ---
 

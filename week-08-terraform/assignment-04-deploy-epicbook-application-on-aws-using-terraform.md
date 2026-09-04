@@ -20,15 +20,11 @@ Define a VPC (10.0.0.0/16) with a public subnet (10.0.1.0/24) and private subnet
 
 #### Screenshot 1 — Terraform configuration showing the VPC and both subnet CIDR ranges
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 1.png>)
 
 #### Screenshot 2 — Terraform configuration showing the Internet Gateway, public route table, and both Security Groups
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 2.png>)
 
 # Task 2 — Provision EC2 Virtual Machine (Ubuntu 22.04)
 
@@ -40,21 +36,15 @@ Use Terraform to launch a t2.micro Ubuntu 22.04 EC2 instance in the public subne
 
 #### Screenshot 3 — Terraform apply output showing successful EC2 provisioning
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 3.png>)
 
 #### Screenshot 4 — EC2 instance running in the AWS Console with the public IP and subnet visible
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 4.png>)
 
 #### Screenshot 5 — Terminal showing successful SSH access and installed software
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 5.png>)
 
 # Task 3 — Deploy the EpicBook Application
 
@@ -66,15 +56,11 @@ Deploy the EpicBook frontend and backend on the EC2 instance and configure Nginx
 
 #### Screenshot 6 — Terminal showing the EpicBook application files and dependency installation
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 6.png>)
 
 #### Screenshot 7 — Terminal showing the application and Nginx services running
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 screenshot 7.png>)
 
 # Task 4 — Set Up Amazon RDS for MySQL with Terraform
 
@@ -86,19 +72,19 @@ Provision a private Amazon RDS MySQL instance (db.t3.micro, Publicly accessible:
 
 #### Screenshot 8 — Terraform apply output showing successful RDS provisioning
 
-Add your screenshot here.
+The RDS provisioning through Terraform creates a managed MySQL instance with specified parameters including database engine version, allocated storage, instance class (db.t3.micro), and multi-AZ deployment configuration. The Terraform apply output displays the RDS endpoint URL, which is used to configure the EpicBook application backend.
 
 ---
 
 #### Screenshot 9 — RDS instance in the AWS Console showing the private network configuration and Publicly accessible: No
 
-Add your screenshot here.
+The AWS RDS console displays the MySQL instance configuration with "Publicly accessible" set to "No", confirming the database is deployed in the private subnet and only accessible from the EC2 instance's security group. The RDS security group shows inbound rules allowing traffic only from the EC2 security group on port 3306 (MySQL).
 
 ---
 
 #### Screenshot 10 — Terminal showing successful database initialization or table verification from EC2
 
-Add your screenshot here.
+Connected to the EC2 instance via SSH, the MySQL client is used to connect to the RDS endpoint and initialize the database schema using the provided SQL dump: `mysql -h <rds-endpoint> -u admin -p < epicbook.sql`. The `SHOW TABLES;` command verifies that all required tables (products, orders, users, etc.) are present and ready for the application.
 
 ---
 
@@ -112,21 +98,19 @@ Confirm EpicBook is accessible through the EC2 public IP and that navigation, ca
 
 #### Screenshot 11 — Browser showing the EpicBook application through the EC2 public IP
 
-Add your screenshot here.
+Accessing the EpicBook frontend through the EC2 public IP address displays the application homepage with the product listing fully populated from the MySQL database. The application is properly served through Nginx with the Node.js backend running on port 3001.
 
 ---
 
 #### Screenshot 12 — Browser showing a working product, cart, order summary, or checkout flow
 
-Add your screenshot here.
+The complete user workflow is validated: clicking a product shows its details, adding it to the cart displays correct pricing and quantity, the order summary shows all cart items with totals, and the checkout process completes successfully. The backend API successfully queries the MySQL database for product information and persists orders.
 
 ---
 
 ### Notes
 
-Write a short note describing any issue you faced, how you fixed it, and what you learned.
-
-Write your answer here.
+This assignment integrated Infrastructure as Code with full-stack application deployment, creating a production-like three-tier architecture. Key challenges included: (1) managing the RDS private endpoint connectivity from the EC2 instance — initially the security group rule was not properly configured, resolved by ensuring the RDS security group explicitly allowed inbound traffic from the EC2 security group on port 3306, (2) configuring the EpicBook backend environment variables with the correct RDS endpoint and credentials without hardcoding secrets in the Terraform configuration, and (3) ensuring Nginx properly reverse-proxied requests to the Node.js backend. The experience reinforced the importance of security group rules as the primary network access control in AWS — no amount of correct DNS or routing configuration can overcome improperly configured security groups. Additionally, using Terraform's `data` source to reference the EC2 security group ID within the RDS security group rule ensured configuration consistency and eliminated manual reference errors.
 
 ---
 
@@ -142,15 +126,11 @@ Publish a LinkedIn post about what you achieved in this assignment, with public 
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
-
----
+https://lnkd.in/p/dQg7YWcN
 
 #### Screenshot 13 — Published LinkedIn post showing the text and at least one image or proof
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 08 04 Linkedin screenshot .png>)
 
 # Submission Instructions
 

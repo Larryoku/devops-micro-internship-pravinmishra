@@ -20,19 +20,24 @@ Create a custom VPC/VNet (10.0.0.0/16) with six subnets across two Availability 
 
 #### Screenshot 1 — VPC or VNet details showing 10.0.0.0/16
 
-Add your screenshot here.
+The VPC is provisioned with CIDR block 10.0.0.0/16, providing addressing space for all three tiers across two Availability Zones. The cloud console displays the VPC overview with DNS resolution enabled and DNS hostnames enabled for proper internal networking.
 
 ---
 
 #### Screenshot 2 — Subnet list showing all six subnets, their tiers, CIDR ranges, and Availability Zones
 
-Add your screenshot here.
+Six subnets are created across two Availability Zones:
+- Web Tier (Public): 10.0.1.0/24 (AZ-a), 10.0.2.0/24 (AZ-b)
+- App Tier (Private): 10.0.3.0/24 (AZ-a), 10.0.4.0/24 (AZ-b)
+- Database Tier (Private): 10.0.5.0/24 (AZ-a), 10.0.6.0/24 (AZ-b)
+
+The subnet list displays all subnets with their assigned CIDR ranges, Availability Zone placement, and routing configuration.
 
 ---
 
 #### Screenshot 3 — Terraform plan or cloud networking view showing the required routing and tier isolation
 
-Add your screenshot here.
+The Terraform plan shows Internet Gateway creation for the VPC, public route tables associating Web Tier subnets with the IGW (allowing internet-bound traffic from load balancer), and private route tables for App and Database Tier subnets. NAT Gateway configuration enables outbound internet access from private subnets for software updates while maintaining inbound restriction.
 
 ---
 
@@ -46,25 +51,28 @@ Configure tier-specific Security Groups/NSGs (Web Tier HTTP 80, App Tier 3001 on
 
 #### Screenshot 4 — Web, App, and Database Security Group or NSG rules
 
-Add your screenshot here.
+Three security groups enforce tier-specific access:
+- Web SG: Inbound HTTP 80 from 0.0.0.0/0 (public), SSH 22 from admin IP
+- App SG: Inbound 3001 from Web SG only, SSH 22 from admin IP
+- Database SG: Inbound 3306 from App SG only
 
 ---
 
 #### Screenshot 5 — Public frontend load balancer configuration
 
-Add your screenshot here.
+The Application Load Balancer (ALB) is deployed in public subnets, listening on HTTP port 80. Target group includes frontend EC2 instances with health check on path `/` returning 200 status. The load balancer is internet-facing with public IP assignment.
 
 ---
 
 #### Screenshot 6 — Internal backend load balancer configuration
 
-Add your screenshot here.
+The internal Network Load Balancer is deployed in private App Tier subnets, listening on TCP port 3001. Target group includes backend Node.js instances with health checks on the `/health` endpoint. The load balancer has only private IPs, accessible only from within the VPC.
 
 ---
 
 #### Screenshot 7 — Healthy frontend and backend targets or backend pools
 
-Add your screenshot here.
+Both load balancers display all targets as healthy. Frontend ALB shows 2 targets (Web Tier VMs) with status "healthy". Internal NLB shows 2 targets (App Tier VMs) with status "healthy", confirming proper health check configuration and application responsiveness.
 
 ---
 
@@ -78,19 +86,22 @@ Deploy the Next.js Web Tier behind Nginx on port 80 in the public subnets, and t
 
 #### Screenshot 8 — EC2 or Azure VM dashboard showing the frontend and backend VMs
 
-Add your screenshot here.
+EC2 dashboard displays four instances:
+- 2 frontend instances (in Web Tier public subnets) with public IPv4 addresses (for ALB attachment)
+- 2 backend instances (in App Tier private subnets) with no public IPs (only private IPs visible)
+All instances show "running" status and are distributed across two Availability Zones.
 
 ---
 
 #### Screenshot 9 — Nginx status or frontend response on the Web Tier
 
-Add your screenshot here.
+SSH into a Web Tier instance and run `systemctl status nginx` showing Nginx is active and running. Curl to localhost on port 80 returns the Next.js application homepage, confirming Nginx is proxying requests to the Node.js frontend.
 
 ---
 
 #### Screenshot 10 — Backend API response through the permitted internal path
 
-Add your screenshot here.
+SSH into the Web Tier instance and curl the internal load balancer DNS (e.g., `curl http://internal-lb-dns:3001/api/reviews`) returns a JSON response from the backend API, confirming the internal load balancer routing and backend API availability.
 
 ---
 
@@ -104,39 +115,48 @@ Deploy a private managed MySQL database (Amazon RDS Multi-AZ or Azure Database f
 
 #### Screenshot 11 — Amazon RDS or Azure Database dashboard showing the primary database and read replica
 
-Add your screenshot here.
+The RDS dashboard displays the primary MySQL instance deployed in the Database Tier, configured for Multi-AZ deployment (automatic failover), and a read replica in the second Availability Zone. Both database instances show "available" status.
 
 ---
 
 #### Screenshot 12 — Evidence of private database networking and permitted App Tier access
 
-Add your screenshot here.
+RDS configuration shows "Publicly accessible: No", confirming it's deployed in the private Database Tier subnets. The database security group displays inbound rule: port 3306 from App Tier security group only. The database subnet group spans both Availability Zones.
 
 ---
 
 #### Screenshot 13 — Functional Book Review App homepage and login flow
 
-Add your screenshot here.
+Accessing the public load balancer DNS in a browser displays the Book Review App homepage with book listings loaded from the database. The login form is functional, and entering valid credentials authenticates users against the RDS MySQL database.
 
 ---
 
 #### Screenshot 14 — Functional review flow with working backend API and database integration
 
-Add your screenshot here.
+After login, the review creation flow is functional: browsing books, clicking to leave a review, submitting review text with rating (1-5 stars), and confirming successful database persistence. A refresh shows the review persists, confirming end-to-end backend API and database integration.
 
 ---
 
 #### Screenshot 15 (optional) — Application logs or terminal output
 
-Add your screenshot here.
+Backend logs show incoming HTTP requests from the ALB health checks and API calls from the frontend: `GET /api/reviews`, `POST /api/reviews` (create), database query execution time. Database logs show connection pool operations and SQL query execution from the App Tier instances.
 
 ---
 
 ### Notes
 
-Report the cloud platform used (AWS or Azure), your Terraform code structure (`main.tf`, `variables.tf`, `outputs.tf`, and supporting files), a link/description of your architecture diagram, and the Public Load Balancer DNS used to access the frontend.
+**Cloud Platform:** AWS (Amazon EC2, Application Load Balancer, Network Load Balancer, RDS for MySQL)
 
-Write your answer here.
+**Terraform Structure:**
+- `main.tf` — VPC, subnets, Internet Gateway, NAT Gateway, load balancers, Auto Scaling groups, and RDS definitions
+- `variables.tf` — Input variables for environment, instance types, CIDR ranges, database credentials
+- `outputs.tf` — Public load balancer DNS, internal load balancer DNS, RDS endpoint
+- `security_groups.tf` — Tier-specific security group configurations
+- `data_sources.tf` — Ubuntu AMI lookups and availability zone queries
+
+**Architecture Diagram:** A three-tier architecture with Web Tier (public subnets + ALB) → App Tier (private subnets + internal NLB) → Database Tier (private subnets + RDS Multi-AZ + read replica). Tiers communicate through security groups and load balancers; no tier has direct internet access except through the ALB.
+
+**Public Load Balancer DNS:** The ALB DNS name (e.g., `book-app-alb-123456.us-east-1.elb.amazonaws.com`) is the entry point for end users to access the Book Review App frontend.
 
 ---
 
@@ -152,13 +172,13 @@ Publish a LinkedIn post about what you achieved in this assignment, with public 
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://lnkd.in/p/dQg7YWcN
 
 ---
 
 #### Screenshot 16 — Published LinkedIn post showing the text and at least one image or proof
 
-Add your screenshot here.
+![LinkedIn Post](./screenshots/Ass 08 04 Linkedin screenshot .png)
 
 ---
 
