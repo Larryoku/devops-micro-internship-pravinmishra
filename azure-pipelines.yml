@@ -1,0 +1,12 @@
+trigger:
+  - main
+
+pool:
+  name: 'SelfHostedPool'
+
+steps:
+- script: |
+    uname -a
+    whoami
+    df -h
+  displayName: 'Run Linux Verification Commands'
