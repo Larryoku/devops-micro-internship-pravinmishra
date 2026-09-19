@@ -1,0 +1,109 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+# ----------------------------------------------------
+# Stage 1: Build
+# ----------------------------------------------------
+- stage: Build
+  displayName: 'Build Stage'
+  jobs:
+  - job: BuildJob
+    displayName: 'Install & Build React App'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '18.x'
+      displayName: 'Use Node.js 18.x'
+
+    - script: |
+        npm ci
+        npm run build
+      displayName: 'npm ci and build'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/build'
+        artifact: 'react_build'
+        publishLocation: 'pipeline'
+      displayName: 'Publish react_build Artifact'
+
+# ----------------------------------------------------
+# Stage 2: Test
+# ----------------------------------------------------
+- stage: Test
+  displayName: 'Test Stage'
+  dependsOn: Build
+  jobs:
+  - job: TestJob
+    displayName: 'Run Unit Tests'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '18.x'
+      displayName: 'Use Node.js 18.x'
+
+    - script: |
+        npm ci
+        npm test -- --watchAll=false
+      displayName: 'Run Tests (Non-Interactive)'
+
+# ----------------------------------------------------
+# Stage 3: Publish
+# ----------------------------------------------------
+- stage: Publish
+  displayName: 'Publish Stage'
+  dependsOn: Test
+  jobs:
+  - job: PublishJob
+    displayName: 'Verify Artifact Availability'
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'react_build'
+        targetPath: '$(Pipeline.Workspace)/downloaded_build'
+      displayName: 'Download react_build Artifact'
+
+    - script: |
+        ls -la $(Pipeline.Workspace)/downloaded_build
+      displayName: 'Verify Downloaded Artifact Files'
+
+# ----------------------------------------------------
+# Stage 4: Deploy
+# ----------------------------------------------------
+- stage: Deploy
+  displayName: 'Deploy Stage'
+  dependsOn: Publish
+  jobs:
+  - job: DeployJob
+    displayName: 'Deploy to AWS EC2 via SSH'
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'react_build'
+        targetPath: '$(Pipeline.Workspace)/react_build'
+      displayName: 'Download Artifact for Deployment'
+
+    - task: CopyFilesOverSSH@0
+      inputs:
+        sshEndpoint: 'ubuntu-nginx-ssh'
+        sourceFolder: '$(Pipeline.Workspace)/react_build'
+        contents: '**'
+        targetFolder: '/var/www/html'
+        cleanTargetFolder: true
+        overwrite: true
+      displayName: 'Copy Build Artifact to /var/www/html'
+
+    - task: SSH@0
+      inputs:
+        sshEndpoint: 'ubuntu-nginx-ssh'
+        runOptions: 'inline'
+        inline: 'sudo systemctl restart nginx'
+      displayName: 'Restart Nginx Service'
