@@ -1,0 +1,26 @@
+{
+  "[yaml]": {
+    "editor.defaultFormatter": "adrienverge.vscode-yaml-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": ".venv/Scripts/pylint",
+  "extensions.ignoreRecommendations": false,
+  "files.exclude": {
+    "**/.venv": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "search.exclude": {
+    ".venv": true,
+    "__pycache__": true
+  }
+}

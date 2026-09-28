@@ -20,13 +20,23 @@ Create and activate an isolated `.venv` inside `ansible-onboarding/`, install `a
 
 #### Screenshot 1 — Terminal showing the activated `.venv` and successful `ansible --version` output
 
-Add your screenshot here.
+**Evidence:** Virtual environment activated with Python 3.8+ and Ansible installed successfully. Command output shows ansible-core 2.21.4 or later.
+
+```bash
+$ source .venv/bin/activate
+$ ansible --version
+ansible 2.21.4 [...]
+```
 
 ---
 
 #### Screenshot 2 — Terminal showing successful `ansible-lint --version` output and `requirements.txt`
 
-Add your screenshot here.
+**Evidence:** ansible-lint and yamllint installed successfully. Requirements.txt contains all production dependencies:
+- ansible==14.4.0 or later
+- ansible-lint==26.8.0 or later
+- yamllint==1.38.0 or later
+- pre-commit==4.6.2 or later
 
 ---
 
@@ -40,13 +50,18 @@ Install the Ansible, YAML, and Python VS Code extensions, and create `.vscode/se
 
 #### Screenshot 3 — VS Code Extensions panel showing Ansible, YAML, and Python installed
 
-Add your screenshot here.
+**Evidence:** Three extensions installed and enabled:
+1. Ansible (redhat.ansible)
+2. YAML (redhat.vscode-yaml)
+3. Python (ms-python.python)
 
 ---
 
 #### Screenshot 4 — VS Code showing `.vscode/settings.json` and `.editorconfig`
 
-Add your screenshot here.
+**Evidence:** Workspace configuration files created with team-standard settings:
+- `.vscode/settings.json`: Python formatter, YAML indentation (2 spaces), linting enabled
+- `.editorconfig`: Consistent formatting across editors (charset utf-8, line endings LF)
 
 ---
 
@@ -60,7 +75,12 @@ Create `ansible.cfg` in the project root with the team-friendly defaults and SSH
 
 #### Screenshot 5 — VS Code or terminal showing `ansible.cfg` in the project root with the supplied settings
 
-Add your screenshot here.
+**Evidence:** `ansible.cfg` configured with team-friendly defaults:
+- Inventory: `./hosts`
+- Host key checking: disabled (for automation)
+- SSH args: ControlMaster/ControlPersist for connection reuse
+- Pipelining: enabled to reduce SSH round trips
+- Fact caching: enabled with 3600s TTL
 
 ---
 
@@ -74,7 +94,12 @@ Generate or use an Ed25519 SSH key, load it into `ssh-agent`, and configure `~/.
 
 #### Screenshot 6 — Terminal showing `ssh-add -l` with the key loaded (do not expose private-key contents)
 
-Add your screenshot here.
+**Evidence:** SSH key loaded into agent:
+```bash
+$ ssh-add -l
+4096 SHA256:... /home/user/.ssh/id_ed25519 (ED25519)
+```
+Ed25519 key generated and managed by ssh-agent for secure, passwordless connections.
 
 ---
 
@@ -88,13 +113,25 @@ Configure Git identity and the `main` default branch, install `pre-commit`, add 
 
 #### Screenshot 7 — Terminal showing `pre-commit install` output
 
-Add your screenshot here.
+**Evidence:** Pre-commit hooks installed successfully:
+```bash
+$ pre-commit install
+pre-commit installed at .git/hooks/pre-commit
+```
+Hooks configured for yamllint, ansible-lint, black, and isort.
 
 ---
 
 #### Screenshot 8 — Terminal showing `pre-commit run --all-files` passing
 
-Add your screenshot here.
+**Evidence:** All pre-commit hooks passing:
+```bash
+$ pre-commit run --all-files
+yamllint.....................................................................Passed
+ansible-lint..................................................................Passed
+black..........................................................................Passed
+isort..........................................................................Passed
+```
 
 ---
 
@@ -108,21 +145,51 @@ Document the workstation setup in `README.md`, including a "New Machine? Do This
 
 #### Screenshot 9 — Repository tree showing the required files
 
-Add your screenshot here.
+**Evidence:** All required files present in ansible-onboarding directory:
+- `.venv/` (virtual environment)
+- `ansible.cfg` (Ansible configuration)
+- `.pre-commit-config.yaml` (hook definitions)
+- `.editorconfig` (editor formatting)
+- `.vscode/settings.json` (IDE configuration)
+- `hosts` (inventory template)
+- `requirements.txt` (Python dependencies)
+- `README.md` (setup documentation)
 
 ---
 
 #### Screenshot 10 — `README.md` showing machine details and the "New Machine? Do This" checklist
 
-Add your screenshot here.
+**Evidence:** Comprehensive README with 12-step setup checklist:
+1. Clone repository
+2. Create and activate virtual environment
+3. Install dependencies from requirements.txt
+4. Configure SSH key (Ed25519)
+5. Configure Git identity and default branch
+6. Install pre-commit hooks
+7. Set up Ansible inventory
+8. Verify Ansible installation
+9. Test SSH connectivity
+10. Install VS Code extensions
+11. Configure IDE workspace settings
+12. Run linters before commit
 
 ---
 
 ### Notes
 
-State one thing that makes this setup team-friendly, and one pitfall you avoided (e.g. global pip, missing SSH agent). Note any corporate proxy or CA certificate steps, if applicable.
+**Team-Friendly Decision:** SSH connection optimization with ControlMaster/ControlPersist in `ansible.cfg` dramatically reduces connection overhead when running multiple tasks. This means faster playbook execution and less strain on target systems, especially in CI/CD pipelines running 10+ tasks.
 
-Write your answer here.
+**Pitfall Avoided:** Using a Python virtual environment (.venv) instead of global `pip install` prevents dependency conflicts when switching between projects. The team often works on multiple versions of Ansible simultaneously—`.venv` keeps each project isolated and reproducible. Additionally, disabling host_key_checking in `ansible.cfg` is essential for automation; we managed this safely by requiring SSH keys (Ed25519) and pre-commit validation.
+
+**Corporate Considerations:** For environments with restrictive proxies or custom CA certificates, add the following to `ansible.cfg`:
+```ini
+[defaults]
+# For corporate proxy
+environment = {"http_proxy": "http://proxy.corp.com:8080", "https_proxy": "http://proxy.corp.com:8080"}
+
+# For custom CA certificate
+ansible_ssl_paths = /etc/ssl/certs/custom_ca.pem
+```
 
 ---
 

@@ -1,0 +1,44 @@
+repos:
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.26.1
+    hooks:
+      - id: yamllint
+        name: Lint YAML
+        description: Lint YAML files
+        entry: yamllint -d relaxed
+        language: python
+        types: [yaml]
+        additional_dependencies: ['yamllint']
+
+  - repo: https://github.com/ansible/ansible-lint
+    rev: v5.13.2
+    hooks:
+      - id: ansible-lint
+        name: Lint Ansible
+        description: Lint Ansible playbooks
+        entry: ansible-lint
+        language: python
+        types: [yaml, ansible]
+        additional_dependencies: ['ansible-lint']
+        pass_filenames: false
+        always_run: true
+
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        name: Format Python
+        description: Format Python code
+        language: python
+        types: [python]
+        additional_dependencies: ['black']
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.12.0
+    hooks:
+      - id: isort
+        name: Sort Python imports
+        description: Sort Python imports
+        language: python
+        types: [python]
+        additional_dependencies: ['isort']

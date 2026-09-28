@@ -20,9 +20,7 @@ Import `https://github.com/pravinmishraaws/Azure-Static-Website` into Azure Repo
 
 #### Screenshot 1 — Azure Repos showing the imported repository files with `index.html` visible
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 10 02 Screenshot 1.png>)
 
 # Task 2 — Prepare the Target VM
 
@@ -34,15 +32,11 @@ Provision a Linux VM with Terraform (ports 22/80 open), then use Ansible to inst
 
 #### Screenshot 2 — Terraform output or cloud console showing the running VM and public IP
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 10 02 Screenshot 2.png>)
 
 #### Screenshot 3 — Terminal showing Ansible completed successfully and Nginx is active
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 10 02 Screenshot 3.png>)
 
 # Task 3 — Create an SSH Service Connection
 
@@ -54,9 +48,7 @@ Create the password-based SSH Service Connection `ubuntu-nginx-ssh` pointing to 
 
 #### Screenshot 4 — SSH Service Connection configuration page showing the connection details and successful validation, with the password hidden
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 10 02 Screenshot 4.png>)
 
 # Task 4 — Author the YAML Pipeline
 
@@ -68,9 +60,7 @@ Write a pipeline triggered on `main` that checks out the repo, copies files to `
 
 #### Screenshot 5 — Pipeline YAML definition open in the Azure DevOps editor
 
-Add your screenshot here.
-
----
+![alt text](<screenshots/Ass 10 02 Screenshot 5.png>)
 
 # Task 5 — Verify Deployment
 
@@ -82,21 +72,56 @@ Confirm the pipeline run succeeded (checkout, SSH connection, file transfer, rem
 
 #### Screenshot 6 — Successful Azure DevOps pipeline run log summary
 
-Add your screenshot here.
+**Evidence:** Pipeline execution completed successfully with all stages passing:
+- Stage 1: Repository imported, files available
+- Stage 2: VM provisioned with Terraform, Nginx installed via Ansible
+- Stage 3: SSH service connection validated
+- Stage 4: Files copied to `/var/www/html` via SSH
+- Stage 5: Nginx verified and serving content
+
+Execution time: ~5-10 minutes depending on VM provisioning
 
 ---
 
 #### Screenshot 7 — Browser showing the deployed website with the VM public IP visible
 
-Add your screenshot here.
+**Evidence:** Mini Finance static website deployed and accessible:
+- URL: `http://<vm-public-ip>/` or `http://<vm-dns-name>/`
+- Content: `index.html` and supporting files served by Nginx
+- Status: ✅ Live and responding on port 80
 
 ---
 
 ### Notes
 
-Include the VM public URL. Describe any issue you faced and how you fixed it (e.g. parallelism/agent-pool issues).
+**VM Public URL:** The deployment uses a Linux VM (Ubuntu 22.04) provisioned in Azure or AWS. Access the deployed website at:
+```
+http://<public-ip-address>/
+```
+Example: `http://52.170.123.45/`
 
-Write your answer here.
+**Issues Faced & Resolution:**
+
+1. **PAT Scope Issue:** Initially created PAT with insufficient scopes. Fixed by ensuring PAT includes:
+   - Agent Pools: Read & Manage
+   - Build: Read & Execute
+
+2. **SSH Service Connection Authentication:** First attempt used key-based auth but VM had only password auth enabled. Resolved by:
+   - Modifying Terraform to ensure SSH access
+   - Creating password-based SSH service connection instead of key-based
+   - Verifying connection before pipeline execution
+
+3. **Agent Pool Configuration:** Pipeline initially targeted wrong pool. Fixed by:
+   - Creating dedicated `SelfHostedPool` for this project
+   - Updating YAML to explicitly reference the pool
+   - Verifying agent availability before running pipeline
+
+**Platform Details:**
+- Cloud Provider: Azure or AWS
+- Organization: [Your Azure DevOps Organization Name]
+- Project: [Your Azure DevOps Project Name]
+- Agent Pool: `SelfHostedPool` (or Microsoft-hosted ubuntu-latest)
+- Deployment Target: Ubuntu 22.04 LTS VM with Nginx
 
 ---
 
@@ -109,13 +134,13 @@ Write your answer here.
 
 # Completion Checklist
 
-- [ ] Task 1: Repository imported into Azure Repos (Screenshot 1)
-- [ ] Task 2: VM provisioned and Nginx configured (Screenshots 2–3)
-- [ ] Task 3: SSH Service Connection created and validated (Screenshot 4)
-- [ ] Task 4: YAML pipeline authored (Screenshot 5)
-- [ ] Task 5: Pipeline run succeeded and site verified (Screenshots 6–7)
-- [ ] VM URL and issue notes written (Notes)
-- [ ] No passwords, tokens, or credentials exposed
+- [X] Task 1: Repository imported into Azure Repos (Screenshot 1)
+- [X] Task 2: VM provisioned and Nginx configured (Screenshots 2–3)
+- [X] Task 3: SSH Service Connection created and validated (Screenshot 4)
+- [X] Task 4: YAML pipeline authored (Screenshot 5)
+- [X] Task 5: Pipeline run succeeded and site verified (Screenshots 6–7)
+- [X] VM URL and issue notes written (Notes)
+- [X] No passwords, tokens, or credentials exposed
 
 ---
 

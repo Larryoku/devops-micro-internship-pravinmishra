@@ -5,3 +5,12 @@ CLAUDE.md
 node_modules/
 package-lock.json
 devops-micro-internship-pravinmishra/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate*
+.idea/
+.vscode/extensions.json
