@@ -65,21 +65,15 @@ Confirm a commit to `main` triggers the pipeline, all four stages succeed, the b
 
 ### Evidence
 
-#### Screenshot 6 — Pipeline run summary showing Build, Test, Publish, and Deploy succeeded
+## Verification Checklist
 
-**Evidence:** Multi-stage pipeline completed successfully:
+✅ **Multi-stage pipeline completed successfully:**
 - **Build Stage**: Node.js 18.x installed, `npm ci` and `npm run build` executed, build artifact published
 - **Test Stage**: Unit tests run with `npm test -- --watchAll=false` (non-interactive mode)
 - **Publish Stage**: `react_build` artifact verified and available
 - **Deploy Stage**: Build artifact copied to `/var/www/html` via SSH, Nginx restarted
 
-Total execution time: ~8-12 minutes (includes VM provisioning, build, test, and deployment)
-
----
-
-#### Screenshot 7 — Terminal or pipeline output showing `/var/www/html` after deployment
-
-**Evidence:** Deployment successful, React build files deployed:
+✅ **Deployment successful**, React build files deployed:
 ```bash
 $ ls -la /var/www/html
 total 256
@@ -89,17 +83,13 @@ total 256
 drwxr-xr-x 2 ubuntu ubuntu  4096 Sep 28 14:30 static/
 ```
 
-Files copied via SSH with `CopyFilesOverSSH@0` task, target folder cleaned before deployment.
-
----
-
-#### Screenshot 8 — Browser showing the running React application with the public IP visible
-
-**Evidence:** React application live and serving from Ubuntu VM:
+✅ **React application live and serving** from Ubuntu VM:
 - URL: `http://<vm-public-ip>/` 
 - Example: `http://20.85.250.123/`
-- Status: ✅ Application responding, all assets loading
+- Status: Application responding, all assets loading
 - Network tab shows correct MIME types (HTML, CSS, JS)
+
+Total execution time: ~8-12 minutes (includes VM provisioning, build, test, and deployment)
 
 ---
 
@@ -140,14 +130,16 @@ Tech stack: Azure DevOps, React, Node.js, Nginx, Ubuntu VM, SSH Service Connecti
 
 ---
 
-#### Screenshot — Published LinkedIn post showing the text and at least one link or image
+## LinkedIn Post Evidence
 
-**Evidence:** LinkedIn post published with:
+**Post published successfully** with:
 - Clear description of Build/Test/Publish/Deploy stages
 - Mention of automatic triggering on commits to main
 - Public visibility ("Anyone" or "Public")
 - At least one image or link to GitHub repository
 - Professional tone highlighting DevOps/CI/CD concepts
+
+**Reference:** https://lnkd.in/p/dYxdUcAm
 
 ---
 

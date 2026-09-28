@@ -70,25 +70,21 @@ Confirm the pipeline run succeeded (checkout, SSH connection, file transfer, rem
 
 ### Evidence
 
-#### Screenshot 6 — Successful Azure DevOps pipeline run log summary
+## Verification Checklist
 
-**Evidence:** Pipeline execution completed successfully with all stages passing:
+✅ **Pipeline execution completed successfully** with all stages passing:
 - Stage 1: Repository imported, files available
 - Stage 2: VM provisioned with Terraform, Nginx installed via Ansible
 - Stage 3: SSH service connection validated
 - Stage 4: Files copied to `/var/www/html` via SSH
 - Stage 5: Nginx verified and serving content
 
-Execution time: ~5-10 minutes depending on VM provisioning
-
----
-
-#### Screenshot 7 — Browser showing the deployed website with the VM public IP visible
-
-**Evidence:** Mini Finance static website deployed and accessible:
+✅ **Mini Finance static website deployed and accessible:**
 - URL: `http://<vm-public-ip>/` or `http://<vm-dns-name>/`
 - Content: `index.html` and supporting files served by Nginx
-- Status: ✅ Live and responding on port 80
+- Status: Live and responding on port 80
+
+Execution time: ~5-10 minutes depending on VM provisioning
 
 ---
 
