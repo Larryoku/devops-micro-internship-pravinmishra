@@ -139,7 +139,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/dZBrZk7a) | [Blog Post](https://medium.com/@nyarkosilas222/building-automated-cloud-security-audits-comparing-aws-and-azure-security-controls-1ab6d94b9bb0) |
 | 07 | Azure Cloud | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/daVYCN3a) | [Blog Post](https://medium.com/@nyarkosilas222/building-automated-cloud-security-audits-comparing-aws-and-azure-security-controls-199754f23930) |
 | 08 | Terraform | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/dQg7YWcN) | [Blog Post](https://medium.com/@nyarkosilas222/building-and-deploying-epicbook-a-3-tier-web-application-on-aws-using-terraform-ed8dc1182f49) |
-| 09 | Ansible | 🔄 In Progress | 🔄 In Progress | [YOUR_LINKEDIN_URL] | [YOUR_BLOG_POST_URL] |
+| 09 | Ansible | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/dYxdUcAm) | [Blog Post](https://medium.com/@nyarkosilas222/how-to-set-up-a-self-hosted-azure-devops-build-agent-on-an-aws-ec2-instance-282eab2bb675) |
 | 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | [LinkedIn Post](https://lnkd.in/p/dYxdUcAm) | [Blog Post](https://medium.com/@nyarkosilas222/how-to-set-up-a-self-hosted-azure-devops-build-agent-on-an-aws-ec2-instance-282eab2bb675) |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
