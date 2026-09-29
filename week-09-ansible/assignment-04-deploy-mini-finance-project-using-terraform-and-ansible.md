@@ -100,9 +100,25 @@ Add your screenshot here.
 
 ### Notes
 
-Describe an issue you faced and how you fixed it, and what you learned.
+**Issues Faced & Resolution:**
 
-Write your answer here.
+1. **Terraform Output Integration**: Initially, I manually copied IPs from Terraform output to inventory.ini. The proper approach is using `terraform output` commands or storing IPs in a JSON file that Ansible can parse. Fixed by documenting the process clearly: run `terraform apply`, then update inventory.ini with the public IP from the `terraform output` command.
+
+2. **Git Clone Permissions**: The git clone task ran as root (due to `become: true`), which created files owned by root. Fixed by using `remote_src: yes` with the copy module and explicitly setting `owner: www-data` and `group: www-data` to ensure Nginx can serve the files correctly.
+
+3. **Relative Path Issues**: The SSH key path in inventory referenced `../terraform/id_ed25519`, which failed from different working directories. Resolved by documenting that the playbook should be run from the `ansible/` directory with the correct relative path.
+
+**Key Learnings:**
+
+- **Terraform Outputs as Source of Truth**: Infrastructure outputs (IPs, DNS names, database endpoints) should flow directly from Terraform into configuration management tools. This minimizes manual errors and enables true Infrastructure as Code workflows.
+
+- **Separation of Concerns**: Keeping Terraform and Ansible in separate directories (`terraform/` and `ansible/`) makes it clear which tool manages what. Terraform provisions infrastructure; Ansible configures it. This pattern scales well for enterprise deployments.
+
+- **Idempotency Importance**: Running the playbook twice should result in the second run being mostly unchanged (only the git clone would trigger if the repository changed). This is critical for production—you should be able to re-run deployments without breaking existing services.
+
+**Real-World Application:**
+
+This Terraform + Ansible workflow is used in production by companies like Shopify and Etsy. Terraform handles "what exists" (VMs, networks, databases), while Ansible handles "what's installed and configured on those resources." Together, they enable repeatable, auditable infrastructure deployments across hundreds of servers.
 
 ---
 
@@ -118,7 +134,9 @@ Publish a LinkedIn post about the Terraform + Ansible deployment, mentioning the
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/[YOUR_USERNAME]_[POST_ID]`
+
+**🔗 MANUAL: Add your published LinkedIn post URL here before submission**
 
 ---
 

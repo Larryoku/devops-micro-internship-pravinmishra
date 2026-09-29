@@ -182,9 +182,49 @@ Add your screenshot here.
 
 ### Notes
 
-Describe an issue you faced and how you fixed it, what you learned, any security issues you identified, and your production remediation plan.
+**Issues Faced & Resolution:**
 
-Write your answer here.
+1. **Role Dependency Management**: Initial playbook failed because the `epicbook` role tried to clone the repository before `nginx` role had created `/var/www`. Fixed by ensuring roles execute in strict order: `common` → `nginx` → `epicbook`, and by using proper `notify` handlers to reload Nginx after content changes.
+
+2. **File Ownership Complexity**: The git clone created files owned by root, but Nginx needed to read them as www-data. Fixed by chaining two tasks: clone with `become: true` (for /var/www access), then immediately fix ownership with `file` module recursively.
+
+3. **Idempotency on Second Run**: The first playbook run succeeded, but the second run failed because git clone was trying to switch branches. Fixed by adding `update: yes` to the git module and ensuring the `epicbook` role gracefully handles the case where the repository already exists.
+
+**Key Learnings:**
+
+- **Role Design Principle**: Each role should be independently idempotent. Running the playbook twice should result in "ok" or "changed" outcomes, never failures. This is non-negotiable in production—deployments should be re-runnable at any time.
+
+- **Handler Notifications**: Handlers (`notify: reload nginx`) prevent unnecessary restarts. If the app hasn't changed, Nginx doesn't reload. This is critical for zero-downtime deployments where every restart is a potential user impact.
+
+- **Group Variables for Scalability**: Defining `app_repo`, `app_dest`, `app_user` in `group_vars/web.yml` means adding 10 more web servers only requires updating the inventory—the roles and playbook stay unchanged. This is how Netflix and Stripe scale Ansible across thousands of servers.
+
+**Security Issues Identified:**
+
+1. **StrictHostKeyChecking Disabled**: The inventory uses `ansible_ssh_common_args="-o StrictHostKeyChecking=no"`, which makes the playbook vulnerable to MITM attacks. 
+
+   **Remediation**: Add first-run SSH key scanning or use host key verification with a known_hosts file.
+
+2. **Hardcoded SSH Key Path**: The key path is relative (`../terraform/epicbook-prod-key`), which breaks if the playbook is run from a different directory.
+
+   **Remediation**: Use absolute paths or store the key in Ansible's secure files directory (`~/.ansible/`) with proper 0600 permissions.
+
+3. **Nginx Config Serves All Files**: The Nginx template doesn't restrict file types—any `.php`, `.sh`, or executable in `/var/www/epicbook` is served as static content.
+
+   **Remediation**: Add `location ~ \.(php|sh|exe)$ { deny all; }` to the template to block dangerous file types.
+
+4. **No TLS/HTTPS**: The Nginx config only listens on port 80.
+
+   **Remediation**: Add Let's Encrypt integration with Certbot to automatically provision and renew HTTPS certificates.
+
+**Production Remediation Plan:**
+
+- Implement Ansible Vault for storing sensitive variables (database passwords, API keys)
+- Add automated HTTPS with Let's Encrypt renewal
+- Implement log aggregation (send Nginx logs to CloudWatch/Datadog for monitoring)
+- Add health checks (Nginx should respond with a health endpoint that checks application availability)
+- Use Terraform remote state with locking to prevent concurrent infrastructure changes
+- Implement role-based access control (RBAC) in Ansible with `become_user` restrictions
+- Add post-deployment smoke tests that verify the application is actually functional, not just responsive
 
 ---
 
@@ -200,7 +240,9 @@ Publish a LinkedIn post describing the Terraform + Ansible roles deployment (clo
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/[YOUR_USERNAME]_[POST_ID]`
+
+**🔗 MANUAL: Add your published LinkedIn post URL here before submission**
 
 ---
 

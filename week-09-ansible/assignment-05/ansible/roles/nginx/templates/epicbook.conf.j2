@@ -1,0 +1,25 @@
+server {
+    listen {{ nginx_listen_port }};
+    server_name _;
+
+    root {{ app_dest }};
+    index index.html index.htm;
+
+    # Logging
+    access_log /var/log/nginx/epicbook_access.log;
+    error_log /var/log/nginx/epicbook_error.log;
+
+    # Serve static files
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Deny access to sensitive files
+    location ~ /\. {
+        deny all;
+    }
+
+    location ~ ~$ {
+        deny all;
+    }
+}

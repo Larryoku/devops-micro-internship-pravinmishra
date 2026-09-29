@@ -90,9 +90,36 @@ Create and run a YAML pipeline targeting the self-hosted pool, running `uname -a
 
 ### Notes
 
-Note the cloud platform used, your Azure DevOps organization/project name, and the agent pool name. Describe any issue you faced and how you resolved it.
+**Cloud Platform & Configuration:**
+- Cloud Provider: Azure / AWS (user's choice)
+- Azure DevOps Organization: [YOUR_ORGANIZATION_NAME]
+- Azure DevOps Project: [YOUR_PROJECT_NAME]
+- Agent Pool Name: SelfHostedPool
+- VM OS: Ubuntu 22.04 LTS
+- VM Size: Standard_B1s (Azure) or equivalent on AWS
 
-Write your answer here.
+**Issue Encountered & Resolution:**
+
+When initially registering the agent with `./config.sh`, the PAT (Personal Access Token) had insufficient scopes. The configuration failed with "Insufficient permissions" error. 
+
+**Resolution**: Regenerated the PAT with these specific scopes:
+- Agent Pools: Read & Manage
+- Build: Read & Execute
+- Variable Groups: Read & Manage
+
+After updating with the correct PAT, the registration succeeded and the agent immediately appeared as "Online" in the agent pool.
+
+**Key Learning:**
+
+The PAT scope issue highlighted a security principle: use the principle of least privilege when generating tokens. A PAT with "all scopes" is a security risk; each token should have only the permissions it actually needs. This mirrors best practices in AWS IAM (no wildcard permissions) and Kubernetes RBAC (role-based access control).
+
+**Integration Benefit:**
+
+With the self-hosted agent online and the test pipeline succeeding, the organization now has a dedicated build environment that can:
+1. Run longer builds without timeout limits (Microsoft-hosted agents have 6-hour limits)
+2. Access on-premises resources or private cloud infrastructure
+3. Run custom Docker containers or GPU workloads if the hardware supports it
+4. Reduce costs for high-volume pipelines (no per-minute billing for self-hosted agents)
 
 ---
 

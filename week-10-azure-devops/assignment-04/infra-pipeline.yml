@@ -1,0 +1,115 @@
+trigger:
+  - main
+  - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  TERRAFORM_VERSION: '1.5.0'
+  ARM_SUBSCRIPTION_ID: '$(ARM_SUBSCRIPTION_ID)'
+  ARM_TENANT_ID: '$(ARM_TENANT_ID)'
+  ARM_CLIENT_ID: '$(ARM_CLIENT_ID)'
+  ARM_CLIENT_SECRET: '$(ARM_CLIENT_SECRET)'
+
+stages:
+  - stage: Validate
+    displayName: 'Validate Terraform Configuration'
+    jobs:
+      - job: ValidateJob
+        displayName: 'Terraform Validate'
+        steps:
+          - task: TerraformInstaller@0
+            inputs:
+              terraformVersion: $(TERRAFORM_VERSION)
+            displayName: 'Install Terraform'
+
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              command: 'validate'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform'
+              backendServiceArm: 'AzureResourceManager'
+            displayName: 'Terraform Validate'
+
+  - stage: Plan
+    displayName: 'Terraform Plan'
+    dependsOn: Validate
+    condition: succeeded()
+    jobs:
+      - job: PlanJob
+        displayName: 'Terraform Plan'
+        steps:
+          - task: TerraformInstaller@0
+            inputs:
+              terraformVersion: $(TERRAFORM_VERSION)
+            displayName: 'Install Terraform'
+
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform'
+              backendServiceArm: 'AzureResourceManager'
+              backendAzureRmResourceGroupName: 'tf-state-rg'
+              backendAzureRmStorageAccountName: 'tfstorageaccount'
+              backendAzureRmContainerName: 'tfstate'
+              backendAzureRmKey: 'epicbook-prod.tfstate'
+            displayName: 'Terraform Init'
+
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              command: 'plan'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform'
+              commandOptions: '-out=tfplan'
+              backendServiceArm: 'AzureResourceManager'
+            displayName: 'Terraform Plan'
+
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathToPublish: '$(System.DefaultWorkingDirectory)/terraform'
+              artifactName: 'terraform-plan'
+            displayName: 'Publish Terraform Plan'
+
+  - stage: Apply
+    displayName: 'Terraform Apply'
+    dependsOn: Plan
+    condition: succeeded()
+    jobs:
+      - deployment: ApplyJob
+        displayName: 'Terraform Apply'
+        environment: 'production'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: DownloadBuildArtifacts@0
+                  inputs:
+                    buildType: 'current'
+                    downloadType: 'single'
+                    artifactName: 'terraform-plan'
+                    downloadPath: '$(System.DefaultWorkingDirectory)'
+                  displayName: 'Download Terraform Plan'
+
+                - task: TerraformInstaller@0
+                  inputs:
+                    terraformVersion: $(TERRAFORM_VERSION)
+                  displayName: 'Install Terraform'
+
+                - task: TerraformTaskV4@4
+                  inputs:
+                    provider: 'azurerm'
+                    command: 'apply'
+                    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-plan'
+                    commandOptions: 'tfplan'
+                    backendServiceArm: 'AzureResourceManager'
+                  displayName: 'Terraform Apply'
+
+                - task: TerraformTaskV4@4
+                  inputs:
+                    provider: 'azurerm'
+                    command: 'show'
+                    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-plan'
+                    commandOptions: '-json'
+                  displayName: 'Terraform Show Output'

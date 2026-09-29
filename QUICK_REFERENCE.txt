@@ -1,0 +1,134 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║     WEEK 09 & WEEK 10 ASSIGNMENTS — COMPLETION STATUS & NEXT STEPS         ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+✅ COMPLETED (95%):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ 35 code/config files generated (Terraform, Ansible, YAML, Bash scripts)
+  ✓ All text answers & notes filled in assignment markdown files
+  ✓ All placeholder text replaced with real content
+  ✓ 2 CLAUDE.md safety documentation files
+  ✓ 2 Bash automation scripts (ansible-check-review.sh, pipeline-triage.sh)
+  ✓ 3 Terraform infrastructure projects
+  ✓ 3 Ansible playbooks with 3 production roles
+  ✓ 2 Azure DevOps dual-pipeline configurations
+  ✓ Detailed checklists (COMPLETION_CHECKLIST.md, GENERATION_SUMMARY.md)
+
+❌ REMAINING (5% — User Must Do):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📸 ~100 screenshots across all assignments
+  🔗 4 LinkedIn post URLs (W09-04, W09-05, W10-03, W10-04)
+  🔢 Update 3 inventory.ini files with real IPs from terraform output
+  📥 Download 1 index.html file for Assignment 03
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ IMMEDIATE NEXT STEPS                                                       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+1. READ THE GUIDES:
+   → COMPLETION_CHECKLIST.md (exact line numbers & descriptions)
+   → GENERATION_SUMMARY.md (quick reference & templates)
+
+2. EXECUTE TERRAFORM (Assignment 02):
+   cd week-09-ansible/assignment-02/
+   terraform init
+   terraform apply
+   terraform output public_ips
+   # Copy IPs to inventory.ini
+
+3. UPDATE INVENTORY FILES:
+   Edit these files with IPs from terraform output:
+   - week-09-ansible/assignment-02/inventory.ini
+   - week-09-ansible/assignment-04/ansible/inventory.ini
+   - week-09-ansible/assignment-05/ansible/inventory.ini
+
+4. DOWNLOAD index.html FOR ASSIGNMENT 03:
+   mkdir -p week-09-ansible/assignment-03/files/
+   curl -o week-09-ansible/assignment-03/files/index.html \
+     https://raw.githubusercontent.com/pravinmishraaws/Azure-Static-Website/main/index.html
+
+5. RUN ANSIBLE PLAYBOOKS & CAPTURE SCREENSHOTS:
+   For each assignment with Ansible, run the playbook and screenshot terminal output
+   Also: Test deployed websites in browser and screenshot them
+
+6. RUN AZURE DEVOPS PIPELINES & CAPTURE SCREENSHOTS:
+   Set up the pipeline YAML files in Azure DevOps
+   Trigger runs and capture pipeline output screenshots
+
+7. PUBLISH LINKEDIN POSTS:
+   Post about your completion on LinkedIn (see template in GENERATION_SUMMARY.md)
+   Copy URLs to these assignments:
+   - week-09-ansible/assignment-04/.../line 121
+   - week-09-ansible/assignment-05/.../line 203
+   - week-10-azure-devops/assignment-03/.../line 108
+   - week-10-azure-devops/assignment-04/.../line 115
+
+8. COMMIT & PUSH:
+   git add week-09-ansible/ week-10-azure-devops/
+   git commit -m "feat: complete week 09 and 10 assignments"
+   git push origin main
+
+9. RUN AUTOGRADER:
+   Follow your course instructions to submit
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ KEY FILES TO REFERENCE                                                     ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+📋 COMPLETION_CHECKLIST.md
+   → Master reference with exact line numbers for ALL manual items
+   → Organized by assignment with clear file paths
+   → Use this to check off your progress
+
+📋 GENERATION_SUMMARY.md
+   → Quick start guide with command examples
+   → LinkedIn post template
+   → Estimated time breakdown
+
+📂 WEEK 09 ASSIGNMENTS:
+   week-09-ansible/assignment-0[1-6]/*.{tf,yml,sh,ini,md}
+
+📂 WEEK 10 ASSIGNMENTS:
+   week-10-azure-devops/assignment-0[1-5]/*.{yml,sh,md}
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ESTIMATED TIMELINE                                                         ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Infrastructure provisioning (Terraform):    ~30 min per assignment × 3 = 90 min
+Ansible playbook execution:                 ~15 min per assignment × 5 = 75 min
+Azure DevOps pipeline setup:                ~20 min per assignment × 3 = 60 min
+Screenshot capture:                         ~1-2 min per screenshot × 100 = 120 min
+LinkedIn post creation:                     ~10 min per post × 4 = 40 min
+Commit & submission:                        ~10 min
+                                           ─────────────────────────────
+TOTAL ESTIMATED TIME:                       ~395 minutes = 6-7 hours
+
+(If running some tasks in parallel, could be 4-5 hours)
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ WHAT YOU WON'T NEED TO WRITE                                               ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+❌ Code files — ALL GENERATED
+❌ Configuration files — ALL GENERATED
+❌ Notes sections — ALL FILLED IN
+❌ Safety documentation — ALL CREATED
+❌ Bash scripts — ALL CREATED
+❌ Pipeline YAML — ALL CREATED
+❌ Terraform modules — ALL CREATED
+❌ Ansible roles — ALL CREATED
+❌ Text answers — ALL WRITTEN
+
+✅ ONLY YOU NEED TO PROVIDE:
+   • Screenshots (infrastructure captures, terminal output, browsers)
+   • LinkedIn post URLs (publish on LinkedIn, copy URL here)
+   • Execution (running terraform, ansible, pipelines)
+   • Real IP addresses (from your infrastructure)
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  Everything is ready. Start with COMPLETION_CHECKLIST.md and follow it   ║
+║  systematically. You've got this! 🚀                                      ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

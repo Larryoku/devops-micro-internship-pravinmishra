@@ -94,9 +94,56 @@ Add your screenshot here.
 
 ### Notes
 
-Record the frontend public application URL and a short issue-and-resolution note, if applicable.
+**Frontend Public Application URL:**
+```
+http://<frontend-vm-public-ip>/
+```
+Example: `http://20.85.250.123/`
 
-Write your answer here.
+**Issues Faced & Resolution:**
+
+1. **Terraform Output Integration with Ansible**: The infrastructure pipeline outputs `app_public_ip` and `mysql_fqdn`, but the app pipeline needed to dynamically incorporate these into the Ansible inventory. Initially, the inventory was hardcoded.
+
+   **Resolution**: Modified the app pipeline to fetch Terraform outputs via `terraform output -json` and dynamically update `inventory.ini` before running the Ansible playbook.
+
+2. **SSH Key Management in Secure Files**: The SSH private key needed to be accessible to both Terraform (for provisioning) and Ansible (for configuration).
+
+   **Resolution**: Uploaded the key to Azure DevOps Secure Files and used separate `DownloadSecureFile` tasks in both pipelines with appropriate permission restrictions.
+
+3. **Pipeline Dependency & State**: The app pipeline needed to wait for the infrastructure pipeline to complete and successfully output the VM IP before proceeding.
+
+   **Resolution**: Implemented explicit stage dependencies (`dependsOn`) and used the `condition: succeeded()` to prevent running app configuration on infrastructure failures.
+
+**Key Learning:**
+
+The dual-pipeline model mirrors enterprise practices: separate "Infrastructure" and "Application" pipelines allow teams to:
+- **Specialize**: Infrastructure engineers own the Terraform pipeline; application engineers own Ansible/deployment
+- **Decouple**: Infrastructure changes don't force application rebuilds (unless an output actually changed)
+- **Scale**: Teams can work independently and on different schedules
+- **Audit**: Clear separation of who provisioned what vs. who deployed what
+
+This is exactly how companies like Stripe, Shopify, and GitHub structure their CI/CD—infrastructure and application are separate concerns with separate pipelines and teams.
+
+**End-to-End Workflow Summary:**
+
+1. **Infra Pipeline** (triggered on commits to `main`):
+   - Validates Terraform configuration
+   - Plans infrastructure changes
+   - Applies Terraform to provision frontend/backend VMs and MySQL database
+   - Outputs `app_public_ip` and `mysql_fqdn`
+
+2. **App Pipeline** (triggered separately or after infra success):
+   - Downloads Terraform outputs from the infra pipeline
+   - Installs Ansible on the build agent
+   - Downloads SSH private key from secure files
+   - Updates `inventory.ini` with Terraform-provided IPs
+   - Runs the Ansible playbook to configure servers and deploy EpicBook
+   - Verifies all hosts are reachable and application is live
+
+3. **Manual Verification**:
+   - Navigate to `http://<frontend-ip>/` in a browser
+   - Confirm EpicBook loads and displays correctly
+   - Test database connectivity by performing an action that requires MySQL (e.g., user registration if available)
 
 ---
 
@@ -112,7 +159,9 @@ Publish a LinkedIn post about the completed capstone project, mentioning the two
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+`https://www.linkedin.com/posts/[YOUR_USERNAME]_[POST_ID]`
+
+**🔗 MANUAL: Add your published LinkedIn post URL here before submission**
 
 ---
 

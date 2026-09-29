@@ -1,0 +1,8 @@
+---
+- name: Deploy EpicBook with Ansible Roles
+  hosts: web
+  become: true
+  roles:
+    - common
+    - nginx
+    - epicbook

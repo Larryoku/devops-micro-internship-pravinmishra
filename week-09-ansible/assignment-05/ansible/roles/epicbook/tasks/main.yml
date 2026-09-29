@@ -1,0 +1,34 @@
+---
+- name: Ensure app destination directory exists
+  file:
+    path: "{{ app_dest }}"
+    state: directory
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+    mode: '0755'
+
+- name: Clone EpicBook repository
+  git:
+    repo: "{{ app_repo }}"
+    dest: "{{ app_dest }}"
+    version: main
+    update: yes
+  notify: reload nginx
+
+- name: Set EpicBook directory ownership
+  file:
+    path: "{{ app_dest }}"
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+    mode: '0755'
+    recurse: yes
+  notify: reload nginx
+
+- name: Ensure proper file permissions for web content
+  file:
+    path: "{{ app_dest }}"
+    owner: "{{ app_user }}"
+    group: "{{ app_group }}"
+    mode: '0644'
+    recurse: yes
+  changed_when: false

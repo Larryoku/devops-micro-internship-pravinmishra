@@ -148,9 +148,7 @@ Add your screenshot here.
 
 ### Notes
 
-In one or two sentences, explain why `ansible-playbook --check --diff` deserves the same respect as `terraform plan`, and why the AI skill was allowed to analyze the dry-run output but never allowed to run the playbook for real.
-
-Add your answer here
+`ansible-playbook --check --diff` is identical in purpose to `terraform plan` — it shows exactly what **will change** without making changes, providing the opportunity for human review before any production impact. The `/ansible-risk-review` skill was allowed to analyze dry-run output (a read-only operation) but never allowed to run the real playbook because the human must retain decision authority over infrastructure changes; an AI tool that auto-applies infrastructure changes, even well-intentioned ones, violates the principle that humans must consciously approve production modifications. This separation between analysis (AI can do this) and execution (humans only) protects production systems from unintended changes and maintains clear accountability for infrastructure decisions.
 
 ---
 

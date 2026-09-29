@@ -1,0 +1,132 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: Build
+    displayName: 'Build React Application'
+    jobs:
+      - job: BuildJob
+        displayName: 'Build and Package'
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '18.x'
+            displayName: 'Install Node.js 18.x'
+
+          - script: |
+              npm ci
+            displayName: 'Install Dependencies (npm ci)'
+
+          - script: |
+              npm run build
+            displayName: 'Build React Application'
+
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathToPublish: '$(Build.SourcesDirectory)/build'
+              artifactName: 'react_build'
+              publishLocation: 'Container'
+            displayName: 'Publish Build Artifact'
+
+  - stage: Test
+    displayName: 'Run Unit Tests'
+    dependsOn: Build
+    condition: succeeded()
+    jobs:
+      - job: TestJob
+        displayName: 'Unit Tests'
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '18.x'
+            displayName: 'Install Node.js 18.x'
+
+          - script: |
+              npm ci
+            displayName: 'Install Dependencies'
+
+          - script: |
+              npm test -- --watchAll=false --coverage
+            displayName: 'Run Unit Tests (Non-Interactive)'
+
+          - task: PublishCodeCoverageResults@1
+            inputs:
+              codeCoverageTool: 'cobertura'
+              summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+            displayName: 'Publish Code Coverage'
+            condition: succeededOrFailed()
+
+  - stage: Publish
+    displayName: 'Publish Artifact'
+    dependsOn: Test
+    condition: succeeded()
+    jobs:
+      - job: PublishJob
+        displayName: 'Finalize Artifact'
+        steps:
+          - task: DownloadBuildArtifacts@0
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: 'react_build'
+              downloadPath: '$(System.ArtifactsDirectory)'
+            displayName: 'Download Build Artifact'
+
+          - script: |
+              echo "Build artifact ready for deployment"
+              ls -la $(System.ArtifactsDirectory)/react_build/
+            displayName: 'Verify Artifact Contents'
+
+  - stage: Deploy
+    displayName: 'Deploy to Production'
+    dependsOn: Publish
+    condition: succeeded()
+    jobs:
+      - job: DeployJob
+        displayName: 'Deploy to Ubuntu VM via SSH'
+        steps:
+          - task: DownloadBuildArtifacts@0
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: 'react_build'
+              downloadPath: '$(System.ArtifactsDirectory)'
+            displayName: 'Download Build Artifact'
+
+          - task: CopyFilesOverSSH@0
+            inputs:
+              sshEndpoint: 'ubuntu-nginx-ssh'
+              sourceFolder: '$(System.ArtifactsDirectory)/react_build'
+              targetFolder: '/tmp/react-build'
+              fileCopyMode: 'recursive'
+            displayName: 'Copy React Build to VM'
+
+          - task: SSH@0
+            inputs:
+              sshEndpoint: 'ubuntu-nginx-ssh'
+              runOptions: 'inline'
+              inline: |
+                set -e
+                echo "Deploying React build to /var/www/html..."
+                sudo cp -r /tmp/react-build/* /var/www/html/
+                sudo chown -R www-data:www-data /var/www/html
+                echo "Restarting Nginx..."
+                sudo systemctl restart nginx
+                echo "Deployment complete!"
+              readyTimeout: '20000'
+            displayName: 'Deploy and Restart Nginx'
+
+          - task: SSH@0
+            inputs:
+              sshEndpoint: 'ubuntu-nginx-ssh'
+              runOptions: 'inline'
+              inline: |
+                echo "Verifying deployment..."
+                ls -la /var/www/html | head -20
+                echo "Nginx status:"
+                sudo systemctl status nginx
+              readyTimeout: '20000'
+            displayName: 'Verify Deployment'

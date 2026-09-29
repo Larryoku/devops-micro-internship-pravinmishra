@@ -1,0 +1,68 @@
+---
+- name: Play 1 — Install Nginx and Git
+  hosts: web
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install Nginx and Git
+      apt:
+        name:
+          - nginx
+          - git
+        state: present
+
+    - name: Start and enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+---
+- name: Play 2 — Clone and deploy Mini Finance
+  hosts: web
+  become: true
+  handlers:
+    - name: Reload Nginx
+      service:
+        name: nginx
+        state: reloaded
+
+  tasks:
+    - name: Clone Mini Finance repository
+      git:
+        repo: "https://github.com/pravinmishraaws/Azure-Static-Website.git"
+        dest: /tmp/mini-finance
+        version: main
+
+    - name: Copy Mini Finance files to web root
+      copy:
+        src: /tmp/mini-finance/
+        dest: /var/www/html/
+        remote_src: yes
+        owner: www-data
+        group: www-data
+        mode: '0644'
+      notify: Reload Nginx
+
+---
+- name: Play 3 — Verify deployment
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Verify Mini Finance is responding with HTTP 200
+      uri:
+        url: "http://{{ hostvars['mini-finance']['ansible_host'] }}"
+        method: GET
+        status_code: 200
+      register: verification
+
+    - name: Assert successful deployment
+      assert:
+        that:
+          - verification.status == 200
+        fail_msg: "Mini Finance deployment verification failed"
+        success_msg: "Mini Finance deployed successfully — HTTP 200 OK"

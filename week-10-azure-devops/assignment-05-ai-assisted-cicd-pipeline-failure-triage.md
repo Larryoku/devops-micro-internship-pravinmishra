@@ -128,9 +128,7 @@ Add your screenshot here.
 
 ### Notes
 
-Explain, in your own words, why the skill was allowed to gather evidence and diagnose the failure but was never allowed to re-trigger the pipeline or apply the fix itself.
-
-Add your answer here
+The `/pipeline-triage` skill was allowed to gather evidence and diagnose failures because reading logs is a read-only operation that poses no risk — the skill cannot break anything by analyzing logs, only by taking action. However, it was never allowed to re-trigger the pipeline or apply fixes because those actions require human judgment and responsibility: only the human who understands the codebase should decide whether the diagnosis is correct and what fix to apply. If Claude automatically retried a failing test, it might mask a real bug that needs human attention. If Claude automatically committed a fix, it would bypass code review and introduce untested changes. By restricting Claude to diagnosis (gathering evidence, categorizing failures, recommending fixes), the workflow preserves human authority over the actual fix while leveraging AI's speed and pattern recognition for faster troubleshooting. This balance—AI does the analysis, humans do the decision-making—is essential for maintaining code quality and safety in production systems.
 
 ---
 

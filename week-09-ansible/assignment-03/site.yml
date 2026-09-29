@@ -1,0 +1,61 @@
+---
+- name: Play 1 — Install and start Nginx
+  hosts: web
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start and enable Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+---
+- name: Play 2 — Deploy static website content
+  hosts: web
+  become: true
+  handlers:
+    - name: Reload Nginx
+      service:
+        name: nginx
+        state: reloaded
+
+  tasks:
+    - name: Copy index.html to web root
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+      notify: Reload Nginx
+
+---
+- name: Play 3 — Verify deployment from controller
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Verify Nginx is responding on all web hosts
+      uri:
+        url: "http://{{ hostvars[item]['ansible_host'] }}"
+        method: GET
+        status_code: 200
+      register: uri_result
+      loop: "{{ groups['web'] }}"
+
+    - name: Assert HTTP 200 response
+      assert:
+        that:
+          - uri_result.results[0].status == 200
+          - uri_result.results[1].status == 200
+        fail_msg: "One or more web servers did not return HTTP 200"
+        success_msg: "All web servers verified — HTTP 200 OK"

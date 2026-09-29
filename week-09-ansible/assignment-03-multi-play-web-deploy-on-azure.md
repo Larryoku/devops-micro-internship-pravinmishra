@@ -94,9 +94,32 @@ Add your screenshot here.
 
 ### Notes
 
-Describe an issue you faced and how you fixed it, what you learned, why installation and deployment were split into separate plays, and one benefit of using `copy` instead of cloning from Git directly.
+**Issue Faced & Resolution:**
 
-Write your answer here.
+The initial playbook failed because the `copy` module couldn't find `files/index.html` due to missing local file. The file needed to be staged locally before the playbook run. Fixed by downloading the file from the GitHub repository using `curl` and placing it in the `files/` directory structure.
+
+**Key Learning:**
+
+The handler-based reload approach taught me the importance of idempotency. If the file hasn't changed, Nginx doesn't reload unnecessarily, reducing service interruptions and connection resets. This is critical in production environments where every second of downtime impacts users.
+
+**Why Installation & Deployment Were Split:**
+
+Splitting the tasks into separate plays provides several advantages:
+1. **Separation of Concerns**: Play 1 handles infrastructure setup (Nginx installation), while Play 2 handles content deployment. This makes the playbook easier to maintain and modify independently.
+2. **Retry & Rollback**: If content deployment fails (e.g., corrupted file), we can re-run Play 2 without reinstalling Nginx.
+3. **Readability**: Three distinct plays are easier to understand than 10+ sequential tasks in one play.
+4. **Flexibility**: Allows running only Play 1 for fresh server prep, or only Play 2 for content updates.
+
+**Benefit of `copy` Over `git clone`:**
+
+Using the `copy` module provides several advantages:
+- **No Git Dependency**: The web servers don't need Git installed, reducing attack surface and dependencies.
+- **Atomic Updates**: The file is copied atomically (no partial reads/writes).
+- **Ownership Control**: Easily set correct file ownership and permissions (www-data:www-data, mode 0644) without post-clone cleanup.
+- **Version Control**: By managing content in `files/`, you can use Git to version-control the exact content deployed.
+- **Simple Content**: For static HTML, copying is simpler and faster than cloning an entire repository.
+
+In contrast, `git clone` would require installing Git, managing SSH keys, and handling repository cleanup—unnecessary overhead for a static file.
 
 ---
 

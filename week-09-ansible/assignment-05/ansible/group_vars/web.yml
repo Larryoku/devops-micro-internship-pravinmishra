@@ -1,0 +1,22 @@
+---
+# Application Configuration
+app_repo: "https://github.com/pravinmishraaws/EpicBook.git"
+app_dest: "/var/www/epicbook"
+app_user: "www-data"
+app_group: "www-data"
+
+# System Configuration
+system_packages:
+  - git
+  - curl
+  - unzip
+  - software-properties-common
+  - htop
+  - vim
+
+# Nginx Configuration
+nginx_site_name: "epicbook"
+nginx_listen_port: 80
+
+# Application Port
+app_port: 3000

@@ -98,9 +98,25 @@ Add your screenshot here.
 
 ### Notes
 
-Describe an issue you faced and how you fixed it, what you learned, when you'd use an ad-hoc command instead of a playbook, and one challenge you faced during SSH or inventory setup.
+**Issues Faced & Resolution:**
 
-Write your answer here.
+1. **SSH Key Permissions Issue**: Initially, the SSH key had incorrect permissions (644), which SSH refused. Fixed by ensuring the Terraform script sets file permissions to 600 on the generated `id_ed25519` key file.
+
+2. **Inventory File Formatting**: The initial inventory had incorrect variable syntax. Resolved by using proper INI format with `ansible_host`, `ansible_user`, and `ansible_ssh_private_key_file` variables set correctly for each host.
+
+**Key Learnings:**
+
+- **Ad-Hoc Commands vs Playbooks**: Ad-hoc commands are ideal for quick diagnostics (`ping`, `uptime`, `df -h`) and one-off operations across multiple hosts. Playbooks are better for complex, multi-step workflows with handlers, templates, and idempotency requirements. For example, running `ansible all -m ping` to verify connectivity is faster than creating a playbook, but installing and configuring Nginx across 10 servers benefits from a playbook structure.
+
+- **SSH Agent & Passwordless Auth**: Using Ed25519 keys with SSH agent (`ssh-add -l`) dramatically reduces connection overhead. When Ansible connects to multiple hosts, having keys pre-loaded avoids repeated authentication and enables ControlMaster/ControlPersist optimizations.
+
+**Challenge During Setup:**
+
+The main challenge was ensuring consistent connectivity across all four VMs during the first playbook run. The issue was that NSG rules weren't fully propagated before Ansible tried to connect. Fixed by adding a 30-second delay after Terraform apply and verifying each host was reachable with `ansible-ping` before proceeding with package installations.
+
+**Real-World Application:**
+
+In production CI/CD pipelines, ad-hoc commands are used for health checks and emergency patches (e.g., `ansible all -m shell -a "systemctl restart nginx"` during an incident), while playbooks handle the standard deployment flow. This assignment demonstrates both scenarios—quick diagnostics with ad-hoc and scalable operations with playbooks.
 
 ---
 

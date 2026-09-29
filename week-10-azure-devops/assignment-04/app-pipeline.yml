@@ -1,0 +1,98 @@
+trigger:
+  - main
+  - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  ANSIBLE_VERSION: '2.13.0'
+
+stages:
+  - stage: Setup
+    displayName: 'Setup & Prepare'
+    jobs:
+      - job: PrepareJob
+        displayName: 'Prepare Ansible Environment'
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.10'
+            displayName: 'Use Python 3.10'
+
+          - script: |
+              python -m pip install --upgrade pip
+              pip install ansible==$(ANSIBLE_VERSION) jinja2
+            displayName: 'Install Ansible'
+
+          - task: DownloadSecureFile@1
+            inputs:
+              secureFile: 'epicbook-prod-key'
+            displayName: 'Download SSH Private Key'
+
+          - script: |
+              mkdir -p ~/.ssh
+              cp $(Agent.TempDirectory)/epicbook-prod-key ~/.ssh/
+              chmod 600 ~/.ssh/epicbook-prod-key
+            displayName: 'Setup SSH Key'
+
+  - stage: Configure
+    displayName: 'Configure Infrastructure'
+    dependsOn: Setup
+    condition: succeeded()
+    jobs:
+      - job: AnsibleJob
+        displayName: 'Run Ansible Playbook'
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.10'
+            displayName: 'Use Python 3.10'
+
+          - script: |
+              python -m pip install --upgrade pip
+              pip install ansible==2.13.0 jinja2
+            displayName: 'Install Ansible'
+
+          - task: DownloadSecureFile@1
+            inputs:
+              secureFile: 'epicbook-prod-key'
+            displayName: 'Download SSH Private Key'
+
+          - script: |
+              mkdir -p ~/.ssh
+              cp $(Agent.TempDirectory)/epicbook-prod-key ~/.ssh/epicbook-prod-key
+              chmod 600 ~/.ssh/epicbook-prod-key
+              echo "Host *" >> ~/.ssh/config
+              echo "  StrictHostKeyChecking=no" >> ~/.ssh/config
+              chmod 600 ~/.ssh/config
+            displayName: 'Setup SSH Configuration'
+
+          - script: |
+              cd ansible
+              export ANSIBLE_HOST_KEY_CHECKING=False
+              ansible-playbook -i inventory.ini site.yml -v
+            displayName: 'Run Ansible Playbook'
+            env:
+              ANSIBLE_HOST_KEY_CHECKING: 'False'
+
+          - script: |
+              cd ansible
+              ansible all -i inventory.ini -m ping -v
+            displayName: 'Verify All Hosts Reachable'
+
+  - stage: Verify
+    displayName: 'Verify Deployment'
+    dependsOn: Configure
+    condition: succeeded()
+    jobs:
+      - job: VerifyJob
+        displayName: 'Verify EpicBook Deployment'
+        steps:
+          - script: |
+              echo "Verifying EpicBook application is live..."
+              # Note: Replace with actual frontend IP from Terraform output
+              curl -f http://$(EPICBOOK_FRONTEND_IP)/ || exit 1
+              echo "✓ EpicBook is responding with HTTP 200"
+            displayName: 'Health Check'
+            condition: always()
