@@ -1,0 +1,27 @@
+---
+- name: Setup Nginx and Web Directory Permissions
+  hosts: web
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx is started and enabled
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Configure ownership of /var/www/html
+      file:
+        path: /var/www/html
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'

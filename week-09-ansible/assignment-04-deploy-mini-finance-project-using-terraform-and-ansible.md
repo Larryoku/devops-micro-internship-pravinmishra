@@ -20,7 +20,7 @@ Create the `mini-finance` project with separate `terraform/` and `ansible/` subd
 
 #### Screenshot 1 — Terminal or editor showing the complete `mini-finance` project tree
 
-Add your screenshot here.
+![Screenshot 1](./screenshots/Ass%2009%2004%20screenshot%201.png)
 
 ---
 
@@ -34,19 +34,19 @@ Provision an Ubuntu 22.04 Standard_B1s VM with a public IP, SSH key authenticati
 
 #### Screenshot 2 — Terminal showing the end of a successful `terraform apply`
 
-Add your screenshot here.
+![Screenshot 2](./screenshots/Ass%2009%2004%20screenshot%202.png)
 
 ---
 
 #### Screenshot 3 — Terminal showing `terraform output public_ip`
 
-Add your screenshot here.
+![Screenshot 3](./screenshots/Ass%2009%2004%20screenshot%203.png)
 
 ---
 
 #### Screenshot 4 — Terraform code or Azure Portal showing NSG inbound rules for ports 22 and 80
 
-Add your screenshot here.
+![Screenshot 4](./screenshots/Ass%2009%2004%20screenshot%204.png)
 
 ---
 
@@ -60,7 +60,7 @@ Connect to the VM with SSH using the injected key and run `hostname` remotely wi
 
 #### Screenshot 5 — Terminal showing the successful passwordless SSH hostname check
 
-Add your screenshot here.
+![Screenshot 5](./screenshots/Ass%2009%2004%20screenshot%205.png)
 
 ---
 
@@ -74,13 +74,13 @@ Create `ansible/inventory.ini` and a three-play `site.yml` that installs Nginx a
 
 #### Screenshot 6 — Editor showing `inventory.ini` and the three plays in `site.yml`
 
-Add your screenshot here.
+![Screenshot 6](./screenshots/Ass%2009%2004%20screenshot%206.png)
 
 ---
 
 #### Screenshot 7 — Terminal showing `ansible-playbook -i inventory.ini site.yml` with HTTP 200, assertion OK, and no failures
 
-Add your screenshot here.
+![Screenshot 7](./screenshots/Ass%2009%2004%20screenshot%207.png)
 
 ---
 

@@ -74,31 +74,31 @@ This is not a course. It is an internship-style program — real deployments, re
 [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/)
 
 <!-- Week 02 → Agentic AI with Claude Code -->
-<![![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/)
+[![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/)
 
 <!-- Week 03 → Linux & Bash for DevOps -->
-<[![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)
+[![Week 03 – Linux & Bash](./badges/week-03.svg)](./week-03-linux-and-bash-for-devops/)
 
 <!-- Week 04 → Git & GitHub -->
-<![![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/) 
+[![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/)
 
 <!-- Week 05 → DevOps Lifecycle & Agile -->
-< [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
+[![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/)
 
 <!-- Week 06 → AWS Cloud -->
-<![![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/)
+[![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/)
 
 <!-- Week 07 → Azure Cloud -->
-<! [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/)
+[![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/)
 
 <!-- Week 08 → Terraform -->
-<! [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/)
+[![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/)
 
 <!-- Week 09 → Ansible -->
-<! [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/)
+[![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/)
 
 <!-- Week 10 → Azure DevOps CI/CD -->
-<![![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/)
+[![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/)
 
 <!-- Week 11 → Docker -->
 <!-- [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) -->
