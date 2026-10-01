@@ -86,9 +86,7 @@ Paste your forked repository URL here:
 
 <<<<<<< HEAD:week-02-agentic-ai/assignment-03-skills.md
 `Add your URL here`
-=======
-`__________https://www.linkedin.com/posts/silas-nyarko_devops-agenticai-cloudcomputing-activity-7480750040848711680-fiyA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC77mYABXwQj5VAsAS-zzzdbpmvsIZLeP7U________________`
->>>>>>> 71ae30e (docs: complete assignment 4 written answers and agent configurations):week-02-agentic-ai/solution-assignment-03-skills.md
+
 ---
 
 # Completion Checklist
